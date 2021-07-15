@@ -71,29 +71,4 @@ function exclude_category( $query ) {
 }
 add_action( 'pre_get_posts', 'exclude_category' );
 
-
-
-function getOutYouFreakinBot() {
-	// bots being bots trying to (wrongly) guess italian translations
-	// of posts written *BEFORE 2018/03/15*
-
-	$reg = '/\/it\/((20[0-1][0-7]|2017)|(2018\/([01]([0-2])\/[0-2][0-4])))/';
-	$url = $_SERVER["REQUEST_URI"];
-	$subst = '/$1';
-	$result = preg_match($reg, $url);
-
-	// print_r($result);
-
-	if ( $result != null ) :
-	    $newurl = preg_replace($reg, $subst, $url);
-
-	    print_r($newurl);
-
-	    wp_redirect( $newurl, 301 ); 
-	    exit;
-
-	endif;
-     
-}
-add_action( 'template_redirect', 'getOutYouFreakinBot' );
 ?>
