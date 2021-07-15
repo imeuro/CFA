@@ -516,7 +516,7 @@ add_filter( 'upload_mimes', 'CFA_mime_types' );
 // /cfa/wordpress/wp-includes/css/dist/block-library/style.min.css?ver=5.5.3
 // /cfa/CFA-content/plugins/wysija-newsletters/css/validationEngine.jquery.css?ver=2.14
 function remove_block_library_css() {
-//wp_dequeue_style( 'wp-block-library' ); 
+wp_dequeue_style( 'wp-block-library' ); 
 wp_dequeue_style( 'validate-engine-css' ); 
 }
 add_action( 'wp_enqueue_scripts', 'remove_block_library_css' );

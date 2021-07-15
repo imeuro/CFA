@@ -59,6 +59,13 @@ endif;
       <noscript>
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>">
       </noscript>
+
+      <?php if (is_single()) : ?>
+        <link rel="preload" href="https://www.conceptualfinearts.com/cfa/wordpress/wp-includes/css/dist/block-library/style.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+        <noscript>
+          <link rel="stylesheet" href="https://www.conceptualfinearts.com/cfa/wordpress/wp-includes/css/dist/block-library/style.min.css">
+        </noscript>
+      <?php endif; ?>
       
       <?php wp_head(); ?>
   </head>
