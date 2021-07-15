@@ -24,7 +24,7 @@ function getOutYouFreakinBot() {
 	if ( $result != null ) :
 	    $newurl = preg_replace($reg, $subst, $url);
 
-	    print_r($newurl);
+	    // print_r($newurl);
 
 	    wp_redirect( $newurl, 301 ); 
 	    exit;
