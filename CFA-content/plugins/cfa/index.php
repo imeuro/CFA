@@ -28,15 +28,17 @@ function get_langswitcherDOM() {
 		// var_dump($translationURL);
 		// var_dump($post);
 
-		if ( 'cfa_translations' == get_post_type() || $post->post_parent == '95535' ) :
-			if ($translationID == null) { $translationURL = home_url('/'); } // No translation -> link to home ENG
-			$ldom .= '<li><a href="'.$translationURL.'" data-lang="EN">EN</a>';
-			$ldom .= '<span data-lang="IT">IT</span></li>';
-		else : 
-			if ($translationID == null) { $translationURL = home_url('/it/'); } // No translation ->link to home ITA
-			$ldom .= '<li><span data-lang="EN">EN</span>';
-			$ldom .= '<a href="'.$translationURL.'" data-lang="IT">IT</a></li>';
-		endif;
+		if ( $translationID !== null ) {
+			if ( 'cfa_translations' == get_post_type() || $post->post_parent == '95535' ) :
+				$ldom .= '<li><a href="'.$translationURL.'" data-lang="EN">EN</a>';
+				$ldom .= '<span data-lang="IT">IT</span></li>';
+			else : 
+				$ldom .= '<li><span data-lang="EN">EN</span>';
+				$ldom .= '<a href="'.$translationURL.'" data-lang="IT">IT</a></li>';
+			endif;
+		} else {
+			return;
+		}
 	}
 	return $ldom;
 }
