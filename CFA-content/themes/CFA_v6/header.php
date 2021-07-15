@@ -27,7 +27,7 @@ endif;
 
       <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/SometimesTimes-Regular.woff2" as="font" type="font/woff2" crossorigin>
       <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/NHaasGroteskDSStd-55Rg.woff2" as="font" type="font/woff2" crossorigin>
-      <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/js/swiper.min.css" as="style">
+      <!-- <link rel="preload" href="<?php // echo get_template_directory_uri(); ?>/js/swiper.min.css" as="style"> -->
 
       <link rel="preconnect" href="https://www.googletagmanager.com">
 
