@@ -32,13 +32,14 @@ while (have_posts()) : the_post();
                 <a href="<?php the_permalink(); ?>" class="left">
                   <?php
                   // check if the post has a Post Thumbnail assigned to it.
+                  $ll = '';
+                  if ($postnum>2) { $ll = ' loading="lazy"'; }
                   if ( has_post_thumbnail() ) {
                     $imgsrc =  wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large' );
-                    echo '<img src="'.$imgsrc[0].'" loading="lazy" />';
                   } else {
                     $imgsrc =  wp_get_attachment_image_src($first_attachment->ID, 'large' );
-                    echo '<img src="'.$imgsrc[0].'" loading="lazy" />';
                   }
+                  echo '<img src="'.$imgsrc[0].'"'.$ll.' />';
                   ?>
                   <div class="pinbin-copy">
                     <p>
