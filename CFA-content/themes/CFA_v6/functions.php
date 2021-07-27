@@ -14,7 +14,8 @@
 // of posts written *BEFORE 2018/03/15*
 function getOutYouFreakinBot() {
 	
-	$reg = '/\/it\/((20[0-1][0-7]|2017)|(2018\/([01]([0-2])\/[0-2][0-4])))/';
+	// $reg = '/\/it\/((20[0-1][0-7]|2017)|(2018\/([01]([0-2])\/[0-2][0-4])))/';
+	$reg = '/\/it\/((20[0-1][0-7]|2017))/';
 	$url = $_SERVER["REQUEST_URI"];
 	$subst = '/$1';
 	$result = preg_match($reg, $url);
