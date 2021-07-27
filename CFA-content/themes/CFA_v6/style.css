@@ -338,10 +338,10 @@ figure.wp-block-gallery,
     max-width: 100%;
     height: auto;
 }
-.wp-block-image.alignfull img,
-.wp-block-image.alignwide img,
-.wp-block-cover.alignfull,
-.wp-block-cover-image.alignfull,
+.wp-block-cover .wp-block-image.alignfull img,
+.wp-block-cover .wp-block-image.alignwide img,
+.wp-block-cover .wp-block-cover.alignfull,
+.wp-block-cover .wp-block-cover-image.alignfull,
 .alignwide,
 .alignfull {
   width:  100vw;
