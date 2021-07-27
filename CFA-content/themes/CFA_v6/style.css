@@ -350,6 +350,11 @@ figure.wp-block-gallery,
   left: calc(50% - 50vw);
 }
 
+.wp-block-media-text p,
+.wp-block-cover p,
+.wp-block-cover-image p {
+  line-height: 1.675;
+}
 .wp-block-cover p,
 .wp-block-cover-image p {
     max-width: 640px;
