@@ -50,7 +50,7 @@ endif;
                 url('<?php echo get_template_directory_uri(); ?>/fonts/SometimesTimes-Regular.svg#SometimesTimes-Regular') format('svg');
             font-weight: normal;
             font-style: normal;
-            font-display: swap;
+            font-display: optional;
         }
         <?php include( get_template_directory().'/css/critical.min.css') ?>
       </style>
