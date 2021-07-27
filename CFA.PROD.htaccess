@@ -1,0 +1,369 @@
+# BEGIN YOAST REDIRECTS
+<IfModule mod_rewrite.c>
+RewriteEngine On
+Redirect 301 "/cfa/gallery-residency-program" "/cfa/gallery-visiting-program"
+Redirect 301 "/cfa/2019/04/26/hasseb-ahmed-artist-luigi-russolo-rivolta" "/cfa/2019/04/26/haseeb-ahmed-artist-luigi-russolo-rivolta"
+Redirect 301 "/cfa/2019/05/02/roman-stanczak-a-flight-from-venice" "/cfa/2019/05/02/roman-stanczak-flight-venice-biennale"
+Redirect 301 "/cfa/gallery-visiting-program" "/cfa/gallery-visiting-programme"
+Redirect 301 "/cfa/it/2019/09/15/the-free-work-of-karel-martens" "/cfa/it/2019/09/15/karel-martens-artista-graphic-designer"
+Redirect 301 "/cfa/it/2019/09/23/mona-osman-artist" "/cfa/it/2019/09/23/mona-osman-artista-collezione-maramotti"
+Redirect 301 "/cfa/2015/03/28/restoration-alchemy-jackson-pollock" "/cfa/2015/03/28/the-restoration-of-alchemy-reveals-the-truth-about-jackson-pollock"
+Redirect 301 "/cfa/it/2019/06/04/orpheus-cycle-grechetto-milan" "/cfa/it/2019/06/04/sala-grechetto-milano"
+Redirect 301 "/cfa/it/2019/05/30/zoe-williams-from-the-riva-tunnel-to-the-sunday-fantasy" "/cfa/it/2019/05/30/zoe-williams-artista-riva-tunnel-sunday-fantasy"
+Redirect 301 "/cfa/it/2019/05/27/andrea-del-verrocchio-workshop-florence" "/cfa/it/2019/05/27/andrea-del-verrocchio-palazzo-strozzi"
+Redirect 301 "/cfa/it/2015/03/28/the-restoration-of-alchemy-reveals-the-truth-about-jackson-pollock" "/cfa/2015/03/28/the-restoration-of-alchemy-reveals-the-truth-about-jackson-pollock"
+Redirect 301 "/cfa/it/2018/11/14/jill-mulleady-artista-nue" "/cfa/it/2018/11/14/jill-mulleady"
+Redirect 301 "/cfa/sitemap.xml" "/cfa/sitemap_index.xml"
+Redirect 301 "/cfa/2017/03/12/who-is-lavinia-calza-a-first-time-interview-with-art-agent-who-is-shaping-kenyan-contemporary-art" "/cfa/2017/03/12/lavinia-calza-interview"
+Redirect 301 "/cfa/2016/09/19/interview-cfa-meets-collector-michael-hilti-at-the-kunstmuseum-liechtenstein" "/cfa/2016/09/19/michael-hilti-interview-liechtenstein"
+Redirect 301 "/cfa/2016/09/19/interview-cfa-meets-collector-" "/cfa/2016/09/19/michael-hilti-interview-liechtenstein"
+Redirect 301 "/cfa/2016/06/07/berlin-biennale-2016-last-good" "/cfa/2016/06/07/berlin-biennale-2016-goodbye-post-internet-label"
+Redirect 301 "/cfa/2014/01/20/a-dialogue-with-katja-novitskova" "/cfa/2017/09/29/katja-novitskova-interveiw"
+Redirect 301 "/cfa/2017/06/19/lorenz-helbling-interview-chinese-contemporary-art-new-wave/feed" "/cfa/2017/06/19/lorenz-helbling-interview"
+Redirect 301 "/cfa/2017/05/13/venice-biennale-2017-are-you-discovering-or-being-discovered-by-contemporary-art" "/cfa/2017/05/13/venice-biennale-2017"
+Redirect 301 "/cfa/2015/03/03/focus-on-doha-a-dialogue-with-emin-balcioglu-the-meta-curator-who-is-behind-the-museums-blossoming" "/cfa/2015/03/03/emin-balcioglu-interview"
+Redirect 301 "/cfa/2014/01/09/at-the-show-with-the-artist-diego-marcon-visits-felix-vallotton-at-grand-palais-in-paris" "/cfa/2014/01/09/diego-marcon"
+Redirect 301 "/cfa/2016/06/07/berlin-biennale-2016-last-goodbye-to-the-prematurely-dead-post-internet-label" "/cfa/2016/06/07/berlin-biennale-2016-goodbye-post-internet-label"
+Redirect 301 "/cfa/2016/04/01/i-have-doubts-that-the-met-should-be-involved-in-contemporary-art-an-interview-with-richard-feigen" "/cfa/2016/04/01/richard-feigen"
+Redirect 301 "/cfa/2017/03/27/are-you-attending-milans-art-week-here-some-locals-you-may-like-to-meet" "/cfa/2017/03/27/motel-lucie"
+Redirect 301 "/cfa/2016/01/15/comfortably-unaffected-fashion-an-interview-with-art-collector-giuseppe-iannaccone" "/cfa/2016/01/15/giuseppe-iannaccone-interview"
+Redirect 301 "/cfa/2017/12/13/classic-african-oceanic-art-market" "/cfa/2017/12/13/classic-oceanic-african-art-market"
+Redirect 301 "/cfa/it/2018/12/06/grazyna-kulczyk-interview-susch-muzeum" "/cfa/it/2018/12/06/grazyna-kulczyk-intervista-con-la-collezionista"
+Redirect 301 "/cfa/it/2014/02/20/fortunato-depero-opens-the-new-centre-for-italian-modern-art-in-new-york" "/cfa/2014/02/20/fortunato-depero-opens-the-new-centre-for-italian-modern-art-in-new-york"
+Redirect 301 "/cfa/2014/05/23/rachel-whiteread-on-giorgio-morandi-another-british-artists-pays-tribute-to-the-painters-selfishness/rachel-whiteread-study-for-room-museo-morandi-bologna" "/cfa/2014/05/23/rachel-whiteread-on-giorgio-morandi-another-british-artists-pays-tribute-to-the-painters-selfishness"
+Redirect 301 "/cfa/it/2019/01/23/masolino-collegiate-castiglione-olona-lombardy" "/cfa/it/2019/01/23/masolino-castiglione-olona-collegiata"
+Redirect 301 "/cfa/it/2018/10/24/rediscovering-the-mediterranean-finally-a-show-from-an-european-perspective" "/cfa/it/2018/10/24/pittura-europea"
+Redirect 301 "/cfa/it/2019/02/14/gian-giacomo-poldi-pezzoli-art-collector" "/cfa/it/2019/02/14/gian-giacomo-poldi-pezzoli-collezionista"
+Redirect 301 "/cfa/it/2019/07/05/neo-rauch-interview" "/cfa/it/2019/07/05/neo-rauch-intervista"
+Redirect 301 "/cfa/it/2019/09/11/duke-of-devonshire-interview" "/cfa/it/2019/09/11/collezionista-duca-devonshire-intervista"
+Redirect 301 "/cfa/it/2019/12/11/michaela-eichwald-dependance" "/cfa/it/2019/12/11/michaela-eichwald-artista"
+Redirect 301 "/cfa/it/2019/12/29/james-bradburne-e-brera-intervista" "/cfa/it/2019/12/29/james-bradburne-a-brera-intervista"
+Redirect 301 "/cfa/2020/03/19/museum-set-ups-is-now-the-time-to-rethink-them" "/cfa/2020/03/19/museum-displays-is-now-the-time-to-rethink-them"
+Redirect 301 "/cfa/2020/03/23/kaloki-nyamai-stellenboschtriennale" "/cfa/2020/03/23/kaloki-nyamai-stellenbosch-triennale"
+Redirect 301 "/sections/exhibitions" "/cfa/sections/exhibitions"
+Redirect 301 "/cfa/it/2020/04/14/animali-selvaggi-rinascimentali" "/cfa/it/2020/04/14/animali-selvatici-rinascimentali"
+Redirect 301 "/cfa/2015/04/28/test-digital-fresco" "/cfa/2015/04/28/global-cows-2020"
+Redirect 301 "/cfa/sections/exhibitions" "/cfa/sections/online-exhibitions"
+Redirect 301 "/cfa/it/2020/06/29/neo-artigiani-pittura-decorativa-alla-scuola-van-der-kelen-logelain" "/cfa/it/2020/06/29/van-der-kelen-logelain"
+Redirect 301 "/cfa/2020/08/23/villa-lena-evastafieva-jerome-hadey" "/cfa/2020/08/23/villa-lena-evstafieva-jerome-hadey"
+Redirect 301 "/cfa/it/2020/08/23/villa-lena-evastafieva-interview" "/cfa/it/2020/08/23/villa-lena-evstafieva-interview"
+Redirect 301 "/cfa/it/2020/12/07/originale-o-falso-una-guida-pratica-ispirata-da-due-opere-di-liubov-popova-e-una-mostra-al-ludwig" "/cfa/it/2020/12/07/falsi-darte-introduzione-alle-analisi-scientifiche"
+Redirect 301 "/cfa/it/2016/12/12/giangiacomo-rossetti-artista" "/cfa/it/2017/12/12/giangiacomo-rossetti-artista"
+Redirect 301 "/cfa/it/2017/12/12/giangiacomo-rossetti-artista" "/cfa/it/2020/12/12/giangiacomo-rossetti-artista"
+Redirect 301 "/cfa/karel-martens" "/cfa/gallery-visiting-programme/karel-martens"
+Redirect 301 "/cfa/la-scultura-senza-qualita" "/cfa/gallery-visiting-programme/la-scultura-senza-qualita"
+Redirect 301 "/cfa/notte-di-ferragosto" "/cfa/gallery-visiting-programme/notte-di-ferragosto"
+Redirect 301 "/cfa/revelation-theater" "/cfa/gallery-visiting-programme/revelation-theater"
+Redirect 301 "/cfa/esempio-mostra" "/cfa/gallery-visiting-programme/esempio-mostra"
+Redirect 301 "/cfa/the-soul-of-the-desert" "/cfa/gallery-visiting-programme/the-soul-of-the-desert"
+Redirect 301 "/cfa/where-do-streams-run-to" "/cfa/gallery-visiting-programme/where-do-streams-run-to"
+Redirect 301 "/cfa/patrick-welde" "/cfa/gallery-visiting-programme/patrick-welde"
+Redirect 301 "/cfa/it/2018/12/19/berenice-olmedo-artist" "/cfa/it/2018/12/19/berenice-olmedo-artista-messicana"
+Redirect 301 "/cfa/it/2019/10/20/lorenza-longhi-artist-fanta-mln" "/cfa/it/2019/10/20/lorenza-longhi-artista"
+Redirect 301 "/cfa/it/2018/02/15/roberto-casamonti-collection-interview" "/cfa/it/2018/02/15/roberto-casamonti-collezione"
+Redirect 301 "/cfa/it/2018/02/20/louis-fratino" "/cfa/it/2018/02/20/louis-fratino-intervista"
+Redirect 301 "/cfa/it/2019/04/16/with-silvio-wolf-tintoretto-baselitz" "/cfa/it/2019/04/16/al-met-con-silvio-wolf-tintoretto-baselitz"
+Redirect 301 "/cfa/it/2018/02/23/beatrice-de-gelder" "/cfa/it/2018/02/23/beatrice-de-gelder-neuroscienze-arte"
+Redirect 301 "/cfa/it/2019/04/08/walter-pfeiffer-an-interview-with-queer-photographys-forerunner" "/cfa/it/2019/04/08/walter-pfeiffer-intervista-pioniere-queer-photography"
+Redirect 301 "/cfa/it/2019/04/01/ibrahim-mahama-artist" "/cfa/it/2019/04/01/ibrahim-mahama-artista-tamale"
+Redirect 301 "/cfa/it/2018/02/27/manuel-solano" "/cfa/it/2018/02/27/manuel-solano-intervista"
+Redirect 301 "/cfa/it/2019/03/11/le-corbusier-private-studio-apartment" "/cfa/it/2019/03/11/le-corbusier-casa-studio"
+Redirect 301 "/cfa/it/2019/03/26/srijon-chowdhury" "/cfa/it/2019/03/26/srijon-chowdhury-artista"
+Redirect 301 "/cfa/it/2019/03/18/cleo-fariselli-artist" "/cfa/it/2019/03/18/cleo-fariselli-artista"
+Redirect 301 "/cfa/it/2019/03/04/paul-sochacki-artist" "/cfa/it/2019/03/04/paul-sochacki-artista"
+Redirect 301 "/cfa/it/2018/03/01/italy-general-elections-2018-what-are-the-parties-saying-about-the-arts" "/cfa/it/2018/03/01/elezioni-2018"
+Redirect 301 "/cfa/it/2018/03/06/philippe-van-snick-interview" "/cfa/it/2018/03/06/philippe-van-snick-intervista"
+Redirect 301 "/cfa/it/2018/03/09/tefaf-2018-maastricht" "/cfa/it/2018/03/09/tefaf-edizione-2018"
+Redirect 301 "/cfa/it/2018/03/13/rembrandt-soolmans-coppit" "/cfa/it/2018/03/13/rembrandt-soolmans-coppit-doppio-ritratto"
+Redirect 301 "/cfa/it/2018/03/16/alice-guareschi" "/cfa/it/2018/03/16/alice-guareschi-artista"
+Redirect 301 "/cfa/it/2019/02/26/maxwell-alexandre-artist" "/cfa/it/2019/02/26/maxwell-alexandre-artista"
+Redirect 301 "/cfa/it/2019/02/19/jannis-marwitz-writings" "/cfa/it/2019/02/19/jannis-marwitz-tre-scritti"
+Redirect 301 "/cfa/it/2018/03/20/new-museum-triennial-2018" "/cfa/it/2018/03/20/new-museum-triennial-edizione-2018"
+Redirect 301 "/cfa/it/2019/02/08/muntean-rosenblum-artist-intagram" "/cfa/it/2019/02/08/muntean-rosenblum-artista-instagram"
+Redirect 301 "/cfa/it/2019/02/05/paul-eluard-artist" "/cfa/it/2019/02/05/paul-eluard-artista"
+Redirect 301 "/cfa/it/2019/02/01/sanam-khatibi" "/cfa/it/2019/02/01/sanam-khatibi-artista"
+Redirect 301 "/cfa/it/2018/03/22/mantegna-and-bellini-querini-stampalia" "/cfa/it/2018/03/22/mantegna-bellini-querini-stampalia"
+Redirect 301 "/cfa/it/2018/03/22/mantegna-bellini-querini-stampalia" "/cfa/it/2018/03/22/mantegna-bellini-querini-stampalia-venezia"
+Redirect 301 "/cfa/it/2019/01/28/art-collector-must-reads" "/cfa/it/2019/01/28/7-libri-collezionista-arte-deve-leggere"
+Redirect 301 "/cfa/it/2018/03/27/sam-falls-trento" "/cfa/it/2018/03/27/sam-falls-galleria-civica-trento"
+Redirect 301 "/cfa/it/2019/01/11/jan-domicz-on-jean-prouve" "/cfa/it/2019/01/11/jan-domicz-incontra-jean-prouve"
+Redirect 301 "/cfa/it/2019/01/08/museo-etrusco" "/cfa/it/2019/01/08/milano-museo-etrusco"
+Redirect 301 "/cfa/it/2018/12/11/enrico-crispolti-interview" "/cfa/it/2018/12/11/enrico-crispolti-intervista"
+Redirect 301 "/cfa/it/2018/03/30/the-art-of-rivalry-sebastian-smee" "/cfa/it/2018/03/30/un-libro-da-leggere-th"
+Redirect 301 "/cfa/it/2018/12/03/how-we-chose-when-it-comes-to-buy-art" "/cfa/it/2018/12/03/come-scegliere-opera-arte"
+Redirect 301 "/cfa/it/2018/03/30/un-libro-da-leggere-th" "/cfa/it/2018/03/30/rivalita-tra-artisti-libro"
+Redirect 301 "/cfa/it/2018/04/05/why-the-does-juan-sanchez-cotans-cabbage-look-so-contemporary" "/cfa/it/2018/04/05/juan-sanchez-cotans"
+Redirect 301 "/cfa/it/2018/11/27/laura-lima-and-the-art-of-political-suspension" "/cfa/it/2018/11/27/laura-lima-intervista-con-lartista"
+Redirect 301 "/cfa/it/2018/04/09/friend-of-a-friend-warsaw" "/cfa/it/2018/04/09/friend-of-a-friend-varsavia"
+Redirect 301 "/cfa/it/2018/04/16/albania-contemporary-art" "/cfa/it/2018/04/16/arte-contemporanea-albanese"
+Redirect 301 "/cfa/it/2018/04/23/top-10-art-movies" "/cfa/it/2018/04/23/migliori-film-darte"
+Redirect 301 "/cfa/it/2018/04/26/gaudenzio-ferrari" "/cfa/it/2018/04/26/gaudenzio-ferrari-mostra-monografica"
+Redirect 301 "/cfa/it/2018/05/04/art-monte-carlo" "/cfa/it/2018/05/04/art-monte-carlo-2018"
+Redirect 301 "/cfa/it/2018/05/08/titian-assumption-restoration-save-venice" "/cfa/it/2018/05/08/tiziano-assunzione-save-venice"
+Redirect 301 "/cfa/it/2018/05/10/dakart-biennial-of-african-art-2018" "/cfa/it/2018/05/10/dakart-bienniale-arte-africana-contemporanea-2018"
+Redirect 301 "/cfa/it/2018/05/15/a-farewell-to-franz-staehler" "/cfa/it/2018/05/15/franz-staehler-artista"
+Redirect 301 "/cfa/it/2018/05/21/shining-a-light-into-adam-gordons-darkness" "/cfa/it/2018/05/21/adam-gordons-artista"
+Redirect 301 "/cfa/it/2018/05/24/boris-vervoordt-interview" "/cfa/it/2018/05/24/boris-vervoordt-intervista"
+Redirect 301 "/cfa/it/2018/05/30/diego-marcon-and-the-ludwig-paradigma" "/cfa/it/2018/05/30/diego-marcon-ludwig"
+Redirect 301 "/cfa/it/2018/06/01/does-site-specific-painting-exist-nicolas-party-questions-rene-magritte" "/cfa/it/2018/06/01/nicolas-party-rene-magritte"
+Redirect 301 "/cfa/it/2018/06/05/alberto-bonisoli-promises-more-money-for-italian-culture" "/cfa/it/2018/06/05/alberto-bonisoli-ministro-beni-culturali"
+Redirect 301 "/cfa/it/2018/06/08/david-thuku" "/cfa/it/2018/06/08/david-thuku-artista"
+Redirect 301 "/cfa/it/2018/06/13/berlin-biennale-2018" "/cfa/it/2018/06/13/berlin-biennale-edizione-2018"
+Redirect 301 "/cfa/it/2018/06/19/the-art-of-the-blockchain" "/cfa/it/2018/06/19/arte-blockchain"
+Redirect 301 "/cfa/it/2018/06/22/philippe-model-musee-valence" "/cfa/it/2018/06/22/philippe-model-museo-valence"
+Redirect 301 "/cfa/it/2018/06/27/lucien-bilinelli-interview" "/cfa/it/2018/06/27/lucien-bilinelli-collezionista"
+Redirect 301 "/cfa/it/2018/06/29/francesco-joao-scavarda-interview" "/cfa/it/2018/06/29/francesco-joao-scavarda-intervista"
+Redirect 301 "/cfa/it/2018/07/10/kasper-bosmans" "/cfa/it/2018/07/10/kasper-bosmans-artista"
+Redirect 301 "/cfa/it/2018/07/16/christian-jankowski-petzel" "/cfa/it/2018/07/16/christian-jankowski-artista"
+Redirect 301 "/cfa/it/2018/08/09/jr-artist-interview" "/cfa/it/2018/08/09/jr-artist-intervista"
+Redirect 301 "/cfa/it/2018/08/14/top-art-nouveau-dealer-robert-zehil-smiles-at-china-a-seminal-interview" "/cfa/it/2018/08/14/robert-zehil-liberty-collezionista"
+Redirect 301 "/cfa/it/2018/08/22/walter-swennen-free-riding-from-wiels-to-la-triennale" "/cfa/it/2018/08/22/walter-swennen-artista"
+Redirect 301 "/cfa/it/2018/08/29/lutz-guggisberg-collezione-maramotti" "/cfa/it/2018/08/29/lutz-guggisberg-maramotti"
+Redirect 301 "/cfa/it/2018/09/19/mantegna-and-bellini-at-the-ng-sparks-debate-in-italy" "/cfa/it/2018/09/19/mantegna-bellini-national-gallery"
+Redirect 301 "/cfa/it/2018/09/26/rodrigo-hernandez-at-pivo-the-abstract-nun-looks-sexy" "/cfa/it/2018/09/26/rodrigo-hernandez-pivo"
+Redirect 301 "/cfa/it/2018/10/03/elke-lente-filip-gilissen-couturissimo-pentahotel" "/cfa/it/2018/10/03/elke-lente-filip-gilissen"
+Redirect 301 "/cfa/it/2018/10/08/zeitz-mocaa" "/cfa/it/2018/10/08/zeitz-mocaa-cape-town"
+Redirect 301 "/cfa/it/2018/10/18/sam-falls-303" "/cfa/it/2018/10/18/sam-falls-natura"
+Redirect 301 "/cfa/it/2018/10/24/pittura-europea-tra-le-due-guerre" "/cfa/it/2018/10/24/pittura-europea"
+Redirect 301 "/cfa/it/2018/10/30/balthus-beyeler-honors-klossowski-the-younger" "/cfa/it/2018/10/30/balthus-beyeler"
+Redirect 301 "/cfa/it/2018/11/02/b-wurtz-interview" "/cfa/it/2018/11/02/b-wurtz-intervista"
+Redirect 301 "/cfa/it/2018/11/09/the-top-ten-art-biopics" "/cfa/it/2018/11/09/migliori-biografie-dartista-film"
+Redirect 301 "/cfa/it/2018/11/14/jill-mulleady" "/cfa/it/2018/11/14/jill-mulleady-neu"
+Redirect 301 "/cfa/it/2018/11/27/laura-lima-intervista-con-lartista" "/cfa/it/2018/11/27/laura-lima-intervista"
+Redirect 301 "/cfa/it/2018/12/03/come-scegliere-opera-arte" "/cfa/it/2018/12/03/colelzionare-arte"
+Redirect 301 "/cfa/it/2018/12/06/grazyna-kulczyk-intervista-con-la-collezionista" "/cfa/it/2018/12/06/grazyna-kulczyk-intervista"
+Redirect 301 "/cfa/it/2018/12/11/enrico-crispolti-intervista" "/cfa/it/2018/12/11/enrico-crispolti"
+Redirect 301 "/cfa/it/2019/06/06/heinz-frank-artist" "/cfa/it/2019/06/06/heinz-frank-artista"
+Redirect 301 "/cfa/it/2019/07/11/artist-books-publishers" "/cfa/it/2019/07/11/editori-libri-artista-migliori-in-europa"
+Redirect 301 "/cfa/it/2020/02/13/michael-callies" "/cfa/it/2020/02/13/michael-callies-dependance-intervista"
+Redirect 301 "/cfa/it/2019/10/07/isabella-deste-art-collector" "/cfa/it/2019/10/07/isabella-deste-intervista"
+Redirect 301 "/cfa/it/2019/09/03/contemporary-pictorial-cycles" "/cfa/it/2019/09/03/introduzione-cicli-pittorici-contemporanei"
+Redirect 301 "/cfa/it/2019/10/30/albert-lutz-on-art-restitution" "/cfa/it/2019/10/30/albert-lutz-restituzione-beni-artistici"
+Redirect 301 "/cfa/it/2018/12/19/berenice-olmedo-artista-idealista" "/cfa/it/2018/12/19/berenice-olmedo-artista-messicana"
+Redirect 301 "/cfa/it/2019/02/05/paul-eluard-artista-oltre-che-poeta" "/cfa/it/2019/02/05/paul-eluard-artista"
+Redirect 301 "/cfa/it/2019/09/03/pittura-monumentale-contemporanea" "/cfa/it/2019/09/03/introduzione-cicli-pittorici-contemporanei"
+RedirectMatch 301 cfa/it/sections/(.*) cfa/sections/$1
+Redirect 301 "/cfa/2018/11/14/jill-mulleady-artista-nue" "/cfa/2018/11/14/jill-mulleady"
+Redirect 410 "/cfa/tag/giovan-paolo-lomazzo"
+Redirect 301 "/cfa/it/2019/01/11/jan-domicz-artista-incontra-jean-prouve" "/cfa/it/2019/01/11/jan-domicz-incontra-jean-prouve"
+Redirect 301 "/cfa/it/2018/01/16/condo-2018-london" "/cfa/2018/01/16/condo-2018-london"
+Redirect 301 "/cfa/it/chi-siamo" "/cfa/about-us"
+Redirect 301 "/cfa/tag/michelangelo" "/cfa/tag/michelangelo-buonarroti"
+Redirect 410 "/cfa/tag/robert-morris"
+Redirect 301 "/cfa/it/2018/10/19/paris-internationale-fiera-arte-2018-parigi" "/cfa/it/2018/10/19/paris-internationale-edizione-2018"
+RedirectMatch 301 cfa/category/(.*) cfa/sections/$1
+Redirect 301 "/cfa/it/2018/01/29/brafa-2018-brussels" "/cfa/2018/01/29/brafa-2018-brussels"
+Redirect 301 "/cfa/it/2019/01/08/museo-etrusco-fondazione-luigi-rovati-milano" "/cfa/it/2019/01/08/milano-museo-etrusco"
+Redirect 301 "/cfa/it/2019/03/18/cleo-fariselli-collezione-iannaccone" "/cfa/it/2019/03/18/cleo-fariselli-artista"
+Redirect 301 "/cfa/it/2019/04/26/haseeb-ahmed-artista-la-rivolta-russolo" "/cfa/it/2019/04/26/haseeb-ahmed-artist-luigi-russolo-rivolta"
+Redirect 410 "/cfa/tag/hilma-af-klint"
+Redirect 301 "/cfa/it/2019/04/16/silvio-wolf-tintoretto-baselitz" "/cfa/it/2019/04/16/al-met-con-silvio-wolf-tintoretto-baselitz"
+Redirect 301 "/cfa/2021/07/26/joseph-yoakum-and-adventurous-facts" "/cfa/2021/07/26/joseph-yoakum-artist"
+</IfModule>
+# END YOAST REDIRECTS
+# Fix for the /wp-admin question.
+Redirect 301 "/cfa/wp-admin" "/cfa/wordpress/wp-admin"
+
+RedirectMatch 301 ^/cfa/it/tag/(.*) /cfa/tag/$1
+RedirectMatch 301 ^/cfa/it/sections/(.*) /cfa/sections/$1
+RedirectMatch 301 ^/cfa/category/(.*) /cfa/sections/$1
+RedirectMatch 301 ^/cfa/wp-content/uploads/(.*) /cfa/CFA-content/uploads/$1
+# traduzioni inesistenti (pre 2018/03/15) -> vedi functions.php
+#RedirectMatch 301 /it/((20[0-1][0-7]|2017)|(2018\/([01]([0-2])\/[0-2][0-4]))) /$1
+
+# START PHP VERSION CHANGE forced by SG Optimizer
+# END PHP VERSION CHANGE
+# HTTPS forced by SG-Optimizer
+<IfModule mod_rewrite.c>
+    RewriteCond %{HTTP_HOST} !^www\. [NC]
+    RewriteRule ^ https://www.%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+    RewriteCond %{HTTP:X-Forwarded-Proto} !https
+    RewriteCond %{HTTPS} off
+    RewriteRule ^ https://%{HTTP_HOST}%{REQUEST_URI} [L,R=301]
+</IfModule>
+# END HTTPS
+# BEGIN WordPress
+# The directives (lines) between "BEGIN WordPress" and "END WordPress" are
+# dynamically generated, and should only be modified via WordPress filters.
+# Any changes to the directives between these markers will be overwritten.
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteRule .* - [E=HTTP_AUTHORIZATION:%{HTTP:Authorization}]
+RewriteBase /cfa/
+RewriteRule ^index\.php$ - [L]
+RewriteCond %{REQUEST_FILENAME} !-f
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /cfa/index.php [L]
+</IfModule>
+
+# END WordPress
+
+
+# ----------------------------------------------------------------------
+# WordPress security
+# ----------------------------------------------------------------------
+
+# protect the htaccess file
+
+#<files .htaccess>
+#order allow,deny
+#deny from all
+#</files>
+
+# protect wpconfig.php
+
+<files wp-config.php>
+order allow,deny
+deny from all
+</files>
+
+# protect xmlrpc.php
+<FilesMatch "^(xmlrpc\.php)">
+order allow,deny
+#Allow from x.x.x.x
+deny from all
+</FilesMatch>
+
+# ----------------------------------------------------------------------
+# 301 redirects
+# ----------------------------------------------------------------------
+
+# redirect 301 /this/page http://www.mixd.co.uk/to/here
+#RedirectMatch 301 ^/containing.*$ http://www.mixd.co.uk/to/here
+
+
+# ----------------------------------------------------------------------
+# Gzip compression
+# ----------------------------------------------------------------------
+
+
+
+# ----------------------------------------------------------------------
+# Expires headers (for better cache control)
+# ----------------------------------------------------------------------
+
+# These are pretty far-future expires headers.
+# They assume you control versioning with filename-based cache busting
+# Additionally, consider that outdated proxies may miscache
+#   www.stevesouders.com/blog/2008/08/23/revving-filenames-dont-use-querystring/
+
+# If you don't use filenames to version, lower the CSS and JS to something like
+# "access plus 1 week".
+
+<IfModule mod_expires.c>
+  ExpiresActive On
+
+ # Images
+  ExpiresByType image/jpeg "access plus 1 year"
+  ExpiresByType image/gif "access plus 1 year"
+  ExpiresByType image/png "access plus 1 year"
+  ExpiresByType image/webp "access plus 1 year"
+  ExpiresByType image/svg+xml "access plus 1 year"
+  ExpiresByType image/x-icon "access plus 1 year"
+
+  # Video
+  ExpiresByType video/webm "access plus 1 year"
+  ExpiresByType video/mp4 "access plus 1 year"
+  ExpiresByType video/mpeg "access plus 1 year"
+
+  # Fonts
+  ExpiresByType font/ttf "access plus 1 year"
+  ExpiresByType font/otf "access plus 1 year"
+  ExpiresByType font/woff "access plus 1 year"
+  ExpiresByType font/woff2 "access plus 1 year"
+  ExpiresByType application/font-woff "access plus 1 year"
+
+  # CSS, JavaScript
+  ExpiresByType text/css "access plus 1 month"
+  ExpiresByType text/javascript "access plus 1 month"
+  ExpiresByType application/javascript "access plus 1 month"
+
+  # Others
+  ExpiresByType application/pdf "access plus 1 month"
+  ExpiresByType image/vnd.microsoft.icon "access plus 1 year"
+</IfModule>
+
+
+# ----------------------------------------------------------------------
+# Better website experience for IE users
+# ----------------------------------------------------------------------
+
+# Force the latest IE version, in various cases when it may fall back to IE7 mode
+#  github.com/rails/rails/commit/123eb25#commitcomment-118920
+# Use ChromeFrame if it's installed for a better experience for the poor IE folk
+
+<IfModule mod_headers.c>
+  Header set X-UA-Compatible "IE=Edge"
+  # mod_headers can't match by content-type, but we don't want to send this header on *everything*...
+  <FilesMatch "\.(js|css|gif|png|jpe?g|pdf|xml|oga|ogg|m4a|ogv|mp4|m4v|webm|svg|svgz|eot|ttf|otf|woff|ico|webp|appcache|manifest|htc|crx|oex|xpi|safariextz|vcf)$" >
+    Header unset X-UA-Compatible
+  </FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# Webfont access
+# ----------------------------------------------------------------------
+
+# Allow access from all domains for webfonts.
+# Alternatively you could only whitelist your
+# subdomains like "subdomain.example.com".
+
+<IfModule mod_headers.c>
+  <FilesMatch "\.(ttf|ttc|otf|eot|woff|font.css)$">
+    Header set Access-Control-Allow-Origin "*"
+  </FilesMatch>
+</IfModule>
+
+# ----------------------------------------------------------------------
+# UTF-8 encoding
+# ----------------------------------------------------------------------
+
+# Use UTF-8 encoding for anything served text/plain or text/html
+AddDefaultCharset utf-8
+
+# Force UTF-8 for a number of file formats
+AddCharset utf-8 .atom .css .js .json .rss .vtt .xml
+
+# ----------------------------------------------------------------------
+# Proper MIME type for all files
+# ----------------------------------------------------------------------
+
+# JavaScript
+AddType application/javascript         js jsonp
+AddType application/json               json
+
+# Audio
+AddType audio/ogg                      oga ogg
+AddType audio/mp4                      m4a f4a f4b
+
+# Video
+AddType video/ogg                      ogv
+AddType video/mp4                      mp4 m4v f4v f4p
+AddType video/webm                     webm
+AddType video/x-flv                    flv
+
+# SVG
+AddType     image/svg+xml              svg svgz
+AddEncoding gzip                       svgz
+
+# Webfonts
+AddType application/vnd.ms-fontobject  eot
+AddType application/x-font-ttf         ttf ttc
+AddType font/opentype                  otf
+AddType application/x-font-woff        woff
+
+# Assorted types
+AddType image/x-icon                        ico
+AddType image/webp                          webp
+AddType text/cache-manifest                 appcache manifest
+AddType text/x-component                    htc
+AddType application/xml                     rss atom xml rdf
+AddType application/x-chrome-extension      crx
+AddType application/x-opera-extension       oex
+AddType application/x-xpinstall             xpi
+AddType application/octet-stream            safariextz
+AddType application/x-web-app-manifest+json webapp
+AddType text/x-vcard                        vcf
+AddType application/x-shockwave-flash       swf
+AddType text/vtt                            vtt
+
