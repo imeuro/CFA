@@ -355,8 +355,8 @@ figure.wp-block-gallery,
 .wp-block-cover-image p {
   font-family: 'Sometimes Times';
   font-weight: 900;
-  font-size: 60px;
-  line-height: 1.15;
+  /*font-size: 60px;
+  line-height: 1.15;*/
 }
 .wp-block-cover p,
 .wp-block-cover-image p {
@@ -600,7 +600,7 @@ blockquote {
   line-height: 23px;
   color: #111;
   margin-left: 20px;
-  border-left: 2px solid #FFCC33;
+  border-left: 2px solid #111;
   padding-left: 25px;
   margin-top: 15px;
   margin-bottom: 15px;
