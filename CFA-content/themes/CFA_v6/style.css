@@ -330,7 +330,7 @@ div.wpcf7 input[type="submit"] {
 .pinbin-copy .wp-block-cover,
 .pinbin-copy .wp-block-cover-image,
 .pinbin-copy .wp-block-media-text__media img,
-.pinbin-copy .wp-block-media-text__media video { margin: 60px auto; }
+.pinbin-copy .wp-block-media-text__media video { margin: 25px auto 35px auto; }
 
 .wp-block-gallery figure.wp-block-image { margin: 0 auto; }
 
