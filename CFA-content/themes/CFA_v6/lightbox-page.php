@@ -52,6 +52,28 @@ Template Name: lightbox-page
 	.page-template-lightbox-page .swiper-pagination-bullet-active {
 	    background-color: #FFCC33;
 	}
+	.prevContainer,
+	.nextContainer {
+		display: inline-block;
+    background: transparent;
+    width: 35px;
+    height: 35px;
+    position: absolute;
+    z-index: 10;
+    left: 20px;
+    top: 50%;
+    transform: rotate(45deg);
+    border-bottom: 2px solid #fff;
+    border-left: 2px solid #fff;
+    cursor: pointer;
+	}
+	.nextContainer {
+		left: initial;
+		right: 20px;
+		border: none;
+		border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+	}
 </style>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
    		<article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
