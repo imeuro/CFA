@@ -15,6 +15,8 @@ Template Name: lightbox-page
 	.page-template-lightbox-page .blocks-gallery-grid,
 	.page-template-lightbox-page .wp-block-gallery {
 		display: block;
+		margin: 0;
+		padding: 0;
 	}
 	.page-template-lightbox-page ul.swiper-wrapper {
 	    margin: 0;
