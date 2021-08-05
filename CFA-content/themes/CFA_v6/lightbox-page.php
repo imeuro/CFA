@@ -12,6 +12,10 @@ Template Name: lightbox-page
 	    width: 100vw;
 	    margin: 0;
 	}
+	.page-template-lightbox-page article .container {
+		display: flex;
+		align-items: center;
+	}
 	.page-template-lightbox-page .blocks-gallery-grid,
 	.page-template-lightbox-page .wp-block-gallery {
 		display: block;
@@ -34,6 +38,7 @@ Template Name: lightbox-page
 		max-height: 95vh;
 		max-width: 100vw;
 		width: auto;
+		height: auto;
 		margin: 0 auto;
 	}
 	.page-template-lightbox-page .swiper-slide figcaption {
@@ -52,27 +57,29 @@ Template Name: lightbox-page
 	.page-template-lightbox-page .swiper-pagination-bullet-active {
 	    background-color: #FFCC33;
 	}
-	.prevContainer,
-	.nextContainer {
-		display: inline-block;
-    background: transparent;
-    width: 35px;
-    height: 35px;
-    position: absolute;
-    z-index: 10;
-    left: 20px;
-    top: 50%;
-    transform: rotate(45deg);
-    border-bottom: 2px solid #fff;
-    border-left: 2px solid #fff;
-    cursor: pointer;
-	}
-	.nextContainer {
-		left: initial;
-		right: 20px;
-		border: none;
-		border-top: 2px solid #fff;
-    border-right: 2px solid #fff;
+	@media all and (min-width: 768px) {
+		.prevContainer,
+		.nextContainer {
+			display: inline-block;
+			background: transparent;
+			width: 35px;
+			height: 35px;
+			position: absolute;
+			z-index: 10;
+			left: 20px;
+			top: 50%;
+			transform: rotate(45deg);
+			border-bottom: 2px solid #fff;
+			border-left: 2px solid #fff;
+			cursor: pointer;
+		}
+		.nextContainer {
+			left: initial;
+			right: 20px;
+			border: none;
+			border-top: 2px solid #fff;
+			border-right: 2px solid #fff;
+		}
 	}
 </style>
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
