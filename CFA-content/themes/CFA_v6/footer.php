@@ -38,7 +38,7 @@ src="https://www.facebook.com/tr?id=508657780012788&ev=PageView
 &noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
-
+*/ ?>
 <!-- Google Tag Manager -->
 <script>
 	(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
@@ -51,7 +51,6 @@ src="https://www.facebook.com/tr?id=508657780012788&ev=PageView
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MLKFBX"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
-*/ ?>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-592YDPY59J"></script>
