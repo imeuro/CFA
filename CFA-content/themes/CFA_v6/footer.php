@@ -60,8 +60,48 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-44216326-1');
+  gtag('config', 'UA-44216326-1',
+  	'anonymize_ip': true
+  );
 </script>
 
+<script type="module">
+    import {getCLS, getFCP, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
+    let addWebVitals = () => {
+        getCLS(data => {
+            console.log("coreWebVitals cls",data);
+            gtag('event', 'timing_complete', {
+                'event_category': 'Performance',
+                'name': 'cumulative-layout-shift',
+                'value': Math.round(data.value*1000)
+            });
+        });
+        getFCP(data => {
+            console.log("coreWebVitals fcp",data);
+            gtag('event', 'timing_complete', {
+                'event_category': 'Performance',
+                'name': 'first-contentful-paint',
+                'value': Math.round(data.value)
+            });
+        });
+        getFID(data => {
+            console.log("coreWebVitals fid",data);
+            gtag('event', 'timing_complete', {
+                'event_category': 'Performance',
+                'name': 'first-input-delay',
+                'value': Math.round(data.value)
+            });
+        });
+        getLCP(data => {
+            console.log("coreWebVitals lcp",data);
+            gtag('event', 'timing_complete', {
+                'event_category': 'Performance',
+                'name': 'largest-contentful-paint',
+                'value': Math.round(data.value)
+            });
+        });
+    }
+    addWebVitals();
+</script>
 </body>
 </html>
