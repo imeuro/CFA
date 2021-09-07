@@ -54,13 +54,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 */ ?>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z66ZN5VDNS"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-44216326-1"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-Z66ZN5VDNS');
+  gtag('config', 'UA-44216326-1');
 </script>
 
 </body>
