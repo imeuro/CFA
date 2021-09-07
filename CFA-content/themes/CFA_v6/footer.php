@@ -38,7 +38,6 @@ src="https://www.facebook.com/tr?id=508657780012788&ev=PageView
 &noscript=1"/>
 </noscript>
 <!-- End Facebook Pixel Code -->
-*/ ?>
 
 <!-- Google Tag Manager -->
 <script>
@@ -52,6 +51,17 @@ src="https://www.facebook.com/tr?id=508657780012788&ev=PageView
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-5MLKFBX"
 height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+*/ ?>
+
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-44216326-1"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-44216326-1');
+</script>
 
 </body>
 </html>
