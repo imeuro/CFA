@@ -1,14 +1,17 @@
 /**
  * @package pinbin
- */
+*/
 
 @import url('https://fonts.googleapis.com/css?family=Inter:wght@300;400;700&display=swap');
-@import url( 'style.css' );
+@import url( '../style.css' );
+@import url( './/critical.min.css' );
+ 
+
 
 /* Add overwrites as needed so that the content of the editor field is attractive and not broken */
 body {
 	padding: 0px 10px;
-	width: 537px;
+	width: 640px;
   font-size: 1.8rem;
   line-height: 3rem;
   margin: 0 auto;

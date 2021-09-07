@@ -116,6 +116,19 @@ h1 {
     margin: 0.67em 0;
 }
 
+.single h1,
+.archive h1,
+.search h1,
+.error404 h1 {
+    color: #000;
+    font-family: 'Sometimes Times', serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 5em;
+    line-height: 1.15em;
+    margin: 0 -15vw 10px -15vw;
+}
+
 /**
  * Address styling not present in IE 8/9, Safari 5, and Chrome.
  */
@@ -542,11 +555,17 @@ div.page.hentry {
 /* Main Navigation
 --------------------------------------------------------------*/
 
-/* List styles */
 body.home #main-nav-wrapper {
     height: 0;
 }
 
+.page-template-default #wrap {
+    padding-top: 0;
+    position: relative;
+    z-index: 9;
+    max-width: 640px;
+    margin: 170px auto 100px auto;
+}
 
 #wrap.fixd {
     position: absolute;
@@ -750,7 +769,7 @@ nav#archive-nav-below a {
 .sidemenu .menu li {
     padding: 0 40px 25px 40px;
     width: auto;
-    flex: 1 0 calc(50% - 80px);
+    flex: 1 0 auto;
 }
 
 .sidemenu .menu li a {
@@ -824,6 +843,190 @@ nav#archive-nav-below a {
     display: none;
 }
 
+.page-template-default .pinbin-copy,
+.page-template-default .pinbin-copy form.widget_wysija p {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: flex-start;
+    justify-content: center;
+    max-width: 768px;
+    position: relative;
+    margin-bottom: 10px;
+    padding: 0;
+    background: #000;
+}
+
+.single .single-pinbin-copy,
+.page .pinbin-copy,
+.error404 .pinbin-copy {
+    padding: 0 5vw;
+    color: #444;
+    font-size: 15px;
+    line-height: 18px;
+    width: 100%;
+    max-width: 1140px;
+    margin: 0 auto;
+    text-align: center;
+    margin-top: 50px;
+    box-sizing: border-box;
+}
+
+.single .single-pinbin-copy {
+    width: 80vw;
+    max-width: 550px;
+    margin-top: 0;
+    text-align: justify;
+    box-sizing: content-box;
+}
+
+@media all and (min-width: 768px) {
+
+    .single .single-pinbin-copy,
+    .error404 .pinbin-copy {
+        margin-top: 200px;
+        background: #fff;
+        z-index: 100;
+        position: relative;
+    }
+}
+
+/* roba Bio (contenuto del post type: cfa_authors) */
+small.author {
+    font-size: 100%;
+}
+
+small.author:before {
+    content: "by  ";
+}
+
+img.author-pic {
+    margin: 0 20px 20px 0;
+}
+
+.cfa_authors h1 {
+    text-align: left;
+    margin-bottom: 10px;
+    margin-top: 0;
+    padding: 0;
+}
+
+.page .pinbin-copy h1,
+.search .pinbin-copy h1 {
+    text-align: center;
+    margin: 0 0 50px 0;
+    line-height: 1;
+    font-family: 'Sometimes Times';
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.page-template-default .pinbin-copy h1 {
+    flex: 0 0 100vw;
+    margin-bottom: 80px;
+    font-family: 'Sometimes Times', serif;
+    font-weight: 300;
+    text-align: center;
+    font-size: 5em;
+    line-height: 1.15em;
+    margin: 0 -15vw 80px -15vw;
+}
+
+.page-template-default .pinbin-copy h2,
+.page-template-default .pinbin-copy h2+p,
+.page-template-default .pinbin-copy h2+.wp-block-group,
+.page-template-default .pinbin-copy form.widget_wysija label,
+.page-template-default .pinbin-copy form.widget_wysija input {
+    flex: 0 0 100%;
+    padding: 20px;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.page-template-default .pinbin-copy h2,
+.page-template-default .pinbin-copy form.widget_wysija label {
+    text-align: right;
+    font-family: 'NeueHaasGroteskDisp Std', sans-serif;
+    font-size: 36px;
+    line-height: 38px;
+    font-weight: 300;
+    text-transform: uppercase;
+}
+
+.page-template-default .pinbin-copy h2+p,
+.page-template-default .pinbin-copy h2+.wp-block-group p,
+.page-template-default .pinbin-copy form.widget_wysija input {
+    font-size: 14px;
+    line-height: 22px;
+    padding-top: 14px;
+    letter-spacing: 0;
+    text-align: justify;
+}
+
+.search-results .page-header {
+    color: #000;
+    margin: 0;
+    max-width: 100vw;
+    padding: 0 5vw;
+    text-align: center;
+    box-sizing: border-box;
+}
+
+
+.single .post small.date,
+.single .post div.post-data,
+.single .cfa_translations small.date,
+.single .cfa_translations div.post-data {
+    font-family: 'Sometimes Times', serif;
+    text-align: center;
+    width: 100%;
+    display: inline-block;
+    margin: 25px 0;
+    text-rendering: optimizeLegibility;
+    font-size: 21px;
+}
+
+.pinbin-copy p {
+    margin: 0;
+    padding: 0 0 1.5rem 0;
+    letter-spacing: 0.5px;
+}
+
+.home .pinbin-copy p small,
+.archive .pinbin-copy p small,
+.search .pinbin-copy p small,
+.append-posts .pinbin-copy p small {
+    font-size: 1.1rem;
+}
+
+.home .pinbin-copy p span,
+.archive .pinbin-copy p span,
+.search .pinbin-copy p span,
+.append-posts .pinbin-copy p span {
+    display: block;
+    margin-top: 10px;
+    font-family: 'NeueHaasGroteskDisp Std', sans-serif;
+    font-size: 13px;
+    line-height: 14px;
+    text-transform: none;
+    color: rgba(255, 255, 255, 0.75);
+}
+
+.home .pinbin-copy p small,
+.archive .pinbin-copy p small,
+.search .pinbin-copy p small,
+.append-posts .pinbin-copy p small {
+    display: block;
+    line-height: 14px;
+    margin-top: 10px;
+}
+
+.home .pinbin-copy p strong,
+.archive .pinbin-copy p strong,
+.search .pinbin-copy p strong,
+.append-posts .pinbin-copy p strong {
+    font-weight: 300;
+}
+
 @media only screen and (min-width: 767px) {
     #site-navigation {
         height: 180px;
@@ -852,6 +1055,7 @@ nav#archive-nav-below a {
     }
 
     .sidemenu .menu li {
+        flex: 1 0 calc(50% - 80px);
         padding: 0 0 6px 0;
     }
 
@@ -887,6 +1091,10 @@ nav#archive-nav-below a {
         margin-top: 180px;
     }
 
+    .page-template-default #wrap {
+        margin-top: 230px;
+        max-width: 768px;
+    }
 }
 
 
@@ -960,6 +1168,12 @@ nav#archive-nav-below a {
         box-sizing: border-box;
     }
 
+    .pinbin-copy p {
+        font-size: 1.15em;
+        letter-spacing: 0.75px;
+        line-height: 1.375em;
+    }
+
 }
 
 
@@ -1000,123 +1214,4 @@ ul#ToC-list li a {
 ul#ToC-list li {
     padding: 3px 0;
     display: inline;
-}
-
-
-
-.single h1,
-.archive h1,
-.search h1,
-.error404 h1 {
-    color: #000;
-    font-family: 'Sometimes Times', serif;
-    font-weight: 300;
-    text-align: center;
-    font-size: 5em;
-    line-height: 1.15em;
-    margin: 0 -15vw 10px -15vw;
-}
-
-
-.single .single-pinbin-copy,
-.page .pinbin-copy,
-.error404 .pinbin-copy {
-    padding: 0 5vw;
-    color: #444;
-    font-size: 15px;
-    line-height: 18px;
-    width: 100%;
-    max-width: 1140px;
-    margin: 0 auto;
-    text-align: center;
-    margin-top: 50px;
-    box-sizing: border-box;
-}
-
-.single .single-pinbin-copy {
-    width: 80vw;
-    max-width: 550px;
-    margin-top: 0;
-    text-align: justify;
-    box-sizing: content-box;
-}
-
-@media all and (min-width: 768px) {
-
-    .single .single-pinbin-copy,
-    .error404 .pinbin-copy {
-        margin-top: 200px;
-        background: #fff;
-        z-index: 100;
-        position: relative;
-    }
-}
-
-.page .pinbin-copy h1,
-.search .pinbin-copy h1 {
-    text-align: center;
-    margin: 0 0 50px 0;
-    line-height: 1;
-    font-family: 'Sometimes Times';
-    font-weight: 700;
-    letter-spacing: 1px;
-}
-
-.search-results .page-header {
-    color: #000;
-    margin: 0;
-    max-width: 100vw;
-    padding: 0 5vw;
-    text-align: center;
-    box-sizing: border-box;
-}
-
-
-.single .post small.date,
-.single .post div.post-data,
-.single .cfa_translations small.date,
-.single .cfa_translations div.post-data {
-    font-family: 'Sometimes Times', serif;
-    text-align: center;
-    width: 100%;
-    display: inline-block;
-    margin: 25px 0;
-    text-rendering: optimizeLegibility;
-    font-size: 21px;
-}
-
-.home .pinbin-copy p small,
-.archive .pinbin-copy p small,
-.search .pinbin-copy p small,
-.append-posts .pinbin-copy p small {
-    font-size: 1.1rem;
-}
-
-.home .pinbin-copy p span,
-.archive .pinbin-copy p span,
-.search .pinbin-copy p span,
-.append-posts .pinbin-copy p span {
-    display: block;
-    margin-top: 10px;
-    font-family: 'NeueHaasGroteskDisp Std', sans-serif;
-    font-size: 13px;
-    line-height: 14px;
-    text-transform: none;
-    color: rgba(255, 255, 255, 0.75);
-}
-
-.home .pinbin-copy p small,
-.archive .pinbin-copy p small,
-.search .pinbin-copy p small,
-.append-posts .pinbin-copy p small {
-    display: block;
-    line-height: 14px;
-    margin-top: 10px;
-}
-
-.home .pinbin-copy p strong,
-.archive .pinbin-copy p strong,
-.search .pinbin-copy p strong,
-.append-posts .pinbin-copy p strong {
-    font-weight: 300;
 }

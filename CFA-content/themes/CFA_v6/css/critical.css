@@ -769,7 +769,7 @@ nav#archive-nav-below a {
 .sidemenu .menu li {
     padding: 0 40px 25px 40px;
     width: auto;
-    flex: 1 0 calc(50% - 80px);
+    flex: 1 0 auto;
 }
 
 .sidemenu .menu li a {
@@ -1042,6 +1042,7 @@ img.author-pic { margin: 0 20px 20px 0; }
     }
 
     .sidemenu .menu li {
+        flex: 1 0 calc(50% - 80px);
         padding: 0 0 6px 0;
     }
 

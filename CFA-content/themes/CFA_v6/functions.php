@@ -118,6 +118,13 @@ if (!is_admin())
 
 	add_action( 'wp_enqueue_scripts', 'CFA_scripts' );
 
+function wpdocs_theme_add_editor_styles() {
+	add_editor_style( 'css/editor-style.css' );
+}
+add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
+
+
+
 function CFA_scripts() {
 	global $post;
 
@@ -490,7 +497,7 @@ add_shortcode('mailpoet_undo_unsubscribe', 'mpoet_get_undo_unsubscribe');
 
 
 // shortcode to insert
-  function tagline_shortcode() {
+function tagline_shortcode() {
 		$count_posts = wp_count_posts();
 		$doubled_posts = str_split($count_posts->publish * 2);
 		$split_count_posts = '';
