@@ -60,9 +60,9 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-44216326-1',
+  gtag('config', 'UA-44216326-1',{
   	'anonymize_ip': true
-  );
+  });
 </script>
 
 <script type="module">
