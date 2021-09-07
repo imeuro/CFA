@@ -54,13 +54,13 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 */ ?>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-Z66ZN5VDNS"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-592YDPY59J"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-Z66ZN5VDNS',{
+  gtag('config', 'G-592YDPY59J',{
   	'anonymize_ip': true
   });
 </script>
@@ -69,7 +69,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
     import {getCLS, getFCP, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
     let addWebVitals = () => {
         getCLS(data => {
-            console.log("coreWebVitals cls",data);
+            console.debug("coreWebVitals cls",data);
             gtag('event', 'timing_complete', {
                 'event_category': 'Performance',
                 'name': 'cumulative-layout-shift',
@@ -77,7 +77,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         });
         getFCP(data => {
-            console.log("coreWebVitals fcp",data);
+            console.debug("coreWebVitals fcp",data);
             gtag('event', 'timing_complete', {
                 'event_category': 'Performance',
                 'name': 'first-contentful-paint',
@@ -85,7 +85,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         });
         getFID(data => {
-            console.log("coreWebVitals fid",data);
+            console.debug("coreWebVitals fid",data);
             gtag('event', 'timing_complete', {
                 'event_category': 'Performance',
                 'name': 'first-input-delay',
@@ -93,7 +93,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
             });
         });
         getLCP(data => {
-            console.log("coreWebVitals lcp",data);
+            console.debug("coreWebVitals lcp",data);
             gtag('event', 'timing_complete', {
                 'event_category': 'Performance',
                 'name': 'largest-contentful-paint',
