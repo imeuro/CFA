@@ -65,8 +65,7 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 </script>
 
 <!-- Adsense -->
-<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-9553887918833046"
-     crossorigin="anonymous"></script>
+<script data-ad-client="ca-pub-9553887918833046" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 
 <script type="module">
     import {getCLS, getFCP, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
