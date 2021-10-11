@@ -66,9 +66,7 @@ endif;
           <link rel="stylesheet" href="https://www.conceptualfinearts.com/cfa/wordpress/wp-includes/css/dist/block-library/style.min.css">
         </noscript>
       <?php endif; ?>
-      
-      <script data-ad-client="ca-pub-9553887918833046" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-      
+            
       <?php wp_head(); ?>
   </head>
 
