@@ -1200,3 +1200,8 @@ ul#ToC-list li {
     padding: 3px 0;
     display: inline;
 }
+
+
+.google-auto-placed.ap_container {
+    margin: 20px auto 40px auto;
+}
