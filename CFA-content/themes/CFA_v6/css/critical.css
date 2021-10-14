@@ -1132,14 +1132,14 @@ img.author-pic { margin: 0 20px 20px 0; }
         margin-top: 230px;
         max-width: 768px; 
     }
-    
+
     .home .sponsored .pinbin-copy p {
         padding-top: 20px;
     }
     .home .sponsored .pinbin-copy p:before {
         top: -5px;
     }
-    .single .sponsored .pinbin-copy p:before {
+    .single .sponsored .pinbin-copy:before {
         top: -30px;
     }
 }
