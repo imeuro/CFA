@@ -1005,7 +1005,7 @@ img.author-pic { margin: 0 20px 20px 0; }
 }
 
 .home .sponsored .pinbin-copy p {
-    padding-top: 20px;
+    padding-top: 30px;
 }
 .home .sponsored .pinbin-copy p:before {
     content: "SPONSORED";
@@ -1013,9 +1013,20 @@ img.author-pic { margin: 0 20px 20px 0; }
     position: absolute;
     width: 100%;
     left: 0;
-    top: -5px;
+    top: 5px;
     font-size: 9px;
     font-family: 'NeueHaasGroteskDisp Std',sans-serif;
+}
+.single .sponsored .pinbin-copy:before {
+    content: "SPONSORED";
+    display: block;
+    position: absolute;
+    width: auto;
+    left: 50%;
+    top: 0;
+    font-size: 11px;
+    font-family: 'NeueHaasGroteskDisp Std',sans-serif;
+    transform: translateX(-50%);
 }
 
 .home .pinbin-copy p small,
@@ -1120,6 +1131,16 @@ img.author-pic { margin: 0 20px 20px 0; }
     .page-template-default #wrap { 
         margin-top: 230px;
         max-width: 768px; 
+    }
+    
+    .home .sponsored .pinbin-copy p {
+        padding-top: 20px;
+    }
+    .home .sponsored .pinbin-copy p:before {
+        top: -5px;
+    }
+    .single .sponsored .pinbin-copy p:before {
+        top: -30px;
     }
 }
 
