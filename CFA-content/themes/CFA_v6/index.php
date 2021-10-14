@@ -24,7 +24,7 @@ while (have_posts()) : the_post();
   if ($isSponsored) {
     $sponsoredClass = 'sponsored';
   } else {
-    $sponsoredClass = 'gigi';
+    $sponsoredClass = '';
   }
  ?>
       <article id="post-<?php the_ID(); ?>" <?php post_class($sponsoredClass); ?>>

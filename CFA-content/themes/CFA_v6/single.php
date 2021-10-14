@@ -7,9 +7,20 @@
 <?php get_header(); ?>
 
 	<?php if (have_posts()) : 
-    while (have_posts()) : the_post(); ?>
+    while (have_posts()) : the_post(); 
 
-   		<article id="post-<?php the_ID(); ?>" <?php post_class('scroller'); ?>>
+  // check for sponsores posts
+  $isSponsored = get_field('sponsored_post',$post->ID);
+
+  if ($isSponsored) {
+    $sponsoredClass = 'sponsored ';
+  } else {
+    $sponsoredClass = '';
+  }
+
+?>
+
+   		<article id="post-<?php the_ID(); ?>" <?php post_class($sponsoredClass.'scroller'); ?>>
 
         <div class="pinbin-copy single-pinbin-copy">
 
