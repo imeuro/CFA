@@ -174,32 +174,6 @@ div.wpcf7 input[type="submit"] {
   text-rendering: optimizeLegibility;
 }
 
-.home .pinbin-copy p,
-.archive .pinbin-copy p,
-.search .pinbin-copy p,
-.append-posts .pinbin-copy p {
-  line-height: 36px;
-  font-size: 30px;
-  position: absolute;
-  bottom: 0;
-  padding: 15px 25px;
-  background: rgba(0, 0, 0, 0.75);
-  -webkit-backdrop-filter: blur(10px);
-  backdrop-filter: blur(10px);
-  border-radius: 2px;
-  font-family: 'Sometimes Times';
-  letter-spacing: 1px;
-  text-transform: initial;
-  text-align: center;
-}
-
-.single-pinbin.copy h2,
-.single-pinbin.copy h3,
-.single-pinbin.copy h4,
-.single-pinbin.copy h5 {
-    margin-bottom: 3rem;
-}
-
 .search-results .pinbin-copy.otherway.container {
   text-align: center;
   margin-top: 75px;

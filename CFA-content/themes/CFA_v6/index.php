@@ -18,8 +18,16 @@ while (have_posts()) : the_post();
   // check for available ads...
   include( 'ads/advblock.inc.php' );
 
+  // check for sponsores posts
+  $isSponsored = get_field('sponsored_post',$post->ID);
+
+  if ($isSponsored) {
+    $sponsoredClass = 'sponsored';
+  } else {
+    $sponsoredClass = 'gigi';
+  }
  ?>
-      <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
+      <article id="post-<?php the_ID(); ?>" <?php post_class($sponsoredClass); ?>>
 
          <?php
           $attachments = get_children(array('post_parent' => get_the_ID(), 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order'));
