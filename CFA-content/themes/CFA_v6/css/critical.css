@@ -1014,7 +1014,7 @@ img.author-pic { margin: 0 20px 20px 0; }
     width: 100%;
     left: 0;
     top: 5px;
-    font-size: 9px;
+    font-size: 7px;
     font-family: 'NeueHaasGroteskDisp Std',sans-serif;
 }
 .single .sponsored .pinbin-copy:before {
@@ -1024,7 +1024,7 @@ img.author-pic { margin: 0 20px 20px 0; }
     width: auto;
     left: 50%;
     top: 0;
-    font-size: 11px;
+    font-size: 9px;
     font-family: 'NeueHaasGroteskDisp Std',sans-serif;
     transform: translateX(-50%);
 }
