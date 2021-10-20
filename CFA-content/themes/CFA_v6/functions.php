@@ -563,3 +563,16 @@ function disable_wpembedJS(){
   wp_deregister_script( 'wp-embed' );
 }
 add_action( 'wp_footer', 'disable_wpembedJS' );
+
+
+
+
+
+function twentyseventeen_content_image_sizes_attr( $sizes, $size ) {
+	$width = $size[0];
+
+	$sizes = '(min-width: 768px) 550px, 80vw';
+
+	return $sizes;
+}
+add_filter( 'wp_calculate_image_sizes', 'twentyseventeen_content_image_sizes_attr', 10, 2 );
