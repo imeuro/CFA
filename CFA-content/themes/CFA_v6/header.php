@@ -41,7 +41,7 @@ endif;
                 url('<?php echo get_template_directory_uri(); ?>/fonts/NHaasGroteskDSStd-55Rg.svg#NHaasGroteskDSStd-55Rg') format('svg');
             font-weight: normal;
             font-style: normal;
-            font-display: optional;
+            font-display: swap;
         }
         @font-face {
             font-family: 'Sometimes Times';
@@ -50,7 +50,7 @@ endif;
                 url('<?php echo get_template_directory_uri(); ?>/fonts/SometimesTimes-Regular.svg#SometimesTimes-Regular') format('svg');
             font-weight: normal;
             font-style: normal;
-            font-display: optional;
+            font-display: swap;
         }
         <?php include( get_template_directory().'/css/critical.min.css') ?>
       </style>
