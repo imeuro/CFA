@@ -792,12 +792,7 @@ nav#archive-nav-below a {
     margin: 0 20px;
 }
 
-.sidemenu .menu #lang-switcher span:last-child,
-.sidemenu .menu #lang-switcher a:last-child {
-    margin-left: 20px
-}
-
-.sidemenu .menu #lang-switcher span {
+#lang-switcher span {
     font-size: 26px;
     line-height: 36px;
     font-weight: 300;
