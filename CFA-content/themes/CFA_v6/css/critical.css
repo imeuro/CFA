@@ -788,6 +788,10 @@ nav#archive-nav-below a {
     opacity: .75;
 }
 
+#lang-switcher li a {
+    margin: 0 20px;
+}
+
 .sidemenu .menu #lang-switcher span:last-child,
 .sidemenu .menu #lang-switcher a:last-child {
     margin-left: 20px
@@ -1129,7 +1133,7 @@ img.author-pic { margin: 0 20px 20px 0; }
         width: auto;
     }
     #lang-switcher li a {
-        margin-left: 20px;
+        margin: 0 0 0 20px;
     }
     .home #wrap {
         margin-top: 180px;
