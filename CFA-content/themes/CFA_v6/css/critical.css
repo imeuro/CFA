@@ -774,7 +774,7 @@ nav#archive-nav-below a {
 
 .sidemenu .menu li a {
     font-size: 28px;
-    line-height: 30px;
+    line-height: 36px;
     text-transform: uppercase;
     text-decoration: none;
     color: #000;
@@ -788,12 +788,13 @@ nav#archive-nav-below a {
     opacity: .75;
 }
 
-#lang-switcher li a {
+#lang-switcher li a,
+#lang-switcher li span {
     margin: 0 20px;
 }
 
 #lang-switcher span {
-    font-size: 26px;
+    font-size: 28px;
     line-height: 36px;
     font-weight: 300;
     color: #000;
