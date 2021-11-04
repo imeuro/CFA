@@ -1128,7 +1128,8 @@ img.author-pic { margin: 0 20px 20px 0; }
         right: 0;
         width: auto;
     }
-    #lang-switcher li a {
+    #lang-switcher li a,
+    #lang-switcher li span {
         margin: 0 0 0 20px;
     }
     .home #wrap {
