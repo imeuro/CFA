@@ -1123,8 +1123,14 @@ img.author-pic { margin: 0 20px 20px 0; }
 
     #lang-switcher {
         flex: 1 0 calc(50% - 60px);
+        position: absolute;
+        bottom: 0;
+        right: 0;
+        width: auto;
     }
-
+    #lang-switcher li a {
+        margin-left: 20px;
+    }
     .home #wrap {
         margin-top: 180px;
     }

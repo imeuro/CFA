@@ -224,7 +224,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 
 
-	moveLangSwitcher();
+	//moveLangSwitcher();
 	appendENV(ENV);
 
 });
