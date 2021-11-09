@@ -572,7 +572,7 @@ function twentyseventeen_content_image_sizes_attr( $sizes, $size ) {
 
 	$width = $size[0];
 
-	$sizes = '(min-width: 1024px) 80vw, (min-width: 768px) 550px, 50vw';
+	$sizes = '(min-width: 1024px) 1320px, (min-width: 768px) 550px, 50vw';
 
 	return $sizes;
 }
