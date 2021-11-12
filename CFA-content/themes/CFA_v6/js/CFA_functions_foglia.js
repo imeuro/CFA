@@ -331,3 +331,10 @@ let checkLightbox = () => {
 
 	}
 }
+
+
+// fix responsive image: srcset for fullwidth (.wp-block-image.alignfull) imgs
+let fullscreenIMGs = document.querySelectorAll('.wp-block-image.alignfull img')
+Array.from(fullscreenIMGs).forEach(function(el){
+    el.sizes='(min-width: 768px) 100vw, 80vw';
+})
