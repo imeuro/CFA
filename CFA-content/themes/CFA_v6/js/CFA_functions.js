@@ -116,22 +116,11 @@ if ( bodyClasses.contains('no-header') === false ) {
 	})
 }
 
-// move lang-switcher in menu
-const moveLangSwitcher = () => {
-	const LS = document.getElementById('lang-switcher');
-	const HM = document.getElementById('header-menu');
-	if (HM != null) {
-		HM.appendChild(LS.firstElementChild);
-		HM.lastElementChild.id = 'lang-switcher';
-		LS.remove();
-	}
-}
-
 
 // protect images - attempt
-if (ENV == 'www.conceptualfinearts.com') {
-	document.addEventListener('contextmenu', event => event.preventDefault());
-}
+// if (ENV == 'www.conceptualfinearts.com') {
+// 	document.addEventListener('contextmenu', event => event.preventDefault());
+// }
 
 let appendENV = (env) => {
 	if (typeof devENV !== 'undefined' && devENV !== null) {
@@ -221,10 +210,6 @@ document.addEventListener("DOMContentLoaded", function() {
 	// Website Credits
 	console.log("%c\n CONCEPTUAL FINE ARTS rev. 6 \n © 2013-"+new Date().getFullYear()+" - all rights reserved \n",'background:#fff;color:#F7A420;font-weight:700');
 
-
-
-
-	//moveLangSwitcher();
 	appendENV(ENV);
 
 });
