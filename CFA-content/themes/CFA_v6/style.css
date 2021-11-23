@@ -1553,3 +1553,26 @@ body.page-template-default,
   width: 68px;
 }
 
+
+
+
+.pea_cook_wrapper.pea_cook_bottomright {
+    width: 150px;
+    /* border: 1px solid #b5b5b5; */
+    box-shadow: 0 0 2px 0px #b5b5b5;
+    bottom: 60px;
+    margin: 0;
+    padding: 10px;
+    box-sizing: border-box;
+    display: flex;
+    flex-flow: column nowrap;
+}
+.pea_cook_wrapper p {
+    font-family: 'NeueHaasGroteskDisp Std',sans-serif;
+    font-weight: 400;
+    padding: 0;
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+}
