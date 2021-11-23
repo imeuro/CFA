@@ -1556,9 +1556,9 @@ body.page-template-default,
 
 
 
-#cookie-notice {
-    min-width: 150px;
-    width: 250px;
+body #cookie-notice {
+    min-width: 175px;
+    width: 175px;
     background-color: rgba(255,255,255,.8)!important;
     border-radius: 2px;
     box-shadow: 0px 0px 10px 0px #dcdcdc;
@@ -1566,11 +1566,14 @@ body.page-template-default,
     left: initial;
     right: 15px;
     bottom: 50px;
-}
-#cookie-notice .cookie-notice-container {
-    font-family: 'NeueHaasGroteskDisp Std',sans-serif;
-    font-weight: 400;
     padding: 10px;
+}
+body #cookie-notice .cookie-notice-container {
+    font-family: 'NeueHaasGroteskDisp Std', serif;
+    font-size: 11px;
+    line-height: 14px;
+    font-weight: 400;
+    padding: 10px 0 5px 0;
     display: flex;
     flex-flow: column wrap;
     justify-content: space-around;
@@ -1599,4 +1602,13 @@ body.page-template-default,
 
 #cookie-notice .cn-button {
     background-color: #000;
+    font-family: 'Sometimes Times',serif;
+    text-transform: uppercase;
+    font-weight: 700;
+    font-size: 14px;
+    letter-spacing: 1.25px;
+}
+
+#cookie-notice #cn-notice-text {
+    margin-bottom: 15px;
 }
