@@ -1595,7 +1595,7 @@ body #cookie-notice .cookie-notice-container {
 #cookie-notice .cn-close-icon:after {
     top: 5px;
     left: 11px;
-    background-color: #000;
+    background-color: #000!important;
     width: 1px;
     height: 14px;
 }
