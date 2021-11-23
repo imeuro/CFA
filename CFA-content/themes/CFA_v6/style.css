@@ -1591,14 +1591,13 @@ body #cookie-notice .cookie-notice-container {
     zoom: .75;
 }
 
-#cookie-notice .cn-close-icon:before {
-    top: 5px;
-    left: 11px;
-}
-
+#cookie-notice .cn-close-icon:before,
 #cookie-notice .cn-close-icon:after {
     top: 5px;
     left: 11px;
+    background-color: #000;
+    width: 1px;
+    height: 14px;
 }
 
 #cookie-notice .cn-button {
