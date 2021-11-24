@@ -1555,13 +1555,11 @@ body.page-template-default,
 
 
 
-
 body #cookie-notice {
     min-width: 150px;
     width: 150px;
     background-color: rgba(255,255,255,1)!important;
     border-radius: 0;
-    /*box-shadow: 0px 0px 10px 0px #dcdcdc;*/
     border: 1px solid #666;
     position: fixed;
     left: initial;
@@ -1614,3 +1612,4 @@ body #cookie-notice .cookie-notice-container {
     text-align: left;
     width: 100%;
 }
+

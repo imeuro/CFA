@@ -60,10 +60,8 @@ function CFA_setup() {
 	 */
 	add_theme_support( 'automatic-feed-links' );
 
-		// post thumbnails
+	// post thumbnails
 	add_theme_support( 'post-thumbnails' );
-	add_image_size('summary-image', 300, 9999);
-	add_image_size('detail-image', 750, 9999);
 
 
 	/**
