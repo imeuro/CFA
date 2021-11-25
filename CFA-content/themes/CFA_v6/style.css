@@ -322,16 +322,16 @@ div.wpcf7 input[type="submit"] {
   left: calc(50% - 50vw);
 }
 
-.wp-block-image.alignwide img,
-.wp-block-cover.alignwide,
-.wp-block-cover-image.alignwide,
-.alignwide {
-    margin-left: 30px;
-    margin-right: 30px;
-    width: calc(100vw - 60px);
-    max-width: calc(100vw - 60px);
-    position: relative;
-    left: calc(50% - 50vw);
+@media only screen and (min-width: 768px) {
+  .wp-block-image.alignwide img,
+  .wp-block-cover.alignwide,
+  .wp-block-cover-image.alignwide,
+  .alignwide {
+      width: calc(100vw - 60px);
+      max-width: calc(100vw - 60px);
+      position: relative;
+      left: calc(50% - 50vw + 30px);
+  }
 }
 .wp-block-media-text p,
 .wp-block-cover p,
