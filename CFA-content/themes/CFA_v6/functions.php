@@ -562,3 +562,14 @@ function disable_wpembedJS(){
 }
 add_action( 'wp_footer', 'disable_wpembedJS' );
 
+
+
+// https://wordpress.stackexchange.com/questions/240765/how-to-delete-resized-cropped-image-uploads-and-prevent-future-resizing
+function unset_oldImageSizes( $sizes ){
+    unset( $sizes[ 'thumbnail' ]);
+    unset( $sizes[ 'wysija-newsletters-max' ]);
+    unset( $sizes[ '2048x2048' ] );
+    unset( $sizes[ 'mailpoet_newsletter_max' ]);
+    return $sizes;
+}
+add_filter( 'intermediate_image_sizes_advanced', 'unset_oldImageSizes' );
