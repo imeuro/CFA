@@ -322,6 +322,15 @@ div.wpcf7 input[type="submit"] {
   left: calc(50% - 50vw);
 }
 
+.wp-block-image.alignwide img,
+.wp-block-cover.alignwide,
+.wp-block-cover-image.alignwide,
+.alignwide {
+    width: 90vw;
+    max-width: 90vw;
+    position: relative;
+    left: calc(50% - 45vw);
+}
 @media only screen and (min-width: 768px) {
   .wp-block-image.alignwide img,
   .wp-block-cover.alignwide,
