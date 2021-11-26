@@ -1611,6 +1611,7 @@ body #cookie-notice .cookie-notice-container {
 
 body #cookie-notice .cn-button {
     background-color: #000;
+    color: #fff;
     font-family: 'Sometimes Times',serif;
     text-transform: uppercase;
     font-weight: 700;
