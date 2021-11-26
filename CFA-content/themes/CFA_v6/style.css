@@ -1571,24 +1571,22 @@ body.page-template-default,
 
 
 
-body #cookie-notice {
-    min-width: 150px;
-    width: 150px;
+body #cookie-notice .cookie-notice-container {
+    min-width: 250px;
+    width: 250px;
     background-color: rgba(255,255,255,1)!important;
-    border-radius: 0;
+    box-shadow: 0px 0px 10px 0px #101010;
     border: 1px solid #666;
     position: fixed;
-    left: initial;
-    right: 15px;
-    bottom: 50px;
-    padding: 10px;
-}
-body #cookie-notice .cookie-notice-container {
-    font-family: 'NeueHaasGroteskDisp Std', serif;
-    font-size: 11px;
+    top: 200px;
+    left: 50vw;
+    transform: translateX(-50%);
+    padding: 15px;
+    font-family:
+    'NeueHaasGroteskDisp Std', serif;
+    font-size: 13px;
     line-height: 14px;
     font-weight: 400;
-    padding: 0;
     display: flex;
     flex-flow: column wrap;
     justify-content: flex-start;
@@ -1614,18 +1612,22 @@ body #cookie-notice .cookie-notice-container {
     height: 14px;
 }
 
-#cookie-notice .cn-button {
+body #cookie-notice .cn-button {
     background-color: #000;
     font-family: 'Sometimes Times',serif;
     text-transform: uppercase;
     font-weight: 700;
     font-size: 14px;
     letter-spacing: 1.25px;
+    float: right;
 }
 
 #cookie-notice #cn-notice-text {
-    margin: 0 0 10px 0px;
+    margin: 0 0 15px 0px;
     text-align: left;
     width: 100%;
 }
-
+#cookie-notice #cn-notice-buttons {
+    margin: 0;
+    width: 100%;
+}
