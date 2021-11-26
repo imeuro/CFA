@@ -1575,7 +1575,6 @@ body #cookie-notice .cookie-notice-container {
     min-width: 250px;
     width: 250px;
     background-color: rgba(255,255,255,1)!important;
-    box-shadow: 0px 0px 20px 0px #b7b7b7;
     border: 1px solid #666;
     position: fixed;
     top: 200px;
@@ -1596,7 +1595,6 @@ body #cookie-notice .cookie-notice-container {
     position: absolute;
     top: 10px;
     right: 1px;
-    border-radius: 50%;
     padding: 12px;
     opacity: 1;
     zoom: .75;
@@ -1629,4 +1627,21 @@ body #cookie-notice .cn-button {
 #cookie-notice #cn-notice-buttons {
     margin: 0;
     width: 100%;
+}
+
+@media (min-width: 767px) {
+  body #cookie-notice .cookie-notice-container {
+      min-width: 350px;
+      width: 350px;
+      padding: 30px 30px 15px 30px;
+      font-size: 15px;
+      line-height: 20px;
+  }
+  #cookie-notice a#cn-close-notice {
+      top: 20px;
+      right: 11px;
+  }
+  #cookie-notice #cn-notice-text {
+    margin: 0 0 25px 0px;
+  }
 }
