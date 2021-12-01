@@ -1328,66 +1328,64 @@ article.type-post:not(.isotope-item):after {
 
 
 /* DEFAULT PAGE TEMPLATE */
-body.page-template-default,
-.page-template-default .sidemenu,
-body.page-template-page-CFAlive,
-.page-template-page-CFAlive .sidemenu {
+body.page,
+.page .sidemenu {
   background: #000;
   color: #fff;
 }
-.page-template-default #main-nav-wrapper #logo svg path,
-.page-template-default #hambmenu-icon rect {
+.page #main-nav-wrapper #logo svg path,
+.page #hambmenu-icon rect {
     fill: #fff;
 }
-.page-template-default .pinbin-copy,
-.page-template-default .sidemenu .menu li a,
-.page-template-default .sidemenu .menu #lang-switcher span,
-.page-template-default p a,
-.page-template-default #showmehome {
+.page .pinbin-copy,
+.page .sidemenu .menu li a,
+.page .sidemenu .menu #lang-switcher span,
+.page p a,
+.page #showmehome {
     color: #fff;
 }
-.page-template-default #site-navigation { 
+.page #site-navigation { 
   position: fixed;
   z-index: 1;
 }
-.page-template-default #site-navigation.menu-open { 
+.page #site-navigation.menu-open { 
   z-index: 10;
 }
-.page-template-default #hambmenu { position: fixed;  }
+.page #hambmenu { position: fixed;  }
 
-.page-template-default .pinbin-copy h2+.wp-block-group p {
+.page .pinbin-copy h2+.wp-block-group p {
     padding-top: 0;
     padding-bottom: 30px;
 }
-.page-template-default .pinbin-copy p a {
+.page .pinbin-copy p a {
   text-decoration: none;
 }
-.page-template-default .pinbin-copy p strong,
-.page-template-default .pinbin-copy p b,
-.page-template-default .pinbin-copy h2 b,
-.page-template-default .pinbin-copy h2 strong {
+.page .pinbin-copy p strong,
+.page .pinbin-copy p b,
+.page .pinbin-copy h2 b,
+.page .pinbin-copy h2 strong {
   text-decoration: none;
   border-bottom: 2px solid #FFCC33;
   letter-spacing: 0.5px;
   font-weight: 300;
 }
-.page-template-default .pinbin-copy .wp-block-spacer {
+.page .pinbin-copy .wp-block-spacer {
     clear: both;
     flex: 1 0 100%;
 }
-.page-template-default .pinbin-copy h2 + .wp-block-group {
+.page .pinbin-copy h2 + .wp-block-group {
     padding-top: 0;
 }
-.page-template-default #uplink:before, 
-.page-template-default #uplink:after {
+.page #uplink:before, 
+.page #uplink:after {
   background-color: #fff;
 }
 
-.page-template-default .pinbin-copy .widget_wysija_cont {
+.page .pinbin-copy .widget_wysija_cont {
   position: relative;
   max-width: 640px;
 }
-.page-template-default .pinbin-copy .widget_wysija input[type=text],
+.page .pinbin-copy .widget_wysija input[type=text],
 #searchform input[type=text],
 .wp-block-search input[type=search] {
     background-color: #000;
@@ -1402,7 +1400,7 @@ body.page-template-page-CFAlive,
     padding: 20px 0 0 0;
     outline: none;
 }
-.page-template-default .pinbin-copy .widget_wysija .formError .formErrorContent {
+.page .pinbin-copy .widget_wysija .formError .formErrorContent {
     color: #FFCC33;
     border: none;
     background: none;
@@ -1412,7 +1410,7 @@ body.page-template-page-CFAlive,
     margin-top: 10px;
     text-align: left;
 }
-.page-template-default .pinbin-copy .widget_wysija input[type=submit],
+.page .pinbin-copy .widget_wysija input[type=submit],
 #searchform input[type=submit],
 .wp-block-search button[type=submit] {
   font-family: 'Sometimes Times', serif;
@@ -1423,8 +1421,8 @@ body.page-template-page-CFAlive,
   margin: 40px auto 100px auto;
   transition: 300ms ease-in-out;
 }
-.page-template-default .pinbin-copy .widget_wysija input[type=submit]:hover,
-.page-template-default .pinbin-copy .widget_wysija input[type=submit]:active,
+.page .pinbin-copy .widget_wysija input[type=submit]:hover,
+.page .pinbin-copy .widget_wysija input[type=submit]:active,
 #searchform input[type=submit]:hover,
 #searchform input[type=submit]:active,
 .wp-block-search button[type=submit]:hover,
@@ -1445,12 +1443,12 @@ body.page-template-page-CFAlive,
 
 
 @media (min-width: 767px) {
-  .page-template-default .pinbin-copy h2,
-  .page-template-default .pinbin-copy h2 + p,
-  .page-template-default .pinbin-copy h2 + .wp-block-group,
-  .page-template-default .pinbin-copy h2 + .wp-block-search,
-  .page-template-default .pinbin-copy form.widget_wysija label,
-  .page-template-default .pinbin-copy form.widget_wysija input {
+  .page .pinbin-copy h2,
+  .page .pinbin-copy h2 + p,
+  .page .pinbin-copy h2 + .wp-block-group,
+  .page .pinbin-copy h2 + .wp-block-search,
+  .page .pinbin-copy form.widget_wysija label,
+  .page .pinbin-copy form.widget_wysija input {
     flex: 0 0 calc(50%);
     padding: 20px 0 20px 20px;
     margin: 0;
@@ -1458,7 +1456,7 @@ body.page-template-page-CFAlive,
     word-break: break-word;
     letter-spacing: 0px;
   }
-  .page-template-default .pinbin-copy h2 {
+  .page .pinbin-copy h2 {
     padding: 20px 20px 20px 0;
   }  
 }
@@ -1532,8 +1530,8 @@ body.page-template-page-CFAlive,
   cursor: pointer;
   background: #fff;
 }
-.page-template-default #uplink,
-.page-template-default #showmehome { background-color: #000; }
+.page #uplink,
+.page #showmehome { background-color: #000; }
 
 #uplink:hover,
 #showmehome:hover { opacity: 1 }
