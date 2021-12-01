@@ -16,13 +16,15 @@ Template Name: CFAlive
         <?php } ?>    
              
        			<div class="pinbin-copy container">
-                <h1><?php the_title(); ?></h1>
-           		   <?php the_content(); ?> 
-                
-                  <?php wp_link_pages(); ?>
-                
-					       <?php //comments_template(); ?>
-                
+              <h1><?php the_title(); ?></h1>
+              <?php the_content(); ?> 
+
+              <?php 
+              $CFAlive_events = get_field('CFAlive_events');
+              var_dump($CFAlive_events)
+
+              ?>
+
          		</div>          
                 
        </article>
