@@ -20,7 +20,7 @@ Template Name: CFAlive
               <?php the_content(); ?> 
 
               <?php 
-              $CFAlive_events = get_field('CFAlive_events');
+              $CFAlive_events = get_field('cfalive_events');
               var_dump($CFAlive_events)
 
               ?>
