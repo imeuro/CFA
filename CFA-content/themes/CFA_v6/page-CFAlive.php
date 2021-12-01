@@ -19,23 +19,32 @@ Template Name: CFAlive
               <h1><?php the_title(); ?></h1>
               <?php the_content(); ?> 
 
-                            <?php 
-              $CFAlive_events = get_field('cfalive_events');
-              for ($i=0; $i < count($CFAlive_events); $i++) {
-		$ci=$CFAlive_events[$i]; 
-		echo $ci["cfalive_event_text"];
-		$urlgallery=$ci["cfalive_event_gallery"][0]["guid"];
-		echo '<a href="'.$urlgallery.'"><strong>Images</strong></a>';
-                echo "$i <br>";
-                // code...
-              }
-              var_dump($CFAlive_events)
+              <div class="wp-block-group">
+                <?php 
+                $CFAlive_events = get_field('cfalive_events');
+                for ($i=0; $i < count($CFAlive_events); $i++) {
+                  
+                  $ci=$CFAlive_events[$i]; 
+                  if ($i<=1) {
+                    echo '<h2>'.$ci["cfalive_event_label"]["label"].'</h2>';
+                  }
+                  
+                  echo $ci["cfalive_event_text"];
+                  if (!empty($ci["cfalive_event_gallery"])) {
+                    $urlgallery=$ci["cfalive_event_gallery"][0]->guid;
+                    echo '<a href="'.$urlgallery.'"><strong>Images</strong></a>';
+                  }
+
+                }
+                echo "<pre>";
+                //print_r($CFAlive_events);
+                echo "</pre>";
 
 
+                ?>
+            </div>
 
-              ?>
-
-         		</div>          
+         	</div>          
                 
        </article>
        
