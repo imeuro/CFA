@@ -559,7 +559,8 @@ body.home #main-nav-wrapper {
     height: 0;
 }
 
-.page-template-default #wrap {
+.page-template-default #wrap,
+.page-template-page-CFAlive #wrap {
   padding-top: 0;
   position: relative;
   z-index: 9;
@@ -844,7 +845,9 @@ nav#archive-nav-below a {
 }
 
 .page-template-default .pinbin-copy,
-.page-template-default .pinbin-copy form.widget_wysija p {
+.page-template-default .pinbin-copy form.widget_wysija p,
+.page-template-page-CFAlive .pinbin-copy,
+.page-template-page-CFAlive .pinbin-copy form.widget_wysija p {
   display: flex;
   flex-flow: row wrap;
   align-items: flex-start;
@@ -910,7 +913,8 @@ img.author-pic { margin: 0 20px 20px 0; }
     font-weight: 700;
     letter-spacing: 1px;
 }
-.page-template-default .pinbin-copy h1 {
+.page-template-default .pinbin-copy h1,
+.page-template-page-CFAlive .pinbin-copy h1 {
   flex: 0 0 100vw;
   margin-bottom: 80px;
   font-family: 'Sometimes Times', serif;
@@ -925,14 +929,21 @@ img.author-pic { margin: 0 20px 20px 0; }
 .page-template-default .pinbin-copy h2 + p,
 .page-template-default .pinbin-copy h2 + .wp-block-group,
 .page-template-default .pinbin-copy form.widget_wysija label,
-.page-template-default .pinbin-copy form.widget_wysija input {
+.page-template-default .pinbin-copy form.widget_wysija input,
+.page-template-page-CFAlive .pinbin-copy h2,
+.page-template-page-CFAlive .pinbin-copy h2 + p,
+.page-template-page-CFAlive .pinbin-copy h2 + .wp-block-group,
+.page-template-page-CFAlive .pinbin-copy form.widget_wysija label,
+.page-template-page-CFAlive .pinbin-copy form.widget_wysija input {
   flex: 0 0 100%;
   padding: 20px;
   margin: 0;
   box-sizing: border-box;
 }
 .page-template-default .pinbin-copy h2,
-.page-template-default .pinbin-copy form.widget_wysija label {
+.page-template-default .pinbin-copy form.widget_wysija label,
+.page-template-page-CFAlive .pinbin-copy h2,
+.page-template-page-CFAlive .pinbin-copy form.widget_wysija label {
   text-align: right;
   font-family: 'NeueHaasGroteskDisp Std', sans-serif;
   font-size: 36px;
@@ -942,7 +953,10 @@ img.author-pic { margin: 0 20px 20px 0; }
 }
 .page-template-default .pinbin-copy h2 + p,
 .page-template-default .pinbin-copy h2 + .wp-block-group p,
-.page-template-default .pinbin-copy form.widget_wysija input {
+.page-template-default .pinbin-copy form.widget_wysija input,
+.page-template-page-CFAlive .pinbin-copy h2 + p,
+.page-template-page-CFAlive .pinbin-copy h2 + .wp-block-group p,
+.page-template-page-CFAlive .pinbin-copy form.widget_wysija input {
   font-size: 14px;
   line-height: 22px;
   padding-top: 14px;
@@ -1135,6 +1149,7 @@ img.author-pic { margin: 0 20px 20px 0; }
     .home #wrap {
         margin-top: 180px;
     }
+    .page-template-default #wrap,
     .page-template-default #wrap { 
         margin-top: 230px;
         max-width: 768px; 
