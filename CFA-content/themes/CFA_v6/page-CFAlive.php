@@ -19,7 +19,7 @@ Template Name: CFAlive
               <h1><?php the_title(); ?></h1>
               <?php the_content(); ?> 
 
-              <div class="wp-block-group">
+              
                 <?php 
                 $CFAlive_events = get_field('cfalive_events');
                 for ($i=0; $i < count($CFAlive_events); $i++) {
@@ -27,12 +27,19 @@ Template Name: CFAlive
                   $ci=$CFAlive_events[$i]; 
                   if ($i<=1) {
                     echo '<h2>'.$ci["cfalive_event_label"]["label"].'</h2>';
+                    echo '<div class="wp-block-group">';
                   }
                   
-                  echo $ci["cfalive_event_text"];
                   if (!empty($ci["cfalive_event_gallery"])) {
+                    echo substr($ci["cfalive_event_text"],0,-5); // no ending </p>
                     $urlgallery=$ci["cfalive_event_gallery"][0]->guid;
-                    echo '<a href="'.$urlgallery.'"><strong>Images</strong></a>';
+                    echo '<br><a href="'.$urlgallery.'#lightbox" class="glightbox-black"><strong>Images</strong></a></p>';
+                  } else {
+                    echo $ci["cfalive_event_text"];
+                  }
+
+                  if ($i==0 || $i == count($CFAlive_events)) {
+                    echo '</div>';
                   }
 
                 }

@@ -1397,6 +1397,8 @@ page-template-page-CFAlive #site-navigation.menu-open {
     padding-top: 0;
 }
 .page-template-default #uplink:before, 
+.page-template-default #uplink:after,
+.page-template-page-CFAlive #uplink:before, 
 .page-template-page-CFAlive #uplink:after {
   background-color: #fff;
 }
@@ -1560,7 +1562,9 @@ page-template-page-CFAlive #site-navigation.menu-open {
   background: #fff;
 }
 .page-template-default #uplink,
-.page-template-default #showmehome { background-color: #000; }
+.page-template-default #showmehome,
+.page-template-page-CFAlive #uplink,
+.page-template-page-CFAlive #showmehome { background-color: #000; }
 
 #uplink:hover,
 #showmehome:hover { opacity: 1 }
