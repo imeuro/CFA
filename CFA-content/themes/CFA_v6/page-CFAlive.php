@@ -19,9 +19,19 @@ Template Name: CFAlive
               <h1><?php the_title(); ?></h1>
               <?php the_content(); ?> 
 
-              <?php 
+                            <?php 
               $CFAlive_events = get_field('cfalive_events');
+              for ($i=0; $i < count($CFAlive_events); $i++) {
+		$ci=$CFAlive_events[$i]; 
+		echo $ci["cfalive_event_text"];
+		$urlgallery=$ci["cfalive_event_gallery"][0]["guid"];
+		echo '<a href="'.$urlgallery.'"><strong>Images</strong></a>';
+                echo "$i <br>";
+                // code...
+              }
               var_dump($CFAlive_events)
+
+
 
               ?>
 
