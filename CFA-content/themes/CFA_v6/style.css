@@ -1330,8 +1330,8 @@ article.type-post:not(.isotope-item):after {
 /* DEFAULT PAGE TEMPLATE */
 body.page-template-default,
 .page-template-default .sidemenu,
-body.page-template-CFAlive,
-.page-template-CFAlive .sidemenu {
+body.page-template-page-CFAlive,
+.page-template-page-CFAlive .sidemenu {
   background: #000;
   color: #fff;
 }
