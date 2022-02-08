@@ -130,32 +130,31 @@ if (bodyClasses.contains('home') === true || bodyClasses.contains('archive') ===
 		//===============================
 
 		if ( bodyClasses.contains('home') || bodyClasses.contains('page-template-index_ita') || bodyClasses.contains('archive') || bodyClasses.contains('search') ) {
+			jQuery(window).load(function() {
+				// effetto hover su immagini in hp (idem a #234)
+				if(sw>1024){
+					jQuery('article.post .pinbin-image, article.cfa_translations .pinbin-image').each( function() {
+								jQuery(this).hoverdir({speed : 1000});
+					});
 
-			// effetto hover su immagini in hp (idem a #234)
-			if(sw>1024){
-				jQuery('article.post .pinbin-image, article.cfa_translations .pinbin-image').each( function() {
-							jQuery(this).hoverdir({speed : 1000});
-				});
-
-			}
-			okresize();
-
-
-		    if (sw>767) {
-
-		      $container.isotope({
-		        layoutMode: 'spineAlign',
-		        //disable resizing
-		        resizable: false,
-		        spineAlign: {
-		          gutterWidth: 12
-		        }
-		      });
-		      $container.isotope('reLayout');
+				}
+				okresize();
 
 
-		    }
-		  
+			    if (sw>767) {
+
+					$container.isotope({
+						layoutMode: 'spineAlign',
+						//disable resizing
+						resizable: false,
+						spineAlign: {
+							gutterWidth: 12
+						}
+					});
+					$container.isotope('reLayout');
+				}
+		  });
+
 		  var pageNum = 0;
 		  $container.infinitescroll({
 		    loading: {
