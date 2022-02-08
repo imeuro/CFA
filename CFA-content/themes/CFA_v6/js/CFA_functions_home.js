@@ -151,7 +151,7 @@ if (bodyClasses.contains('home') === true || bodyClasses.contains('archive') ===
 							gutterWidth: 12
 						}
 					});
-					$container.isotope('reLayout');
+					setTimeout(function(){$container.isotope('reLayout');}, 3000);
 				}
 		  });
 
