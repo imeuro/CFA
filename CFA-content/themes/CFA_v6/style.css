@@ -1331,14 +1331,18 @@ article.type-post:not(.isotope-item):after {
 body.page-template-default,
 .page-template-default .sidemenu,
 body.page-template-page-CFAlive,
-.page-template-page-CFAlive .sidemenu {
+.page-template-page-CFAlive .sidemenu,
+body.tribe-events-page-template,
+.tribe-events-page-template .sidemenu {
   background: #000;
   color: #fff;
 }
 .page-template-default #main-nav-wrapper #logo svg path,
 .page-template-default #hambmenu-icon rect,
 .page-template-page-CFAlive #main-nav-wrapper #logo svg path,
-.page-template-page-CFAlive #hambmenu-icon rect {
+.page-template-page-CFAlive #hambmenu-icon rect,
+.tribe-events-page-template #main-nav-wrapper #logo svg path,
+.tribe-events-page-template #hambmenu-icon rect  {
     fill: #fff;
 }
 .page-template-default .pinbin-copy,
@@ -1350,20 +1354,28 @@ body.page-template-page-CFAlive,
 .page-template-page-CFAlive .sidemenu .menu li a,
 .page-template-page-CFAlive .sidemenu .menu #lang-switcher span,
 .page-template-page-CFAlive p a,
-.page-template-page-CFAlive #showmehome {
+.page-template-page-CFAlive #showmehome,
+.tribe-events-page-template .pinbin-copy,
+.tribe-events-page-template .sidemenu .menu li a,
+.tribe-events-page-template .sidemenu .menu #lang-switcher span,
+.tribe-events-page-template p a,
+.tribe-events-page-template #showmehome {
     color: #fff;
 }
 .page-template-default #site-navigation,
-.page-template-page-CFAlive #site-navigation { 
+.page-template-page-CFAlive #site-navigation,
+.tribe-events-page-template #site-navigation { 
   position: fixed;
   z-index: 1;
 }
 .page-template-default #site-navigation.menu-open,
-page-template-page-CFAlive #site-navigation.menu-open { 
+.page-template-page-CFAlive #site-navigation.menu-open,
+.tribe-events-page-template #site-navigation.menu-open { 
   z-index: 10;
 }
 .page-template-default #hambmenu,
-.page-template-page-CFAlive #hambmenu { position: fixed;  }
+.page-template-page-CFAlive #hambmenu,
+.tribe-events-page-template #hambmenu { position: fixed;  }
 
 .page-template-default .pinbin-copy h2+.wp-block-group p,
 .page-template-page-CFAlive .pinbin-copy h2+.wp-block-group p {
@@ -1371,7 +1383,8 @@ page-template-page-CFAlive #site-navigation.menu-open {
     padding-bottom: 30px;
 }
 .page-template-default .pinbin-copy p a,
-.page-template-page-CFAlive .pinbin-copy p a {
+.page-template-page-CFAlive .pinbin-copy p a,
+.tribe-events-page-template .pinbin-copy p a {
   text-decoration: none;
 }
 .page-template-default .pinbin-copy p strong,
@@ -1381,25 +1394,33 @@ page-template-page-CFAlive #site-navigation.menu-open {
 .page-template-page-CFAlive .pinbin-copy p strong,
 .page-template-page-CFAlive .pinbin-copy p b,
 .page-template-page-CFAlive .pinbin-copy h2 b,
-.page-template-page-CFAlive .pinbin-copy h2 strong {
+.page-template-page-CFAlive .pinbin-copy h2 strong,
+.tribe-events-page-template .pinbin-copy p strong,
+.tribe-events-page-template .pinbin-copy p b,
+.tribe-events-page-template .pinbin-copy h2 b,
+.tribe-events-page-template .pinbin-copy h2 strong {
   text-decoration: none;
   border-bottom: 2px solid #FFCC33;
   letter-spacing: 0.5px;
   font-weight: 300;
 }
 .page-template-default .pinbin-copy .wp-block-spacer,
-.page-template-page-CFAlive .pinbin-copy .wp-block-spacer {
+.page-template-page-CFAlive .pinbin-copy .wp-block-spacer,
+.tribe-events-page-template .pinbin-copy .wp-block-spacer {
     clear: both;
     flex: 1 0 100%;
 }
 .page-template-default .pinbin-copy h2 + .wp-block-group,
-.page-template-page-CFAlive .pinbin-copy h2 + .wp-block-group {
+.page-template-page-CFAlive .pinbin-copy h2 + .wp-block-group,
+.tribe-events-page-template .pinbin-copy h2 + .wp-block-group {
     padding-top: 0;
 }
 .page-template-default #uplink:before, 
 .page-template-default #uplink:after,
 .page-template-page-CFAlive #uplink:before, 
-.page-template-page-CFAlive #uplink:after {
+.page-template-page-CFAlive #uplink:after,
+.tribe-events-page-template #uplink:before, 
+.tribe-events-page-template #uplink:after {
   background-color: #fff;
 }
 
@@ -1478,7 +1499,13 @@ page-template-page-CFAlive #site-navigation.menu-open {
   .page-template-page-CFAlive .pinbin-copy h2 + .wp-block-group,
   .page-template-page-CFAlive .pinbin-copy h2 + .wp-block-search,
   .page-template-page-CFAlive .pinbin-copy form.widget_wysija label,
-  .page-template-page-CFAlive .pinbin-copy form.widget_wysija input {
+  .tribe-events-page-template .pinbin-copy form.widget_wysija input,
+  .tribe-events-page-template .pinbin-copy h2,
+  .tribe-events-page-template .pinbin-copy h2 + p,
+  .tribe-events-page-template .pinbin-copy h2 + .wp-block-group,
+  .tribe-events-page-template .pinbin-copy h2 + .wp-block-search,
+  .tribe-events-page-template .pinbin-copy form.widget_wysija label,
+  .tribe-events-page-template .pinbin-copy form.widget_wysija input {
     flex: 0 0 calc(50%);
     padding: 20px 0 20px 20px;
     margin: 0;
@@ -1487,7 +1514,8 @@ page-template-page-CFAlive #site-navigation.menu-open {
     letter-spacing: 0px;
   }
   .page-template-default .pinbin-copy h2,
-  .page-template-page-CFAlive .pinbin-copy h2 {
+  .page-template-page-CFAlive .pinbin-copy h2,
+  .tribe-events-page-template .pinbin-copy h2 {
     padding: 20px 20px 20px 0;
   }  
 }
@@ -1564,7 +1592,9 @@ page-template-page-CFAlive #site-navigation.menu-open {
 .page-template-default #uplink,
 .page-template-default #showmehome,
 .page-template-page-CFAlive #uplink,
-.page-template-page-CFAlive #showmehome { background-color: #000; }
+.page-template-page-CFAlive #showmehome,
+.tribe-events-page-template #uplink,
+.tribe-events-page-template #showmehome { background-color: #000; }
 
 #uplink:hover,
 #showmehome:hover { opacity: 1 }
@@ -1697,7 +1727,22 @@ body #cookie-notice .cn-button {
 }
 
 /* tribe-events: art calendar */
+:root .tribe-events-page-template .pinbin-copy {
+    --tec-color-background: #000;
+    --tec-color-background-secondary: #fff;
+    --tec-color-text-primary: #fff;
+    --tec-color-text-primary-light: rgba(255,255,255,.5);
+    --tec-color-text-secondary: #000;
+    --tec-color-accent-secondary-hover: rgba(255,255,255,.5);
+    --tec-color-text-disabled: #d5d5d5;
+    --tec-color-border-default: #fff;
+    --tec-color-icon-active: #fff;
+    --tec-color-background-view-selector: #000;
+    --tec-color-border-secondary: #fff;
+}
 .tribe-events-page-template #wrap { padding-top: 0; }
+.tribe-events-page-template .pinbin-copy { background-color: #000; }
+.tribe-events-page-template .pinbin-copy h1 { color: #fff; }
 article.status-publish .tribe-events-before-html {
   font-family: 'Sometimes Times', serif;
   width: 100%;
@@ -1707,9 +1752,9 @@ article.status-publish .tribe-events-before-html {
 }
 article.status-publish .tribe-events-before-html p {
   font-size: 1.625em;
+  font-weight: 600;
   letter-spacing: 0.75px;
   text-rendering: optimizeLegibility;
-  color: #000;
 }
 article.type-tribe_events.status-publish {
     text-align: left;
@@ -1718,16 +1763,12 @@ article.type-tribe_events.status-publish {
 article.status-publish .tribe-events .tribe-events-l-container {
   padding-top: 0;
 }
-/*article.status-publish .tribe-events .tribe-events-c-view-selector__button:before {
-  background-color: #000;
-}
-*/
 article.status-publish .tribe-events .tribe-events-c-view-selector__content,
 article.status-publish .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__list,
 article.status-publish .tribe-events .datepicker {
   border-radius: 0;
   box-shadow: none;
-  border-color: #000;
+  /*border-color: #000;*/
 }
 
 article.status-publish .tribe-common .tribe-common-c-btn-border, 
@@ -1736,9 +1777,9 @@ article.status-publish .tribe-common .tribe-common-c-btn-border-small,
 article.status-publish .tribe-common a.tribe-common-c-btn-border-small {
   border-radius: 0;
   box-shadow: none;
-  border-color: #000;
+  /*border-color: #000;
   background: #000;
-  color: #fff;
+  color: #fff;*/
   font-size: 20px;
 }
 
