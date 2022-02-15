@@ -122,12 +122,19 @@ function wpdocs_theme_add_editor_styles() {
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
 
+function is_tribe_calendar() { // detect if we're on an Events Calendar page
+	if (tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() || tribe_is_view() || 'tribe_events' == get_post_type() || is_singular( 'tribe_events' ))
+		return true;
+	else return false;
+}
 
 function CFA_scripts() {
 	global $post;
 
-	wp_deregister_script('jquery');
-	wp_deregister_script('jquery-migrate');
+	if (!is_tribe_calendar()) {
+		wp_deregister_script('jquery');
+		wp_deregister_script('jquery-migrate');
+	}	
 
 	wp_enqueue_script( 'CFA-functions', get_template_directory_uri() . '/js/CFA_functions.js', array(), null, true );
 

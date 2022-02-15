@@ -987,7 +987,7 @@ img.author-pic { margin: 0 20px 20px 0; }
 }
 
 .home .pinbin-copy p,
-.archive .pinbin-copy p,
+.archive:not(.tribe-events-page-template) .pinbin-copy p,
 .search .pinbin-copy p,
 .append-posts .pinbin-copy p {
   line-height: 36px;

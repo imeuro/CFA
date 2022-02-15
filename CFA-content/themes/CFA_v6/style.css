@@ -1695,3 +1695,53 @@ body #cookie-notice .cn-button {
     margin: 0 0 25px 0px;
   }
 }
+
+/* tribe-events: art calendar */
+.tribe-events-page-template #wrap { padding-top: 0; }
+article.status-publish .tribe-events-before-html {
+  font-family: 'Sometimes Times', serif;
+  width: 100%;
+  font-style: italic;
+  text-align: center;
+  margin: 15px auto 70px auto;
+}
+article.status-publish .tribe-events-before-html p {
+  font-size: 1.625em;
+  letter-spacing: 0.75px;
+  text-rendering: optimizeLegibility;
+  color: #000;
+}
+article.type-tribe_events.status-publish {
+    text-align: left;
+    font-family: 'NeueHaasGroteskDisp Std', sans-serif;
+}
+article.status-publish .tribe-events .tribe-events-l-container {
+  padding-top: 0;
+}
+/*article.status-publish .tribe-events .tribe-events-c-view-selector__button:before {
+  background-color: #000;
+}
+*/
+article.status-publish .tribe-events .tribe-events-c-view-selector__content,
+article.status-publish .tribe-events .tribe-events-c-subscribe-dropdown .tribe-events-c-subscribe-dropdown__list,
+article.status-publish .tribe-events .datepicker {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #000;
+}
+
+article.status-publish .tribe-common .tribe-common-c-btn-border, 
+article.status-publish .tribe-common a.tribe-common-c-btn-border,
+article.status-publish .tribe-common .tribe-common-c-btn-border-small, 
+article.status-publish .tribe-common a.tribe-common-c-btn-border-small {
+  border-radius: 0;
+  box-shadow: none;
+  border-color: #000;
+  background: #000;
+  color: #fff;
+  font-size: 20px;
+}
+
+
+
+

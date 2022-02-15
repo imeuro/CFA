@@ -52,7 +52,7 @@ function wait(ms) {
 
 
 // load additional js's
-if ( bodyClasses.contains('home') || bodyClasses.contains('page-template-index_ita') || bodyClasses.contains('archive') || bodyClasses.contains('search') ) {
+if ( bodyClasses.contains('home') || bodyClasses.contains('page-template-index_ita') || (bodyClasses.contains('archive') && !bodyClasses.contains('tribe-events-page-template') ) || bodyClasses.contains('search') ) {
 	CFALoader({
 		src: themepath+'js/jquery-1.12.4.min.js'
 	}, "CFA_Home_Chain")
@@ -76,20 +76,22 @@ if ( bodyClasses.contains('home') || bodyClasses.contains('page-template-index_i
 			// src: themepath+'js/CFA_functions_home.js?cb='+parseInt(Math.random()*1000000)
 		}, "CFA_Home_Chain"))
 } else {
-	CFALoader({
-		src: themepath+'js/CFA_functions_foglia.js'
-		// src: themepath+'js/CFA_functions_foglia.js?cb='+parseInt(Math.random()*1000000)
-	}, "CFA_Foglia_Chain")
-	.then( element => {
-		if ( bodyClasses.contains('no-header') === false ) {
-			bottomLinks(window);
-			get_summary(window);
-			ShowMeHome();
-			injectMicrio();
-			checkGallery();
-			checkLightbox();
-		}
-	})
+	if (!bodyClasses.contains('tribe-events-page-template')) {
+		CFALoader({
+			src: themepath+'js/CFA_functions_foglia.js'
+			// src: themepath+'js/CFA_functions_foglia.js?cb='+parseInt(Math.random()*1000000)
+		}, "CFA_Foglia_Chain")
+		.then( element => {
+			if ( bodyClasses.contains('no-header') === false ) {
+				bottomLinks(window);
+				get_summary(window);
+				ShowMeHome();
+				injectMicrio();
+				checkGallery();
+				checkLightbox();
+			}
+		})
+	}
 }
 
 
@@ -173,32 +175,34 @@ const logoTransition = () => {
 	else 
 		{ postareaDivName = 'post-area'; }
 	svgbottom = logo_v6.firstElementChild.getBoundingClientRect().y + logo_v6.firstElementChild.getBoundingClientRect().height;
-	initialpostareaDivTop = document.getElementById(postareaDivName).getBoundingClientRect().top;
-	const logoattack = initialpostareaDivTop-svgbottom;
+	if (document.getElementById(postareaDivName)) {
+		initialpostareaDivTop = document.getElementById(postareaDivName).getBoundingClientRect().top;
+		const logoattack = initialpostareaDivTop-svgbottom;
 
-	document.addEventListener('scroll', function() {
-		postareaDivTop = document.getElementById(postareaDivName).getBoundingClientRect().top;
-		// console.debug('postareaDivTop:'+postareaDivTop);
-		// console.debug('document.scrollingElement.scrollTop:' + document.scrollingElement.scrollTop);
-		//blacklogo
-		blackMask = document.querySelector('.blacklogo');
-		if ((document.scrollingElement.scrollTop > logoattack) && postareaDivTop > 0) {
-			blackMask.setAttribute('y', postareaDivTop - svgbottom );
-		} else if (document.scrollingElement.scrollTop <= logoattack) {
-			blackMask.setAttribute('y', 0);
-		} else if (postareaDivTop <= 0 ) {
-			blackMask.setAttribute('y', logo_v6.offsetTop-svgbottom );
-		}
-		//whitelogo
-		whiteMask = document.querySelector('.whitelogo');
-		if ((document.scrollingElement.scrollTop > postareaDivTop - svgbottom) && postareaDivTop > 0) {
-			whiteMask.setAttribute('y', (svgbottom-logo_v6.offsetTop)-(svgbottom - postareaDivTop) );
-		} else if (postareaDivTop <= 0) {
-			whiteMask.setAttribute('y',0);
-		} else if (document.scrollingElement.scrollTop <= logoattack) {
-			whiteMask.setAttribute('y', svgbottom-logo_v6.offsetTop );
-		}
-	});
+		document.addEventListener('scroll', function() {
+			postareaDivTop = document.getElementById(postareaDivName).getBoundingClientRect().top;
+			// console.debug('postareaDivTop:'+postareaDivTop);
+			// console.debug('document.scrollingElement.scrollTop:' + document.scrollingElement.scrollTop);
+			//blacklogo
+			blackMask = document.querySelector('.blacklogo');
+			if ((document.scrollingElement.scrollTop > logoattack) && postareaDivTop > 0) {
+				blackMask.setAttribute('y', postareaDivTop - svgbottom );
+			} else if (document.scrollingElement.scrollTop <= logoattack) {
+				blackMask.setAttribute('y', 0);
+			} else if (postareaDivTop <= 0 ) {
+				blackMask.setAttribute('y', logo_v6.offsetTop-svgbottom );
+			}
+			//whitelogo
+			whiteMask = document.querySelector('.whitelogo');
+			if ((document.scrollingElement.scrollTop > postareaDivTop - svgbottom) && postareaDivTop > 0) {
+				whiteMask.setAttribute('y', (svgbottom-logo_v6.offsetTop)-(svgbottom - postareaDivTop) );
+			} else if (postareaDivTop <= 0) {
+				whiteMask.setAttribute('y',0);
+			} else if (document.scrollingElement.scrollTop <= logoattack) {
+				whiteMask.setAttribute('y', svgbottom-logo_v6.offsetTop );
+			}
+		});
+	}
 
 	document.querySelector('.WLOGO').addEventListener('click', function(){
 			window.location.href = basepath;
