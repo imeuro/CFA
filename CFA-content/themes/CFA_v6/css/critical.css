@@ -797,9 +797,9 @@ nav#archive-nav-below a {
 
 #lang-switcher span {
     font-size: 28px;
-    line-height: 36px;
+    line-height: 28px;
     font-weight: 300;
-    color: #000;
+    color: #3a3a3a;
     font-family: 'Sometimes Times', serif;
 }
 
