@@ -721,6 +721,17 @@ article .nextContainer {
 article .prevContainer { left: 0; }
 article .nextContainer { right: 0; }
 
+.CFAslider .swiper-lazy-preloader {
+  -webkit-animation:spin 4s linear infinite;
+  -moz-animation:spin 4s linear infinite;
+  animation:spin 4s linear infinite;
+}
+.CFAslider .swiper-lazy-preloader:after { 
+  background-image:url(./images/cross-black.svg);
+  background-size: 25px;
+}
+
+
 .shareaholic-canvas:before {
    content: "Share this page: ";
 }
