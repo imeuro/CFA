@@ -848,6 +848,45 @@ nav#archive-nav-below a {
     background: #fff;
     transition: 500ms linear;
 }
+#whitecurtain .cross-black {
+    width: 25px;
+    -webkit-animation:spin 4s linear infinite;
+    -moz-animation:spin 4s linear infinite;
+    animation:spin 4s linear infinite;
+}
+@-moz-keyframes spin {
+  0% { -moz-transform: rotate(0deg); }
+  5% { -moz-transform: rotate(0deg); }
+  25% { -moz-transform: rotate(90deg); }
+  30% { -moz-transform: rotate(90deg); }
+  50% { -moz-transform: rotate(180deg); }
+  55% { -moz-transform: rotate(180deg); }
+  75% { -moz-transform: rotate(270deg); }
+  80% { -moz-transform: rotate(270deg); }
+  100% { -moz-transform: rotate(360deg); }
+}
+@-webkit-keyframes spin { 
+  0% { -webkit-transform: rotate(0deg); }
+  5% { -webkit-transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(90deg); }
+  30% { -webkit-transform: rotate(90deg); }
+  50% { -webkit-transform: rotate(180deg); }
+  55% { -webkit-transform: rotate(180deg); }
+  75% { -webkit-transform: rotate(270deg); }
+  80% { -webkit-transform: rotate(270deg); }
+  100% { -webkit-transform: rotate(360deg); }
+}
+@keyframes spin {
+  0% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  5% { -webkit-transform: rotate(0deg); transform: rotate(0deg); }
+  25% { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+  30% { -webkit-transform: rotate(90deg); transform: rotate(90deg); }
+  50% { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+  55% { -webkit-transform: rotate(180deg); transform: rotate(180deg); }
+  75% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+  80% { -webkit-transform: rotate(270deg); transform: rotate(270deg); }
+  100% { -webkit-transform: rotate(360deg); transform: rotate(360deg); }
+}
 
 #whitecurtain #CFAlogo-svg {
     opacity: 0.25;

@@ -71,7 +71,7 @@ endif;
   </head>
 
   <body <?php body_class(); ?>>
-<div id="whitecurtain"><img src="<?php echo get_template_directory_uri(); ?>/images/cross-black.svg" alt="loading..." style="width: 25px;"></div>
+<div id="whitecurtain"><img class="cross-black" src="<?php echo get_template_directory_uri(); ?>/images/cross-black.svg" alt="loading..."></div>
 
  	<!-- logo and navigation -->
 
