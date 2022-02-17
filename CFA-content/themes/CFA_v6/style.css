@@ -25,7 +25,7 @@ div.wpcf7 input[type="submit"] {
   font-size: 24px;
   font-weight: 300;
   background: #fff;
-  color: #FFCC33;
+  color: #000;
   font-family: 'NeueHaasGroteskDisp Std', sans-serif;
   border: 0;
   padding: 1rem;
@@ -256,7 +256,7 @@ div.wpcf7 input[type="submit"] {
   clear: both;
   display: inline-block;
   padding: 10px 10px;
-  color: #FFCC33;
+  color: #000;
   font-family: 'NeueHaasGroteskDisp Std', sans-serif;
   text-transform: uppercase;
   text-decoration: none;
@@ -683,7 +683,7 @@ select {
   width: 10px;
   height: 10px;
   margin: 0 5px;
-  background: #FFCC33;
+  background: #000;
   border-radius: 10px;
   cursor: pointer;
 }
@@ -1035,7 +1035,7 @@ a.search_menu {
   max-width: 250px;
   height: 60px;
   background: transparent;
-  border-bottom: 5px solid #FFCC33;
+  border-bottom: 5px solid #fff;
   color: #fff;
 }
 .widget_wysija_cont .wysija-paragraph textarea {
@@ -1043,14 +1043,14 @@ a.search_menu {
   box-sizing: border-box;
   font-size: 1.75rem;
 }
-span.wpcf7-not-valid-tip { color: #FFCC33; }
+span.wpcf7-not-valid-tip { color: #fff; }
 .widget_wysija_cont .updated {
   font-family: 'NeueHaasGroteskDisp Std', sans-serif;
   font-size: 2rem;
-  border: 1px solid #FFCC33;
+  border: 1px solid #000;
   border-radius: 3px;
   color: #fff;
-  background: #FFCC33;
+  background: #000;
   text-align: center;
   margin: 40px 0;
   padding: 20px;
@@ -1400,7 +1400,7 @@ body.tribe-events-page-template,
 .tribe-events-page-template .pinbin-copy h2 b,
 .tribe-events-page-template .pinbin-copy h2 strong {
   text-decoration: none;
-  border-bottom: 2px solid #FFCC33;
+  border-bottom: 2px solid #fff;
   letter-spacing: 0.5px;
   font-weight: 300;
 }
@@ -1435,7 +1435,7 @@ body.tribe-events-page-template,
 .wp-block-search input[type=search] {
     background-color: #000;
     border: none;
-    border-bottom: 3px solid #FFCC33;
+    border-bottom: 3px solid #fff;
     color: #fff9;
     font-size: 30px;
     line-height: 38px;
@@ -1446,7 +1446,7 @@ body.tribe-events-page-template,
     outline: none;
 }
 .page-template-default .pinbin-copy .widget_wysija .formError .formErrorContent {
-    color: #FFCC33;
+    color: #fff;
     border: none;
     background: none;
     font-size: 14px;
