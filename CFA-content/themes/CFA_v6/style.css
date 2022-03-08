@@ -1383,7 +1383,7 @@ body.tribe-events-page-template,
 .page-template-page-CFAlive #site-navigation,
 .tribe-events-page-template #site-navigation { 
   position: fixed;
-  z-index: 1;
+  z-index: 10;
 }
 .page-template-default #site-navigation.menu-open,
 .page-template-page-CFAlive #site-navigation.menu-open,
