@@ -523,9 +523,9 @@ article.cfa_translations .pinbin-text a span {
     margin: 25px;
 }
 #infscr-loading img:not([style*="display: none"]) {
-    -webkit-animation: 4s linear infinite spin;
-    -moz-animation: 4s linear infinite spin;
-    animation: 4s linear infinite spin;
+    -webkit-animation: 2s linear infinite spin;
+    -moz-animation: 2s linear infinite spin;
+    animation: 2s linear infinite spin;
 }
 
 
