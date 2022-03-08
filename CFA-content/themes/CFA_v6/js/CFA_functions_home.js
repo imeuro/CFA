@@ -160,7 +160,7 @@ if (bodyClasses.contains('home') === true || bodyClasses.contains('archive') ===
 		    loading: {
 		      finished: undefined,
 		      finishedMsg: "<em>No other items to load.</em>",
-		      img: themepath+"images/cross.gif",
+		      img: themepath+"images/cross-black.svg",
 		      msg: null,
 		      msgText: "",
 		      selector: null,
