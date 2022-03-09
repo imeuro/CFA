@@ -1168,7 +1168,7 @@ img.author-pic { margin: 0 20px 20px 0; }
         left: 0;
         width: 100%;
         height: auto;
-        max-height: 180px;
+        max-height: 150px;
         overflow: hidden;
         transition: none;
         flex-flow: row wrap;
