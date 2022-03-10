@@ -54,8 +54,8 @@ endif;
         }
         <?php include( get_template_directory().'/css/critical.min.css') ?>
       </style>
-
-      <link rel="preload" href="<?php echo get_stylesheet_uri() ?>?cb=211221" as="style" onload="this.onload=null;this.rel='stylesheet'">
+      <?php $cbts = filemtime(get_stylesheet_directory().'/style.css'); ?>
+      <link rel="preload" href="<?php echo get_stylesheet_uri() ?>?cb=<?php echo $cbts ?>" as="style" onload="this.onload=null;this.rel='stylesheet'">
       <noscript>
         <link rel="stylesheet" href="<?php echo get_stylesheet_uri() ?>">
       </noscript>
