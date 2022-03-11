@@ -1758,6 +1758,9 @@ body #cookie-notice .cn-button {
     --tec-color-border-secondary: #fff;
 }
 .tribe-events-page-template .tribe-events .tribe-events-calendar-list__event-date-tag-weekday { color: var(--tec-color-accent-secondary-hover); }
+.tribe-events-page-template .tribe-events .tribe-events-header__events-bar {
+    display: none;
+}
 .tribe-events-page-template .pinbin-copy { background-color: #000; }
 .tribe-events-page-template .pinbin-copy h1 { color: #fff; }
 article.status-publish .tribe-events-before-html {
