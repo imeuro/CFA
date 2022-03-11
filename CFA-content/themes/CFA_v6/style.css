@@ -1801,10 +1801,13 @@ article.status-publish .tribe-common a.tribe-common-c-btn-border-small {
 
 .single-tribe_events .tribe-events-single .tribe-events-schedule h2 {
   flex: 1 0 100%;
+  text-align: center;
 }
 .single-tribe_events .tribe-events-single .tribe-events-event-meta {
   justify-content: space-around;
+  width: 100%;
 }
+.single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group h2 { text-align: left; }
 @media (min-width: 767px) {
   .single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group {
     flex: 0 1 40%;
