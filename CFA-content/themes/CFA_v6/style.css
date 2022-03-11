@@ -1808,10 +1808,16 @@ article.status-publish .tribe-common a.tribe-common-c-btn-border-small {
   width: 100%;
 }
 .single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group h2 { text-align: left; }
+.single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group a.tribe-events-gmap { display: block; }
+.tribe-events-meta-group.tribe-events-meta-group-gmap { order: 2; }
 @media (min-width: 767px) {
   .single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group {
     flex: 0 1 40%;
     box-sizing: border-box;
+  }
+  .single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group.tribe-events-meta-group-gmap {
+    border: 0;
+    flex: 1 0 100%;
   }
 }
 
