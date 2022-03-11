@@ -1803,7 +1803,7 @@ article.status-publish .tribe-common a.tribe-common-c-btn-border-small {
   justify-content: space-around;
 }
 @media (min-width: 767px) {
-  .tribe-events-meta-group {
+  .single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group {
     flex: 0 1 40%;
     box-sizing: border-box;
   }
