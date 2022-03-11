@@ -1799,6 +1799,9 @@ article.status-publish .tribe-common a.tribe-common-c-btn-border-small {
   font-size: 20px;
 }
 
+.single-tribe_events .tribe-events-single .tribe-events-schedule h2 {
+  flex: 1 0 100%;
+}
 .single-tribe_events .tribe-events-single .tribe-events-event-meta {
   justify-content: space-around;
 }
