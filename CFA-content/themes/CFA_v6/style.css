@@ -1133,6 +1133,13 @@ div.wpcf7-validation-errors {
       width: 100%;
       padding: 2% 8%;
   }
+  li#menu-item-113869 {order: 0;}
+  li#menu-item-94493 {order: 1;}
+  li#menu-item-113787 {order: 2;}
+  li#menu-item-94494 {order: 3;}
+  li#menu-item-94491 { order: 4;}
+  li#menu-item-113788 {order: 5;}
+  li#menu-item-94492 { order: 6; }
 }
 
 /*  FIX GUTEMBERG COLUMNS BLOCK (DOH!) */
