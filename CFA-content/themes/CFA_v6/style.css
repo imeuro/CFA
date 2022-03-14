@@ -1764,6 +1764,13 @@ body #cookie-notice .cn-button {
     --tec-color-background-view-selector: #000;
     --tec-color-border-secondary: #fff;
 }
+#tribe-events-pg-template.tribe-events-pg-template { 
+  margin: 0 5vw;
+  padding-top: 0;
+}
+#tribe-events-pg-template.tribe-events-pg-template .tribe-events-before-html {
+    display: none;
+}
 .tribe-events-page-template .tribe-events .tribe-events-calendar-list__event-date-tag-weekday { color: var(--tec-color-accent-secondary-hover); }
 .tribe-events-page-template .tribe-events .tribe-events-header__events-bar {
     display: none;
