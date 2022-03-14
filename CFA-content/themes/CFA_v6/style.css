@@ -1828,7 +1828,6 @@ article.status-publish .tribe-common a.tribe-common-c-btn-border-small {
   #tribe-events-pg-template.tribe-events-pg-template {
     margin: 0 -15vw;
   }
-  .tribe-events-venue-map { width: 100%; }
   .single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group {
     flex: 0 1 40%;
     box-sizing: border-box;
@@ -1837,6 +1836,7 @@ article.status-publish .tribe-common a.tribe-common-c-btn-border-small {
     border: 0;
     flex: 1 0 100%;
   }
+  .single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group.tribe-events-meta-group-gmap .tribe-events-venue-map { width: 100%; }
 }
 
 
