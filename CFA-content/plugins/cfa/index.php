@@ -79,9 +79,7 @@ function disable_wp_responsive_images() {
 add_filter('max_srcset_image_width', 'disable_wp_responsive_images');
 
 
-// tribe events: replace wording
-<?php
- 
+// tribe events: replace wording 
 /*
  * EXAMPLE OF CHANGING ANY TEXT (STRING) IN THE EVENTS CALENDAR
  * See the codex to learn more about WP text domains:
