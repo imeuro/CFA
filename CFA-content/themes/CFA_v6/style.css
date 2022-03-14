@@ -1776,7 +1776,7 @@ body #cookie-notice .cn-button {
     display: none;
 }
 .tribe-events-page-template .pinbin-copy { background-color: #000; }
-.tribe-events-page-template .pinbin-copy h1 { color: #fff; }
+.tribe-events-page-template .pinbin-copy h1 { color: #fff; margin: 0; }
 article.status-publish .tribe-events-before-html {
   font-family: 'Sometimes Times', serif;
   width: 100%;
@@ -1823,7 +1823,10 @@ article.status-publish .tribe-common a.tribe-common-c-btn-border-small {
 }
 .single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group h2 { text-align: left; }
 .single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group a.tribe-events-gmap { display: block; }
-.tribe-events-meta-group.tribe-events-meta-group-gmap { order: 2; }
+.tribe-events-meta-group.tribe-events-meta-group-gmap { 
+  order: 2;
+  margin: 0;
+}
 @media (min-width: 767px) {
   #tribe-events-pg-template.tribe-events-pg-template {
     margin: 0 -15vw;
