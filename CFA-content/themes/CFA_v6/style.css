@@ -1541,7 +1541,9 @@ body.tribe-events-page-template,
   .page-template-page-CFAlive .pinbin-copy h2,
   .tribe-events-page-template .pinbin-copy h2 {
     padding: 20px 20px 20px 0;
-  }  
+    text-transform: initial;
+  }
+  .tribe-events-page-template .pinbin-copy h2 { text-transform: uppercase; }
 }
 
 /* lightbox */
