@@ -11,6 +11,7 @@ $advposts = get_posts(array(
 if (!empty($advposts)) {
   $advpost = $advposts[0];
   $advpics = get_field('sponsor_pics',$advpost->ID);
+  $advlogo = get_field('sponsor_logo',$advpost->ID);
   $advStart = get_field('sponsor_start_date',$advpost->ID);
   $advEnd = get_field('sponsor_end_date',$advpost->ID);
   ?>
@@ -29,9 +30,11 @@ if (!empty($advposts)) {
             }
             ?>
           </div>
-          <div class="adv-copy" id="<?php echo $advpost->post_title ?>">
-            <p><img src="<?php echo get_field('sponsor_logo',$advpost->ID); ?>" loading="lazy" /></p>
-          </div>
+          <?php if ($advlogo): ?>
+            <div class="adv-copy" id="<?php echo $advpost->post_title ?>">
+              <p><img src="<?php echo $advlogo; ?>" loading="lazy" /></p>
+            </div>
+          <?php endif ?>
       </a>
       </div>  
     </article>
