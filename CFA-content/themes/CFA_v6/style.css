@@ -791,7 +791,8 @@ margin-left: 120px;
   font-weight: normal;
 }
 .wp-caption,
-.wp-block-image figcaption {margin-bottom: 1.5rem; box-sizing: border-box; text-align: center;}
+.wp-block-image figcaption,
+.CFAslider figcaption {margin-bottom: 1.5rem; box-sizing: border-box; text-align: center;}
 
 .post-pubdate:before { 
   content: "Last update:";
@@ -1030,7 +1031,8 @@ a.search_menu {
 .gallery-caption,
 .pinbin-copy p.wp-caption-text,
 .wp-block-image figcaption,
-.wp-block-gallery figcaption {
+.wp-block-gallery figcaption,
+.CFAslider figcaption {
   font-size: 1.15rem;
   line-height: 1.75rem;
   margin: 1em;
