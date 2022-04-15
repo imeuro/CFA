@@ -1792,7 +1792,8 @@ margin-left: 120px;
   font-weight: normal;
 }
 .wp-caption,
-.wp-block-image figcaption {margin-bottom: 1.5rem; box-sizing: border-box; text-align: center;}
+.wp-block-image figcaption,
+.CFAslider figcaption {margin-bottom: 1.5rem; box-sizing: border-box; text-align: center;}
 
 
 .wp-block-column #searchform {
@@ -2352,12 +2353,6 @@ a.search_menu {
 
   #wrap .category-description { width: 90%;}
 }
-
-@media only screen and (max-width: 330px) {
-
-
-}
-
 
 #wpadminbar {display: none}
 .gallery-caption,
