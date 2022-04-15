@@ -46,13 +46,11 @@ function gallery2swiper () {
 		if (element.classList.contains('wp-block-gallery') === true) {
 
 			var da_element = element;
-			if (element.nodeName == 'FIGURE') { // shit happens :(
-
-				da_element = element.firstChild;
+			if (element.nodeName == 'FIGURE' && da_element.classList.contains('blocks-gallery-grid')) { // shit happens :(
+				da_element = element.firstElementChild;
 				da_element.classList.remove('blocks-gallery-grid');
-
 			}
-
+			console.debug({da_element});
 			// 'element' will be wrapped with a div.swiper-container.CFAslider
 			var Swrapper = document.createElement('div');
 			da_element.parentNode.insertBefore(Swrapper, da_element);
@@ -63,6 +61,13 @@ function gallery2swiper () {
 			Swrapper.parentNode.insertBefore(Swrapper2, Swrapper);
 			Swrapper2.appendChild(Swrapper);
 
+			if (da_element.classList.contains('has-nested-images')) {
+				var Sslides = da_element.childNodes;
+			} else {
+				var Sslides = da_element.firstElementChild;
+			}
+			console.log({Sslides});
+
 			//reset and add some classes to make it work...
 			Swrapper.className = '';
 			da_element.className = '';
@@ -71,25 +76,29 @@ function gallery2swiper () {
 
 			da_element.classList.add('swiper-wrapper','gutenberg-swiper-block');
 
-			var Sslides = da_element.childNodes;
 			Array.from(Sslides).forEach(function (e, i) {
-				e.className = '';
-				e.classList.add('swiper-slide', 'gallery-item');
-				var Simg= e.querySelector('img');
-				var Simgsrc = Simg.getAttribute('src');
-				Simg.removeAttribute('src');
-				Simg.setAttribute('data-src', Simgsrc);
-				Simg.classList.add('swiper-lazy');
-				var Sfig= e.querySelector('figure'); // to be removed
-				Ssaveme=Sfig.innerHTML;
-				e.innerHTML = Ssaveme;
-				var Sdida= e.querySelector('figcaption');
-				if (Sdida && Sdida.length > 0) {
-					Sdida.classList.add('gallery-caption');
+				console.log({e});
+				if(e.nodeName != '#text') {
+					e.className = '';
+					e.classList.add('swiper-slide', 'gallery-item');
+					var Simg= e.querySelector('img');
+					var Simgsrc = Simg.getAttribute('src');
+					Simg.removeAttribute('src');
+					Simg.setAttribute('data-src', Simgsrc);
+					Simg.classList.add('swiper-lazy');
+					var Sfig= e.querySelector('figure'); // to be removed
+					if(Sfig) {
+						Ssaveme=Sfig.innerHTML;
+						e.innerHTML = Ssaveme;
+					}
+					var Sdida= e.querySelector('figcaption');
+					if (Sdida && Sdida.length > 0) {
+						Sdida.classList.add('gallery-caption');
+					}
+					var Sloader = document.createElement('div');
+					e.appendChild(Sloader);
+					Sloader.classList.add('swiper-lazy-preloader');
 				}
-				var Sloader = document.createElement('div');
-				e.appendChild(Sloader);
-				Sloader.classList.add('swiper-lazy-preloader');
 			});
 
 
