@@ -46,13 +46,13 @@ function gallery2swiper () {
 		if (element.classList.contains('wp-block-gallery') === true) {
 
 			var da_element = element;
-			if (element.nodeName == 'FIGURE') { // shit happens :(
-				da_element = element.firstElementChild;
-				if (da_element.classList.contains('blocks-gallery-grid')) {
-					da_element.classList.remove('blocks-gallery-grid');
-				}
+			if (element.nodeName == 'FIGURE' && da_element.classList.contains('has-nested-images') === false) { // shit happens :(
+
+				da_element = element.firstChild;
+				da_element.classList.remove('blocks-gallery-grid');
+
 			}
-			console.debug({da_element});
+
 			// 'element' will be wrapped with a div.swiper-container.CFAslider
 			var Swrapper = document.createElement('div');
 			da_element.parentNode.insertBefore(Swrapper, da_element);
@@ -63,9 +63,6 @@ function gallery2swiper () {
 			Swrapper.parentNode.insertBefore(Swrapper2, Swrapper);
 			Swrapper2.appendChild(Swrapper);
 
-			var Sslides = da_element.childNodes;
-			console.debug({Sslides});
-
 			//reset and add some classes to make it work...
 			Swrapper.className = '';
 			da_element.className = '';
@@ -74,9 +71,9 @@ function gallery2swiper () {
 
 			da_element.classList.add('swiper-wrapper','gutenberg-swiper-block');
 
+			var Sslides = da_element.childNodes;
 			Array.from(Sslides).forEach(function (e, i) {
-				console.log({e});
-				if(e.nodeName != '#text') {
+				if (e.nodeName != "#text") {
 					e.className = '';
 					e.classList.add('swiper-slide', 'gallery-item');
 					var Simg= e.querySelector('img');
@@ -85,7 +82,7 @@ function gallery2swiper () {
 					Simg.setAttribute('data-src', Simgsrc);
 					Simg.classList.add('swiper-lazy');
 					var Sfig= e.querySelector('figure'); // to be removed
-					if(Sfig) {
+					if (Sfig && Sfig.length > 0) {
 						Ssaveme=Sfig.innerHTML;
 						e.innerHTML = Ssaveme;
 					}
