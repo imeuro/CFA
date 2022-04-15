@@ -46,9 +46,11 @@ function gallery2swiper () {
 		if (element.classList.contains('wp-block-gallery') === true) {
 
 			var da_element = element;
-			if (element.nodeName == 'FIGURE' && da_element.classList.contains('blocks-gallery-grid')) { // shit happens :(
+			if (element.nodeName == 'FIGURE') { // shit happens :(
 				da_element = element.firstElementChild;
-				da_element.classList.remove('blocks-gallery-grid');
+				if (da_element.classList.contains('blocks-gallery-grid')) {
+					da_element.classList.remove('blocks-gallery-grid');
+				}
 			}
 			console.debug({da_element});
 			// 'element' will be wrapped with a div.swiper-container.CFAslider
@@ -61,12 +63,8 @@ function gallery2swiper () {
 			Swrapper.parentNode.insertBefore(Swrapper2, Swrapper);
 			Swrapper2.appendChild(Swrapper);
 
-			if (da_element.classList.contains('has-nested-images')) {
-				var Sslides = da_element.childNodes;
-			} else {
-				var Sslides = da_element.firstElementChild;
-			}
-			console.log({Sslides});
+			var Sslides = da_element.childNodes;
+			console.debug({Sslides});
 
 			//reset and add some classes to make it work...
 			Swrapper.className = '';
