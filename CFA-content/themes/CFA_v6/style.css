@@ -1285,18 +1285,18 @@ button.micrio-switch {
 
 
 /* ADV STUFF */
-.post-ad-insert .adv-block {
+.post-spinsert .spb {
   max-width: 100%
 }
-.post-ad-insert .adv-image {
+.post-spinsert .spi {
   width: 100%;
   max-width: 100%;
 }
-.post-ad-insert .adv-image img {
+.post-spinsert .spi img {
   width: 100%;
   max-width: 100%;
 }
-.post-ad-insert .adv-copy {
+.post-spinsert .spc {
   position: absolute;
   bottom: 10px;
   left: 15px;
@@ -1312,13 +1312,13 @@ button.micrio-switch {
   backdrop-filter: blur(3px);
   text-align: center;
 }
-.post-ad-insert .adv-copy p { margin: 0 auto; }
-#post-area .post-ad-insert .adv-copy img {
+.post-spinsert .spc p { margin: 0 auto; }
+#post-area .post-spinsert .spc img {
   width: 150px;
 }
 
 @media all and (min-width: 769px) {
-  .post-ad-insert .adv-copy {
+  .post-spinsert .spc {
     opacity: 0;
     transition: opacity 500ms ease-in-out;
     background: rgba(255,255,255, 0.5);
@@ -1328,10 +1328,10 @@ button.micrio-switch {
     top: 0;
     text-align: center;
   }  
-  .post-ad-insert:hover .adv-copy {
+  .post-spinsert:hover .spc {
     opacity: 1;
   }
-  .post-ad-insert .adv-copy img {
+  .post-spinsert .spc img {
     width: 175px;
   }
 }
