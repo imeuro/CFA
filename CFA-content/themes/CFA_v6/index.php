@@ -12,6 +12,32 @@
 <?php
 $postnum=0;
 $currentTS = time();
+
+$prefetch_advs = get_posts(array(
+  'numberposts' => -1,
+  'post_status' => 'publish',
+  'post_type'   => 'cfa_sponsors',
+  'orderby'     => 'rand',
+  'order'       => 'rand'
+
+));
+if (!empty($prefetch_advs)) {
+  // print_r($prefetch_advs);
+  $advs = [];
+  for ($i=0; $i < count($prefetch_advs); $i++) {
+    $pos = get_field('sponsor_position',$prefetch_advs[$i]->ID);
+    $advStart = get_field('sponsor_start_date',$prefetch_advs[$i]->ID);
+    $advEnd = get_field('sponsor_end_date',$prefetch_advs[$i]->ID);
+    if ( $currentTS > $advStart && $currentTS < $advEnd ) {
+      $advs[$prefetch_advs[$i]->ID] = $pos;
+    }
+    
+  }
+  $advs_orig = $advs;
+}
+
+
+
 while (have_posts()) : the_post();
   $postnum++;
 
