@@ -251,7 +251,7 @@ function parallax(e) {
     text.style.left = tx;
 }
 
-
+/*
 let getADS = () => {
 	// read and inject advs in position:
 	const adslot1 = document.querySelector('#post-area article:nth-child(2)');
@@ -297,13 +297,47 @@ let injectADScont = (id) => {
 	  .then(response => response.text())
 	  .then(text => target.innerHTML = text);
 }
+*/
 
-let randomizespblocks = () => {
+let rotatespblocks = () => {
 	const thearea = document.querySelector('#post-area');
-	const theslots = thearea.querySelector('.post-spinsert');
-	Array.from(theslots).forEach( function(element, index) {
-		// statements
+	const theslots = thearea.querySelectorAll('.post-spinsert');
+	let spblocks = Array.from(theslots);
+	const original_spblocks = spblocks;
+	// console.debug(spblocks);
+	// console.debug('total: '+ original_spblocks.length);
+
+	let original_positions = [];
+	original_spblocks.forEach( function(el, i) {
+		// zero-based sponsor positions
+		original_positions[i] = Array.from(el.parentNode.children).indexOf(el);
 	});
+	spblocks.forEach( function(el, i) {
+		el.remove();
+	});
+	// console.debug({original_positions});
+	// console.debug({spblocks});
+
+	original_positions.forEach( function(el, i) {
+		// ne seleziono uno a caso da riassegnare:
+		const selected = Math.floor(Math.random() * spblocks.length);
+		console.debug(original_spblocks[selected].id+' va in posizione '+original_positions[i]);
+
+		// aggiungo sponsor riassegnato al DOM 
+		thearea.insertBefore(original_spblocks[selected],thearea.children[original_positions[i]]);
+
+		// rimuovo sponsor riassegnato da spblocks[]
+		spblocks.splice(selected, 1); 
+
+	});
+
+	if ($container.hasClass('isotope') === true) {
+		$container.isotope( 'appended', jQuery( spblocks ) );
+		setTimeout(function(){
+			$container.isotope('reLayout');
+		},500);
+	}
+
 }
 
 document.addEventListener("DOMContentLoaded", function() {
@@ -311,7 +345,8 @@ document.addEventListener("DOMContentLoaded", function() {
 });
 
 
-// window.addEventListener("load", function() {
+window.addEventListener("load", function() {
+	rotatespblocks()
 	logoTransition();
-// });
+});
 
