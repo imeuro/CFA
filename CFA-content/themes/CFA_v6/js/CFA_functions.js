@@ -72,8 +72,8 @@ if ( bodyClasses.contains('home') || bodyClasses.contains('page-template-index_i
 			src: themepath+'js/jquery.infinitescroll.min.js'
 		}, "CFA_Home_Chain"))
 	.then( element => CFALoader({
-			src: themepath+'js/CFA_functions_home.js'
-			// src: themepath+'js/CFA_functions_home.js?cb='+parseInt(Math.random()*1000000)
+			// src: themepath+'js/CFA_functions_home.js'
+			src: themepath+'js/CFA_functions_home.js?cb='+parseInt(Math.random()*1000000)
 		}, "CFA_Home_Chain"))
 } else {
 	if (!bodyClasses.contains('tribe-events-page-template')) {
