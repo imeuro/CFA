@@ -347,6 +347,6 @@ document.addEventListener("DOMContentLoaded", function() {
 
 window.addEventListener("load", function() {
 	logoTransition();
-	setTimeout(function(){ rotatespblocks(); },2000);
+	setTimeout(function(){ rotatespblocks(); },500);
 });
 
