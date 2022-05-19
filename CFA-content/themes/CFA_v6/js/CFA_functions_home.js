@@ -299,6 +299,7 @@ let injectADScont = (id) => {
 }
 */
 if (typeof rotatespblocks !== "function" ) {
+	
 	let rotatespblocks = () => {
 		const thearea = document.querySelector('#post-area');
 		const theslots = thearea.querySelectorAll('.post-spinsert');
@@ -337,17 +338,17 @@ if (typeof rotatespblocks !== "function" ) {
 				$container.isotope('reLayout');
 			},500);
 		}
-
 	}
+
+	document.addEventListener("DOMContentLoaded", function() {
+		setTimeout(function(){ rotatespblocks(); },500);
+	});
+
 }
-
-document.addEventListener("DOMContentLoaded", function() {
-  // getADS();
-});
-
 
 window.addEventListener("load", function() {
 	logoTransition();
-	setTimeout(function(){ rotatespblocks(); },500);
 });
+
+
 
