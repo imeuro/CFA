@@ -43,7 +43,7 @@ while (have_posts()) { the_post();
   if ($isSponsored) {
     $sponsoredClass = 'sponsored ';
   } else {
-    $sponsoredClass = 'post';
+    $sponsoredClass = '';
   }
 
 ?>
