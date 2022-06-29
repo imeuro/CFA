@@ -28,7 +28,7 @@ Template Name: lightbox-page
 	    list-style: none;
 	    width: 100vw;
 	}
-	.page-template-lightbox-page figure { margin: 0; }
+	.page-template-lightbox-page figure { margin: 0; text-align: center; }
 	.page-template-lightbox-page li.swiper-slide {
 	    text-align: center;
 		max-height: 100vh;

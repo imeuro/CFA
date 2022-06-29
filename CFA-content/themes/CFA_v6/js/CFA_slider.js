@@ -78,9 +78,11 @@ function gallery2swiper () {
 					e.classList.add('swiper-slide', 'gallery-item');
 					var Simg= e.querySelector('img');
 					var Simgsrc = Simg.getAttribute('src');
-					Simg.removeAttribute('src');
-					Simg.setAttribute('data-src', Simgsrc);
-					Simg.classList.add('swiper-lazy');
+					if (document.body.classList.contains('page-template-lightbox-page') === false) {
+						Simg.removeAttribute('src');
+						Simg.setAttribute('data-src', Simgsrc);
+						Simg.classList.add('swiper-lazy');
+					}
 					var Sfig= e.querySelector('figure'); // to be removed
 					if (Sfig && Sfig.length > 0) {
 						Ssaveme=Sfig.innerHTML;
@@ -90,9 +92,11 @@ function gallery2swiper () {
 					if (Sdida && Sdida.length > 0) {
 						Sdida.classList.add('gallery-caption');
 					}
-					var Sloader = document.createElement('div');
-					e.appendChild(Sloader);
-					Sloader.classList.add('swiper-lazy-preloader');
+					if (document.body.classList.contains('page-template-lightbox-page') === false) {
+						var Sloader = document.createElement('div');
+						e.appendChild(Sloader);
+						Sloader.classList.add('swiper-lazy-preloader');
+					}
 				}
 			});
 

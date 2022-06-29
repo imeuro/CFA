@@ -220,7 +220,7 @@ function string_limit_words($string, $word_limit) {
   return implode(' ', $words);
 }
 
-/* non voglio le thumbs nella gallery!! */
+/* non voglio le thumbs nella gallery!! 
 function CFA_gallery_shortcode($attr) {
 	$post = get_post();
 
@@ -328,7 +328,7 @@ function CFA_gallery_shortcode($attr) {
 			#{$selector} .gallery-caption {
 				margin-left: 0;
 			}
-			/* see gallery_shortcode() in wp-includes/media.php */
+			// see gallery_shortcode() in wp-includes/media.php
 		</style>";
 	$size_class = sanitize_html_class( $size );
 	$gallery_div = "<div class='container'>\n
@@ -397,12 +397,11 @@ function CFA_gallery_shortcode($attr) {
 	return $output;
 }
 
-remove_shortcode('gallery', 'gallery_shortcode');
-add_shortcode('gallery', 'CFA_gallery_shortcode');
+//remove_shortcode('gallery', 'gallery_shortcode');
+//add_shortcode('gallery', 'CFA_gallery_shortcode');
+*/
 
 add_filter('show_admin_bar', '__return_false');
-
-
 
 /*
 Remove wp-caption inline style width in WordPress 3.4 and up
