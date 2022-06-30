@@ -116,6 +116,9 @@ function gallery2swiper () {
 
 			// aaaaand finally init dat shit
 			BlockSwiper[index] = new Swiper (Swrapper, CFAslidersettings );
+			BlockSwiper[index].init();
+			console.log(index+'init!');
+
 			BlockSwiper[index].on('init', function() { 
 				updateSwipeArea(BlockSwiper[index],300); 
 			});
@@ -128,8 +131,7 @@ function gallery2swiper () {
 					console.debug('lazyImageReady cautionary resize...')
 				}, 4000);
 			});
-			BlockSwiper[index].init();
-			console.log(index+'init!');
+			
 
 		} else { // Legacy carousels with shortcodes
 			var curSwiper = new Swiper (element, CFAslidersettings );
