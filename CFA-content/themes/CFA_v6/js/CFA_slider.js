@@ -124,13 +124,17 @@ function gallery2swiper () {
 			});
 			BlockSwiper[index].on('lazyImageReady', function () {
 				console.log('lazyImageReady........');
-				updateSwipeArea(BlockSwiper[index],1000);
+				updateSwipeArea(BlockSwiper[index],100);
 				// updateSwipeArea(BlockSwiper[index],4000);
 				setTimeout(() => {
 					BlockSwiper[index].update();
 					console.debug('lazyImageReady cautionary resize...')
 				}, 4000);
 			});
+			BlockSwiper[index].on('slideChangeTransitionEnd', function() { 
+				updateSwipeArea(BlockSwiper[index],500); 
+			});
+
 			
 
 		} else { // Legacy carousels with shortcodes
