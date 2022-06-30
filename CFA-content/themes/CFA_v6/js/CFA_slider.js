@@ -9,7 +9,7 @@ var CFAslidersettings = {
 	preloadImages: false,
 	lazy: {
     	loadPrevNext: false,
-    	// loadPrevNextAmount: 1,
+    	loadPrevNextAmount: 2,
     	loadOnTransitionStart: true
   	},
 	fadeEffect: {
@@ -121,7 +121,12 @@ function gallery2swiper () {
 			});
 			BlockSwiper[index].on('lazyImageReady', function () {
 				console.log('lazyImageReady........');
-			updateSwipeArea(BlockSwiper[index],100);
+				updateSwipeArea(BlockSwiper[index],1000);
+				// updateSwipeArea(BlockSwiper[index],4000);
+				setTimeout(() => {
+					BlockSwiper[index].update();
+					console.debug('lazyImageReady cautionary resize...')
+				}, 4000);
 			});
 			BlockSwiper[index].init();
 			console.log(index+'init!');
@@ -132,7 +137,7 @@ function gallery2swiper () {
 				updateSwipeArea(curSwiper,300); 
 			});
 			curSwiper.on('lazyImageReady', function () {
-				updateSwipeArea(curSwiper,100);
+				updateSwipeArea(curSwiper,500);
 			});	
 			curSwiper.init();
 		}
