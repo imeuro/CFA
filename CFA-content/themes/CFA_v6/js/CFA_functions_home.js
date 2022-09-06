@@ -341,7 +341,8 @@ if (typeof rotatespblocks !== "function" ) {
 	}
 
 	document.addEventListener("DOMContentLoaded", function() {
-		setTimeout(function(){ rotatespblocks(); },500);
+		// disabled as per request 06092022
+		// setTimeout(function(){ rotatespblocks(); },500);
 	});
 
 }
