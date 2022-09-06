@@ -27,12 +27,12 @@ endif;
       <meta name="language" content="<?php echo $lang; ?>">
       <title><?php wp_title('&#124;', true, 'right'); ?></title>
 
-      <link rel="apple-touch-icon" sizes="180x180" href="https://www.conceptualfinearts.com/apple-touch-icon.png?v60">
-      <link rel="icon" type="image/png" sizes="32x32" href="https://www.conceptualfinearts.com/favicon-32x32.png?v60">
-      <link rel="icon" type="image/png" sizes="16x16" href="https://www.conceptualfinearts.com/favicon-16x16.png?v60">
-      <link rel="manifest" href="https://www.conceptualfinearts.com/site.webmanifest?v60">
-      <link rel="mask-icon" href="https://www.conceptualfinearts.com/safari-pinned-tab.svg?v60" color="#5bbad5">
-      <link rel="shortcut icon" href="https://www.conceptualfinearts.com/favicon.ico?v60">
+      <link rel="apple-touch-icon" sizes="180x180" href="https://www.conceptualfinearts.com/apple-touch-icon.png?v60b">
+      <link rel="icon" type="image/png" sizes="32x32" href="https://www.conceptualfinearts.com/favicon-32x32.png?v60b">
+      <link rel="icon" type="image/png" sizes="16x16" href="https://www.conceptualfinearts.com/favicon-16x16.png?v60b">
+      <link rel="manifest" href="https://www.conceptualfinearts.com/site.webmanifest?v60b">
+      <link rel="mask-icon" href="https://www.conceptualfinearts.com/safari-pinned-tab.svg?v60b" color="#5bbad5">
+      <link rel="shortcut icon" href="https://www.conceptualfinearts.com/favicon.ico?v60b">
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
 
