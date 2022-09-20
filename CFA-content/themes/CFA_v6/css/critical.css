@@ -1355,7 +1355,7 @@ ul#ToC-list li a {
     margin-right: 10px;
     cursor: pointer;
     display: inline;
-    border-bottom: 1px solid #FFCC33;
+    border-bottom: 1px solid #333;
     /* text-decoration: underline; */
 }
 
