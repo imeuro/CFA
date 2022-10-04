@@ -1846,6 +1846,10 @@ article.status-publish .tribe-common .tribe-events-c-subscribe-dropdown__button 
   order: 2;
   margin: 0;
 }
+.tribe-events-single .tribe-events-sub-nav .tribe-events-nav-next a, .tribe-events-single .tribe-events-sub-nav .tribe-events-nav-previous a {
+  color: #fff;
+}
+
 @media (min-width: 767px) {
   #tribe-events-pg-template.tribe-events-pg-template {
     margin: 0 -15vw;
