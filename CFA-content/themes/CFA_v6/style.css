@@ -1821,7 +1821,7 @@ article.status-publish .tribe-common a.tribe-common-c-btn-border-small {
   font-size: 20px;
 }
 
-.single-tribe_events .tribe-events .tribe-events-c-subscribe-dropdown__container {
+article.status-publish .single-tribe_events .tribe-events .tribe-events-c-subscribe-dropdown__container {
   width: 100%;
   display: flex;
   flex-flow: row wrap;
@@ -1846,8 +1846,19 @@ article.status-publish .tribe-common .tribe-events-c-subscribe-dropdown__button 
   order: 2;
   margin: 0;
 }
-.tribe-events-single .tribe-events-sub-nav .tribe-events-nav-next a,
-.single-tribe_events  .tribe-events-single .tribe-events-sub-nav .tribe-events-nav-previous a {
+
+article.status-publish .single-tribe_events .tribe-events-single .tribe-events-sub-nav {
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: space-between;
+    align-items: center;
+}
+.single-tribe_events .tribe-events-single .tribe-events-sub-nav .tribe-events-nav-next,
+.single-tribe_events .tribe-events-single .tribe-events-sub-nav .tribe-events-nav-previous {
+  flex: 0 0 40%;
+}
+.single-tribe_events .tribe-events-single .tribe-events-sub-nav .tribe-events-nav-next a,
+.single-tribe_events .tribe-events-single .tribe-events-sub-nav .tribe-events-nav-previous a {
   color: #fff;
 }
 
