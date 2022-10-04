@@ -1772,7 +1772,7 @@ body #cookie-notice .cn-button {
   margin: 0 5vw;
   padding-top: 0;
 }
-#tribe-events-pg-template.tribe-events-pg-template .tribe-events-before-html {
+#tribe-events-pg-template.tribe-events-pg-template .tribe-events-before-html p {
     display: none;
 }
 .tribe-events-page-template .tribe-events .tribe-events-calendar-list__event-date-tag-weekday { color: var(--tec-color-accent-secondary-hover); }
@@ -1787,6 +1787,10 @@ article.status-publish .tribe-events-before-html {
   font-style: italic;
   text-align: center;
   margin: 15px auto 70px auto;
+}
+article.status-publish .tribe-events-back a {
+    font-size: 14px;
+    font-weight: 400;
 }
 article.status-publish .tribe-events-before-html p {
   font-size: 1.625em;
@@ -1815,6 +1819,17 @@ article.status-publish .tribe-common a.tribe-common-c-btn-border-small {
   border-radius: 0;
   box-shadow: none;
   font-size: 20px;
+}
+
+.single-tribe_events .tribe-events .tribe-events-c-subscribe-dropdown__container {
+  width: 100%;
+  display: flex;
+  flex-flow: row wrap;
+  align-items: center;
+  justify-content: space-evenly;
+}
+article.status-publish .tribe-common .tribe-events-c-subscribe-dropdown__button {
+  font-size: 14px;
 }
 
 .single-tribe_events .tribe-events-single .tribe-events-schedule h2 {
