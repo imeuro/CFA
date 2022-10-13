@@ -566,7 +566,7 @@ body.home #main-nav-wrapper {
   position: relative;
   z-index: 9;
   max-width: 640px;
-  margin: 170px auto 100px auto; 
+  margin: 170px auto 100px auto;
 }
 
 #wrap.fixd {
@@ -773,24 +773,7 @@ nav#archive-nav-below a {
     width: auto;
     flex: 1 0 auto;
 }
-/*
-.sidemenu .menu li.menu_ig a { font-size: 0; }
-.sidemenu .menu li.menu_ig a:before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 32 40' x='0px' y='0px'%3E%3Cpath fill='%23000' d='M24.66,31H7.34A6.34,6.34,0,0,1,1,24.66V7.34A6.34,6.34,0,0,1,7.34,1H24.66A6.34,6.34,0,0,1,31,7.34V24.66A6.34,6.34,0,0,1,24.66,31ZM7.34,3A4.34,4.34,0,0,0,3,7.34V24.66A4.34,4.34,0,0,0,7.34,29H24.66A4.34,4.34,0,0,0,29,24.66V7.34A4.34,4.34,0,0,0,24.66,3H7.34Z'/%3E%3Cpath fill='%23000' d='M16,23.53A7.53,7.53,0,1,1,23.53,16,7.54,7.54,0,0,1,16,23.53Zm0-13.07A5.53,5.53,0,1,0,21.53,16,5.54,5.54,0,0,0,16,10.47Z'/%3E%3Cpath fill='%23000' d='M24.46,9.9A2.55,2.55,0,1,1,27,7.35,2.56,2.56,0,0,1,24.46,9.9Zm0-4.11A1.55,1.55,0,1,0,26,7.35,1.56,1.56,0,0,0,24.46,5.79Z'/%3E%3C/svg%3E");
-    display: block;
-    content: "";
-    width: 28px;
-    height: 28px;
-    background-size: 28px 28px;
-    background-repeat: no-repeat;
-    background-position: center;
-}
-.page-template-default .sidemenu .menu li.menu_ig a:before,
-.page-template-page-CFAlive .sidemenu .menu li.menu_ig a:before,
-.tribe-events-page-template .sidemenu .menu li.menu_ig a:before {
-    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' data-name='Layer 1' viewBox='0 0 32 40' x='0px' y='0px'%3E%3Cpath fill='%23fff' d='M24.66,31H7.34A6.34,6.34,0,0,1,1,24.66V7.34A6.34,6.34,0,0,1,7.34,1H24.66A6.34,6.34,0,0,1,31,7.34V24.66A6.34,6.34,0,0,1,24.66,31ZM7.34,3A4.34,4.34,0,0,0,3,7.34V24.66A4.34,4.34,0,0,0,7.34,29H24.66A4.34,4.34,0,0,0,29,24.66V7.34A4.34,4.34,0,0,0,24.66,3H7.34Z'/%3E%3Cpath fill='%23fff' d='M16,23.53A7.53,7.53,0,1,1,23.53,16,7.54,7.54,0,0,1,16,23.53Zm0-13.07A5.53,5.53,0,1,0,21.53,16,5.54,5.54,0,0,0,16,10.47Z'/%3E%3Cpath fill='%23fff' d='M24.46,9.9A2.55,2.55,0,1,1,27,7.35,2.56,2.56,0,0,1,24.46,9.9Zm0-4.11A1.55,1.55,0,1,0,26,7.35,1.56,1.56,0,0,0,24.46,5.79Z'/%3E%3C/svg%3E");
-}
-*/
+
 .sidemenu .menu li.menu_lowercase a {
     text-transform: initial;
 }
@@ -1230,7 +1213,8 @@ img.author-pic { margin: 0 20px 20px 0; }
     }
     .page-template-default #wrap,
     .page-template-page-CFAlive #wrap,
-    .tribe-events-page-template #wrap { 
+    .tribe-events-page-template #wrap {
+        overflow-x: hidden;
         margin-top: 230px;
         max-width: 768px; 
     }
