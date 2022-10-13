@@ -43,13 +43,7 @@ Template Name: lightbox-page
 		margin: 0 auto;
 	}
 	.page-template-lightbox-page .swiper-slide figcaption {
-		color: #fff;
-		margin: 5px;
-		font-size: 12px;
-		line-height: 13px;
-		font-family: 'NeueHaasGroteskDisp Std',sans-serif;
-		font-weight: 400;
-		font-style: normal;
+		display: none;
 	}
 	.page-template-lightbox-page .swiper-pagination-bullets {
 		position: absolute;
