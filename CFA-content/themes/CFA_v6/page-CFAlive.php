@@ -33,7 +33,8 @@ Template Name: CFAlive
                   if (!empty($ci["cfalive_event_gallery"])) {
                     echo substr($ci["cfalive_event_text"],0,-5); // no ending </p>
                     $urlgallery=$ci["cfalive_event_gallery"][0]->guid;
-                    echo '<br><a href="'.$urlgallery.'#lightbox" class="glightbox-black"><strong>Images</strong></a></p>';
+                    // echo '<br><a href="'.$urlgallery.'#lightbox" class="glightbox-black"><strong>Images</strong></a></p>';
+                    echo '<br><a href="'.$urlgallery.'"><strong>Images</strong></a></p>';
                   } else {
                     echo $ci["cfalive_event_text"];
                   }
@@ -43,9 +44,6 @@ Template Name: CFAlive
                   }
 
                 }
-                echo "<pre>";
-                //print_r($CFAlive_events);
-                echo "</pre>";
 
 
                 ?>
