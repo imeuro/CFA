@@ -36,10 +36,10 @@ Template Name: CFAlive-gallery
 	.page-template-cfalive-gallery #uplink {
 		outline: none;
 		position: fixed;
-		top: 40px;
-		left: 40px;
-		width: 50px;
-		height: 50px;
+		top: 30px;
+		left: 20px;
+		width: 35px;
+		height: 35px;
 		background: transparent;
 		border: none;
 		border-radius: 8px;
@@ -58,9 +58,9 @@ Template Name: CFAlive-gallery
 	.page-template-cfalive-gallery #uplink:after {
 		content: "";
 		position: absolute;
-		top: 22px;
+		top: 16px;
 		left: 12px;
-		width: 15px;
+		width: 7px;
 		height: 1px;
 		border-radius: 0;
 		background-color: #fff;
