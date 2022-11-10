@@ -60,7 +60,7 @@ Template Name: CFAlive-gallery
 		position: absolute;
 		top: 16px;
 		left: 12px;
-		width: 7px;
+		width: 6px;
 		height: 1px;
 		border-radius: 0;
 		background-color: #fff;
