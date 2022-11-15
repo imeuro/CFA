@@ -14,7 +14,7 @@ CFA-content/cache/
 CFA-content/dbs/
 CFA-content/languages/
 CFA-content/upgrade/
-CFA-content/uploads/
+CFA-content/uploads/*
 CFA-content/mu-plugins/
 CFA-content/wp-cache-config.php
 CFA-content/plugins/*
