@@ -49,6 +49,8 @@ Template Name: CFAlive
 
                 <?php // CFA LIVE ADDITIONAL PARAGRAPHS
                 $cfalive_paragraphs = get_field('cfalive_paragraphs');
+
+                // echo '<pre>'.$cfalive_paragraphs.'</pre>';
                 for ($i=0; $i < count($cfalive_paragraphs); $i++) {
                   
                   $ci=$cfalive_paragraphs[$i]; 
@@ -56,9 +58,19 @@ Template Name: CFAlive
                     echo '<h2>'.strtoupper($ci["cfalive_paragraph_title"]).'</h2>';
                     echo '<div class="wp-block-group">';
                   }
-                  
-                  echo $ci["cfalive_paragraph_text"];
 
+                  for ($p=0; $p < count($ci['cfalive_paragraph_content']); $p++) {
+                    $cpi=$ci['cfalive_paragraph_content'][$p];
+                    if (!empty($cpi["cfalive_paragraph_gallery_link"])) {
+                      echo substr($cpi["cfalive_paragraph_text"],0,-5); // no ending </p>
+                      $urlgallery=$cpi["cfalive_paragraph_gallery_link"][0]->guid;
+                      // echo '<br><a href="'.$urlgallery.'#lightbox" class="glightbox-black"><strong>Images</strong></a></p>';
+                      echo '<br><a href="'.$urlgallery.'"><strong>Images</strong></a></p>';
+                    } else {
+                      echo $cpi["cfalive_paragraph_text"];
+                    }
+                  }
+                  
                   if ($i==0 || $i == count($cfalive_paragraphs)) {
                     echo '</div>';
                   }
