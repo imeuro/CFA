@@ -20,7 +20,7 @@ Template Name: CFAlive
               <?php the_content(); ?> 
 
               
-                <?php 
+                <?php // CFA LIVE EVENTS
                 $CFAlive_events = get_field('cfalive_events');
                 for ($i=0; $i < count($CFAlive_events); $i++) {
                   
@@ -44,8 +44,26 @@ Template Name: CFAlive
                   }
 
                 }
+                ?>
+            </div>
 
+                <?php // CFA LIVE ADDITIONAL PARAGRAPHS
+                $cfalive_paragraphs = get_field('cfalive_paragraphs');
+                for ($i=0; $i < count($cfalive_paragraphs); $i++) {
+                  
+                  $ci=$cfalive_paragraphs[$i]; 
+                  if ($i<=1) {
+                    echo '<h2>'.strtoupper($ci["cfalive_paragraph_title"]).'</h2>';
+                    echo '<div class="wp-block-group">';
+                  }
+                  
+                  echo $ci["cfalive_paragraph_text"];
 
+                  if ($i==0 || $i == count($cfalive_paragraphs)) {
+                    echo '</div>';
+                  }
+
+                }
                 ?>
             </div>
 
