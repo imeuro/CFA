@@ -59,15 +59,16 @@ Template Name: CFAlive
                     echo '<div class="wp-block-group">';
                   }
 
-                  for ($p=0; $p < count($ci['cfalive_paragraph_content']); $p++) {
-                    $cpi=$ci['cfalive_paragraph_content'][$p];
-                    if (!empty($cpi["cfalive_paragraph_gallery_link"])) {
-                      echo substr($cpi["cfalive_paragraph_text"],0,-5); // no ending </p>
-                      $urlgallery=$cpi["cfalive_paragraph_gallery_link"][0]->guid;
-                      // echo '<br><a href="'.$urlgallery.'#lightbox" class="glightbox-black"><strong>Images</strong></a></p>';
-                      echo '<br><a href="'.$urlgallery.'"><strong>Images</strong></a></p>';
-                    } else {
-                      echo $cpi["cfalive_paragraph_text"];
+                  if ($ci['cfalive_paragraph_content'] && count($ci['cfalive_paragraph_content']) > 0) {
+                    for ($p=0; $p < count($ci['cfalive_paragraph_content']); $p++) {
+                      $cpi=$ci['cfalive_paragraph_content'][$p];
+                      if (!empty($cpi["cfalive_paragraph_gallery_link"])) {
+                        echo substr($cpi["cfalive_paragraph_text"],0,-5); // no ending </p>
+                        $urlgallery=$cpi["cfalive_paragraph_gallery_link"][0]->guid;
+                        echo '<br><a href="'.$urlgallery.'"><strong>Images</strong></a></p>';
+                      } else {
+                        echo $cpi["cfalive_paragraph_text"];
+                      }
                     }
                   }
                   
