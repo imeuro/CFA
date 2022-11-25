@@ -23,10 +23,16 @@ Template Name: CFAlive
                 <?php // CFA LIVE EVENTS
                 $CFAlive_events = get_field('cfalive_events');
                 for ($i=0; $i < count($CFAlive_events); $i++) {
-                  
-                  $ci=$CFAlive_events[$i]; 
-                  if ($i<=1) {
-                    echo '<h2>'.$ci["cfalive_event_label"]["label"].'</h2>';
+                  $ci=$CFAlive_events[$i];
+                  $prevLabel = $i>0 ? $CFAlive_events[$i-1]["cfalive_event_label"]["label"] : '';
+                  $curLabel = $ci["cfalive_event_label"]["label"];
+
+                  // print_r($prevLabel);
+                  // print_r($curLabel);
+
+                  if ( $prevLabel != $curLabel ) {
+                    if ($i > 0) { echo '</div>';  } // closes prev wp-block-group
+                    echo '<h2>'.$curLabel.'</h2>';
                     echo '<div class="wp-block-group">';
                   }
                   
@@ -39,7 +45,7 @@ Template Name: CFAlive
                     echo $ci["cfalive_event_text"];
                   }
 
-                  if ($i==0 || $i == count($CFAlive_events)) {
+                  if ($i == count($CFAlive_events)) {
                     echo '</div>';
                   }
 
