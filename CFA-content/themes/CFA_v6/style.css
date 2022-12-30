@@ -1864,7 +1864,7 @@ article.status-publish .single-tribe_events .tribe-events-single .tribe-events-s
 
 @media (min-width: 767px) {
   #tribe-events-pg-template.tribe-events-pg-template {
-    margin: 0 -15vw;
+    margin: 0 -10vw;
   }
   .single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group {
     flex: 0 1 40%;
