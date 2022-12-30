@@ -206,4 +206,16 @@ add_filter( 'ngettext', 'tribe_custom_theme_text_plurals', 20, 5 );
 add_filter( 'gettext_with_context', 'tribe_custom_theme_text_with_context', 20, 4 );
 // Plural-aware translations with context.
 add_filter( 'ngettext_with_context', 'tribe_custom_theme_text_plurals_with_context', 20, 6 );
+
+function tribe_list_reverse_chronological_v2( $template_vars ) {
+  if ( ! empty( $template_vars['is_past'] ) ) {
+    return $template_vars;
+  }
+ 
+  $template_vars['events'] = array_reverse( $template_vars['events'] );
+  
+  return $template_vars;
+}
+
+add_filter( 'tribe_events_views_v2_view_list_template_vars', 'tribe_list_reverse_chronological_v2', 100 );
 ?>
