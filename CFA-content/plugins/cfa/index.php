@@ -217,5 +217,5 @@ function tribe_list_reverse_chronological_v2( $template_vars ) {
   return $template_vars;
 }
 
-add_filter( 'tribe_events_views_v2_view_list_template_vars', 'tribe_list_reverse_chronological_v2', 100 );
+// add_filter( 'tribe_events_views_v2_view_list_template_vars', 'tribe_list_reverse_chronological_v2', 100 );
 ?>
