@@ -66,14 +66,45 @@ if ( empty( $disable_event_search ) ) {
 
 		<div class="tribe-events-calendar-list">
 
-			<?php foreach ( $events as $event ) : ?>
-				<?php $this->setup_postdata( $event ); ?>
+			<?php
 
-				<?php $this->template( 'list/month-separator', [ 'event' => $event ] ); ?>
+			if ($_GET['testsort'] !== null) {
+				$eventdata = [];
+				foreach ( $events as $event ) :
+					$eventdata[$event->ID] = $event->end_date;
+				endforeach;
 
-				<?php $this->template( 'list/event', [ 'event' => $event ] ); ?>
+				echo '<pre>pre_sort:<br>';
+				print_r($eventdata);
+				echo '</pre>';
 
-			<?php endforeach; ?>
+				// User-defined comparison function
+				function compare_dates($a, $b) {
+				    $date_a = strtotime($a);
+				    $date_b = strtotime($b);
+				    if ($date_a == $date_b) {
+				        return 0;
+				    }
+				    return ($date_a < $date_b) ? -1 : 1;
+				}
+
+				// Sort the array by key value which is a date
+				uksort($eventdata, 'compare_dates');
+
+				// Output the sorted array
+				echo '<pre>post_sort:<br>';
+				print_r($eventdata);
+				echo '</pre>';
+			} else {
+				foreach ( $events as $event ) : ?>
+					<?php $this->setup_postdata( $event ); ?>
+
+					<?php $this->template( 'list/month-separator', [ 'event' => $event ] ); ?>
+
+					<?php $this->template( 'list/event', [ 'event' => $event ] ); ?>
+
+				<?php endforeach; 
+			}?>
 
 		</div>
 
