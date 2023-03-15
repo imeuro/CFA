@@ -68,43 +68,26 @@ if ( empty( $disable_event_search ) ) {
 
 			<?php
 
-			if ($_GET['testsort'] !== null) {
-				$eventdata = [];
-				foreach ( $events as $event ) :
-					$eventdata[$event->ID] = $event->end_date;
-				endforeach;
-
-				echo '<pre>pre_sort:<br>';
-				print_r($eventdata);
-				echo '</pre>';
-
 				// User-defined comparison function
-				function compare_dates($a, $b) {
-				    $date_a = strtotime($a);
-				    $date_b = strtotime($b);
-				    if ($date_a == $date_b) {
-				        return 0;
-				    }
-				    return ($date_a < $date_b) ? -1 : 1;
+				function date_sort($a, $b) {
+				    return strtotime($a->end_date) - strtotime($b->end_date);
 				}
-
 				// Sort the array by key value which is a date
-				uksort($eventdata, 'compare_dates');
+				usort($events, 'date_sort');
 
 				// Output the sorted array
-				echo '<pre>post_sort:<br>';
-				print_r($eventdata);
-				echo '</pre>';
-			} else {
-				foreach ( $events as $event ) : ?>
-					<?php $this->setup_postdata( $event ); ?>
+				foreach ( $events as $event ) :
+					// print_r($event->end_date);
+					// echo '<br>';
 
-					<?php $this->template( 'list/month-separator', [ 'event' => $event ] ); ?>
+					$this->setup_postdata( $event );
 
-					<?php $this->template( 'list/event', [ 'event' => $event ] ); ?>
+					// $this->template( 'list/month-separator', [ 'event' => $event ] );
 
-				<?php endforeach; 
-			}?>
+					$this->template( 'list/event', [ 'event' => $event ] );
+
+				endforeach;
+			?>
 
 		</div>
 
