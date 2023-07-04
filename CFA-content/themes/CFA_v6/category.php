@@ -44,6 +44,9 @@ $postnum++;
                 if (get_the_title()!='') :
                    echo '<strong>'.get_the_title().'</strong>';
                 endif;
+                if (get_field('author_name',$post->ID)) :
+                   echo '<small>by '.get_field('author_name',$post->ID).'</small>';
+                endif;
                 if (has_excerpt($post->ID)) :
                   echo '<span>'.get_the_excerpt().'</span>';
                 endif;
