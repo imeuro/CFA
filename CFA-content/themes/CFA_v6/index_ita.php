@@ -31,24 +31,26 @@ if (have_posts()) {
 <?php
 $postnum=0;
 $currentTS = time();
-while (have_posts()) { the_post();
-  $postnum++;
+$do_not_duplicate=[];
+while (have_posts()) : the_post();
+  if ( !in_array( $post->ID, $do_not_duplicate ) ) { // check IDs: for duplicate sticky posts
+    $postnum++;
 
-  // check for available ads...
-  include( 'ads/advblock.inc.php' );
+    // check for available ads...
+    include( 'ads/advblock.inc.php' );
 
-  // check for sponsores posts
-  $isSponsored = get_field('sponsored_post',$post->ID);
+    // check for sponsores posts
+    $isSponsored = get_field('sponsored_post',$post->ID);
 
-  if ($isSponsored) {
-    $sponsoredClass = 'sponsored ';
-  } else {
-    $sponsoredClass = '';
-  }
+    if ($isSponsored) {
+      $sponsoredClass = 'sponsored ';
+    } else {
+      $sponsoredClass = '';
+    }
 
 ?>
 
-      <article id="post-<?php the_ID(); ?>" <?php post_class($sponsoredClass.'post'); ?>>
+    <article id="post-<?php the_ID(); ?>" <?php post_class($sponsoredClass.'post'); ?>>
 
          <?php
           $attachments = get_children(array('post_parent' => get_the_ID(), 'post_type' => 'attachment', 'post_mime_type' => 'image', 'orderby' => 'menu_order'));
@@ -98,7 +100,10 @@ while (have_posts()) { the_post();
               <?php } ?>
         </article>
 
-<?php } ?>
+<?php 
+    $do_not_duplicate[] = $post->ID;
+  }
+endwhile; ?>
 </div>
 <?php } else { ?>
 
