@@ -110,6 +110,7 @@ endwhile;
 $stickiesJS = json_encode($stickies);
 ?>
 </div>
+<script> var stickies = <?php echo $stickiesJS ?>; </script>
 <?php } else { ?>
 
 <article id="post-0" class="post no-results not-found">
