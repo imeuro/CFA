@@ -31,9 +31,9 @@ if (have_posts()) {
 <?php
 $postnum=0;
 $currentTS = time();
-$do_not_duplicate=[];
+$stickies=[];
 while (have_posts()) : the_post();
-  if ( !in_array( $post->ID, $do_not_duplicate ) ) { // check IDs: for duplicate sticky posts
+  if ( !in_array( $post->ID, $stickies ) ) { // check IDs: for duplicate sticky posts
     $postnum++;
 
     // check for available ads...
@@ -101,9 +101,14 @@ while (have_posts()) : the_post();
         </article>
 
 <?php 
-    $do_not_duplicate[] = $post->ID;
+    if (is_sticky($post->ID)) {
+      $stickies[] = $post->ID;
+    }
+    
   }
-endwhile; ?>
+endwhile; 
+$stickiesJS = json_encode($stickies);
+?>
 </div>
 <?php } else { ?>
 
