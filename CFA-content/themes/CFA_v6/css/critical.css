@@ -1219,6 +1219,9 @@ img.author-pic { margin: 0 20px 20px 0; }
         max-width: 768px; 
     }
 
+    .page-template-page-CFAlive #wrap {
+        max-width: 960px;
+    }
     .home .sponsored .pinbin-copy p {
         padding-top: 20px;
     }
