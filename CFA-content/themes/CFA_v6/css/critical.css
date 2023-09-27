@@ -1216,13 +1216,9 @@ img.author-pic { margin: 0 20px 20px 0; }
     .tribe-events-page-template #wrap {
         overflow-x: hidden;
         margin-top: 230px;
-        max-width: 768px; 
+        max-width: 960px; 
     }
-
-    .page-template-page-CFAlive #wrap,
-    .tribe-events-page-template #wrap {
-        max-width: 960px;
-    }
+    
     .home .sponsored .pinbin-copy p {
         padding-top: 20px;
     }
