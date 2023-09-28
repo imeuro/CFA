@@ -258,7 +258,7 @@ function parallax(e) {
 }
 
 
-if (typeof rotatespblocks !== "function" ) {
+//if (typeof rotatespblocks !== "function" ) {
 	
 	let rotatespblocks = () => {
 		const thearea = document.querySelector('#post-area');
@@ -306,7 +306,7 @@ if (typeof rotatespblocks !== "function" ) {
 		setTimeout(function(){ rotatespblocks(); },500);
 	});
 
-}
+//}
 
 window.addEventListener("load", function() {
 	logoTransition();
