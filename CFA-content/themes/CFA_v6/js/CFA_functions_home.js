@@ -302,7 +302,7 @@ let rotatespblocks = () => {
 
 
 window.addEventListener("load", function() {
-	setTimeout(function(){ rotatespblocks(); },200);
+	rotatespblocks();
 	logoTransition();
 });
 
