@@ -221,5 +221,5 @@ document.addEventListener("DOMContentLoaded", function() {
 window.addEventListener("load", function() {
 	console.debug('done with page load.');
 	console.debug('typeof jQuery: '+typeof jQuery);
-	PageReveal();
+	setTimeout(function(){ PageReveal(); },500);
 });
