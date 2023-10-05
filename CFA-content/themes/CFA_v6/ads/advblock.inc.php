@@ -22,7 +22,7 @@ if (!empty($advposts)) {
     ?>
     <article id="spblock-<?php echo $advpost->post_name; ?>" class="post type-post has-post-thumbnail hentry status-publish format-adv3 post-spinsert">
       <div class="spb newitem">
-      <a href="<?php echo get_field('sponsor_url',$advpost->ID); ?>?cid=CFA" target="_blank" rel="nofollow noopener" class="left">
+      <a href="<?php echo get_field('sponsor_url',$advpost->ID); ?>?cid=CFAsponsor" target="_blank" rel="nofollow noopener" class="left" id="splink-<?php echo $advpost->post_name; ?>">
           <div class="spi">
             <?php foreach ($advpics as $advpic) {
               $advpicsrc =  wp_get_attachment_image_src($advpic["sponsor_pic"]["ID"], 'large' );
