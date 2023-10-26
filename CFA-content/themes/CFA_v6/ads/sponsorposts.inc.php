@@ -5,7 +5,7 @@ $sponsorposts = get_posts(array(
   'numberposts' => 1,
   'post_status' => 'publish',
   'post_type'   => 'cfa_sponsors',
-  'offset'     => $postnum,
+  'offset'     => $sponsornum,
 ));
 if (!empty($sponsorposts)) {
   foreach ($sponsorposts as $sponsorpost) {
@@ -43,5 +43,5 @@ if (!empty($sponsorposts)) {
 
   }
 }
-
+$sponsornum++;
  ?>
