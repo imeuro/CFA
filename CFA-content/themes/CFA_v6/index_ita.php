@@ -36,7 +36,7 @@ while (have_posts()) : the_post();
   if ( !in_array( $post->ID, $stickies ) ) { // check IDs: for duplicate sticky posts
 
     // check for available ads...
-    if ($postnum === 1 || $postnum % 2 === 0) {
+    if ($postnum % 2 === 0) {
       include( 'ads/sponsorposts.inc.php' );
     }
 
