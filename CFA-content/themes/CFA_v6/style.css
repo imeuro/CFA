@@ -514,7 +514,7 @@ article.cfa_translations .pinbin-text a span {
   opacity: 1;
   padding: 0;
   display: block;
-  background: #fff;
+  background: none;
   -webkit-transform: translate(-50%);
   transform: translate(-50%);
 }
