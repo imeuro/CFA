@@ -22,10 +22,7 @@ while (have_posts()) : the_post();
     
     // check for available ads...
     if ($postnum === 0 || $postnum % 2 === 0) {
-      echo '-------sponsored';
       include( 'ads/sponsorposts.inc.php' );
-    } else {
-      echo '-------normal';
     }
 
     $postnum++;
