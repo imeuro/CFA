@@ -30,6 +30,8 @@ if (have_posts()) {
 
 <?php
 $postnum=0;
+$sponsornum=0;
+
 $currentTS = time();
 $stickies=[];
 while (have_posts()) : the_post();

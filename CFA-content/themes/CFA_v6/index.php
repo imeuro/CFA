@@ -11,6 +11,8 @@
 
 <?php
 $postnum=0;
+$sponsornum=0;
+
 $currentTS = time();
 $stickies=[];
 
