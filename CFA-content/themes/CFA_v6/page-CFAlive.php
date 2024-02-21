@@ -73,13 +73,15 @@ Template Name: CFAlive
                       $i++;
 
                     }
+
+                    echo $ev_res .'</div>';
                     /* Restore original Post Data */
                     wp_reset_postdata();
                   } else {
                     // no posts found
                   }
 
-                    echo $ev_res .'</div>';
+                    
   
                 }
 
@@ -91,6 +93,7 @@ Template Name: CFAlive
 
 
                 ?>
+
             </div>
 
          	</div>          
