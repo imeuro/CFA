@@ -1413,6 +1413,14 @@ body.tribe-events-page-template,
 .tribe-events-page-template .pinbin-copy p a {
   text-decoration: none;
 }
+.page-template-page-CFAlive .pinbin-copy p a {
+  display: inline-block;
+  opacity: 1;
+  transition: opacity 200ms ease-in-out;
+}
+.page-template-page-CFAlive .pinbin-copy p a:hover {
+  opacity: .5;
+}
 .page-template-default .pinbin-copy p strong,
 .page-template-default .pinbin-copy p b,
 .page-template-default .pinbin-copy h2 b,
@@ -1533,7 +1541,7 @@ body.tribe-events-page-template,
   .tribe-events-page-template .pinbin-copy form.widget_wysija label,
   .tribe-events-page-template .pinbin-copy form.widget_wysija input {
     flex: 0 0 calc(50%);
-    padding: 20px 0 20px 20px;
+    padding: 20px;
     margin: 0;
     box-sizing: border-box;
     word-break: break-word;

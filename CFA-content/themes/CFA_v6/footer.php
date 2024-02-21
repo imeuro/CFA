@@ -8,9 +8,9 @@
 
 
 </div><!-- // close wrap div -->
-
-<div id="modal" class="single hidden empty">
-</div>
+<?php if (is_home() || is_front_page()) : ?>
+<div id="modal" class="single hidden empty"></div>
+<?php endif; ?>
 
 <?php wp_footer();
 ob_end_flush();

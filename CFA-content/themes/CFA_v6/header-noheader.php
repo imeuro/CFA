@@ -36,6 +36,15 @@ endif;
       <meta name="msapplication-TileColor" content="#da532c">
       <meta name="theme-color" content="#ffffff">
 
+      <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/SometimesTimes-Regular.woff2" as="font" type="font/woff2" crossorigin>
+      <link rel="preload" href="<?php echo get_template_directory_uri(); ?>/fonts/NHaasGroteskDSStd-55Rg.woff2" as="font" type="font/woff2" crossorigin>
+
+      <style>
+        <?php include( get_template_directory().'/css/critical.min.css') ?>
+        <?php include( get_template_directory().'/css/gallery.css') ?>
+      </style>
+
+
       <link rel="profile" href="http://gmpg.org/xfn/11" />
       <link rel="pingback" href="<?php bloginfo( 'pingback_url' ); ?>" />
       <?php wp_head(); ?>

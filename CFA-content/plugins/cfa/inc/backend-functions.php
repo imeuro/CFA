@@ -101,4 +101,34 @@ function bidirectional_acf_update_value( $value, $post_id, $field  ) {
 
 add_filter('acf/update_value/name=translation', 'bidirectional_acf_update_value', 10, 3);
 
+
+
+
+
+// DECLUTTER CFA's admin sidebar
+function remove_menus(){
+	global $current_user;
+	$user_id = get_current_user_id();
+
+	if(is_admin()){
+
+		remove_menu_page( 'link-manager.php' );           //Links 
+		remove_menu_page( 'edit-comments.php' );          //Comments
+
+		if($user_id == '2'){
+			remove_menu_page( 'themes.php' );						//Appearance
+			remove_menu_page( 'plugins.php' );						//Plugins
+			remove_menu_page( 'users.php' );						//Users
+			remove_menu_page( 'tools.php' );						//Tools
+			remove_menu_page( 'themes.php' );						//Themes
+			//remove_menu_page( 'options-general.php' );			//Settings
+			remove_menu_page( 'edit.php?post_type=acf-field-group' );		//ACF
+			remove_menu_page( 'cookie-notice' );		//Cookies
+			remove_menu_page( 'admin.php?page=backwpup' );			//BackWPup
+		}
+
+	}
+}
+add_action( 'admin_menu', 'remove_menus', 9999 );
+
 ?>

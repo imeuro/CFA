@@ -140,7 +140,7 @@ function CFA_scripts() {
 
 	// wp_enqueue_style( 'style', get_stylesheet_uri(), '', '', 'all'  );
 
-	if ($_GET['print'] && $_GET['print']=='enabled'){
+	if (isset($_GET['print']) && $_GET['print']=='enabled'){
 		wp_enqueue_style( 'print', get_template_directory_uri() . "/print.css", 'style-css', '1.0', 'print' );
 	}
 	

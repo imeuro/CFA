@@ -1000,8 +1000,8 @@ img.author-pic { margin: 0 20px 20px 0; }
 .tribe-events-page-template .pinbin-copy form.widget_wysija label {
   text-align: right;
   font-family: 'NeueHaasGroteskDisp Std', sans-serif;
-  font-size: 36px;
-  line-height: 38px;
+  font-size: 40px;
+  line-height: 44px;
   font-weight: 300;
   text-transform: uppercase;
 }
@@ -1014,8 +1014,8 @@ img.author-pic { margin: 0 20px 20px 0; }
 .tribe-events-page-template .pinbin-copy h2 + p,
 .tribe-events-page-template .pinbin-copy h2 + .wp-block-group p,
 .tribe-events-page-template .pinbin-copy form.widget_wysija input {
-  font-size: 14px;
-  line-height: 22px;
+  font-size: 20px;
+  line-height: 28px;
   padding-top: 14px;
   letter-spacing: 0;
   text-align: justify;
@@ -1215,8 +1215,10 @@ img.author-pic { margin: 0 20px 20px 0; }
     .page-template-page-CFAlive #wrap,
     .tribe-events-page-template #wrap {
         overflow-x: hidden;
-        margin-top: 230px;
-        max-width: 960px; 
+        margin-top: 150px;
+        max-width: 90vw;
+        margin-left: 5vw;
+        margin-right: 5vw; 
     }
     
     .home .sponsored .pinbin-copy p {

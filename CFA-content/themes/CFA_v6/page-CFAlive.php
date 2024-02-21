@@ -21,68 +21,75 @@ Template Name: CFAlive
 
               
                 <?php // CFA LIVE EVENTS
-                $CFAlive_events = get_field('cfalive_events');
-                for ($i=0; $i < count($CFAlive_events); $i++) {
-                  $ci=$CFAlive_events[$i];
-                  $prevLabel = $i>0 ? $CFAlive_events[$i-1]["cfalive_event_label"]["label"] : '';
-                  $curLabel = $ci["cfalive_event_label"]["label"];
+                function get_live_events($status,$translation) {
+                  $ev_query_args = array(
+                    'post_type' => 'cfa_live',
+                    'post_status' => 'publish',
+                    'order' => 'DESC',
+                    'orderby' => 'date',
+                    'posts_per_page' => '99',
+                    'tax_query' => array(
+                      '0' => array(
+                        'taxonomy' => 'event_label',
+                        'field' => 'slug',
+                        'terms' => array($status),
+                        'operator' => 'IN',
+                      ),
+                    ),
+                  );
 
-                  // print_r($prevLabel);
-                  // print_r($curLabel);
+                  // The Query
+                  $ev_query = new WP_Query( $ev_query_args );
+                  $ev_res = '';
+                  $i = 0;
+                
 
-                  if ( $prevLabel != $curLabel ) {
-                    if ($i > 0) { echo '</div>';  } // closes prev wp-block-group
-                    echo '<h2>'.$curLabel.'</h2>';
-                    echo '<div class="wp-block-group">';
-                  }
-                  
-                  if (!empty($ci["cfalive_event_gallery"])) {
-                    echo substr($ci["cfalive_event_text"],0,-5); // no ending </p>
-                    $urlgallery=$ci["cfalive_event_gallery"][0]->guid;
-                    // echo '<br><a href="'.$urlgallery.'#lightbox" class="glightbox-black"><strong>Images</strong></a></p>';
-                    echo '<br><a href="'.$urlgallery.'"><strong>Images</strong></a></p>';
-                  } else {
-                    echo $ci["cfalive_event_text"];
-                  }
+                  // The Loop
+                  if ( $ev_query->have_posts() ) {
+                    while ( $ev_query->have_posts() ) {
+                      $ev_query->the_post();
+                      //print_r($ev_query);
 
-                  if ($i == count($CFAlive_events)) {
-                    echo '</div>';
-                  }
+                      global $post;
+                      $blocks = parse_blocks( $post->post_content );
+                      
 
-                }
-                ?>
-            </div>
 
-                <?php // CFA LIVE ADDITIONAL PARAGRAPHS
-                $cfalive_paragraphs = get_field('cfalive_paragraphs');
-
-                // echo '<pre>'.$cfalive_paragraphs.'</pre>';
-                for ($i=0; $i < count($cfalive_paragraphs); $i++) {
-                  
-                  $ci=$cfalive_paragraphs[$i]; 
-                  if ($i<=1) {
-                    echo '<h2>'.strtoupper($ci["cfalive_paragraph_title"]).'</h2>';
-                    echo '<div class="wp-block-group">';
-                  }
-
-                  if ($ci['cfalive_paragraph_content'] && count($ci['cfalive_paragraph_content']) > 0) {
-                    for ($p=0; $p < count($ci['cfalive_paragraph_content']); $p++) {
-                      $cpi=$ci['cfalive_paragraph_content'][$p];
-                      if (!empty($cpi["cfalive_paragraph_gallery_link"])) {
-                        echo substr($cpi["cfalive_paragraph_text"],0,-5); // no ending </p>
-                        $urlgallery=$cpi["cfalive_paragraph_gallery_link"][0]->guid;
-                        echo '<br><a href="'.$urlgallery.'"><strong>Images</strong></a></p>';
-                      } else {
-                        echo $cpi["cfalive_paragraph_text"];
+                      if ($i==0) {
+                        $ev_res .= '<h2>'. strtoupper( $status ) .'</h2><div class="wp-block-group">';
                       }
+                      $ev_res .= '<p><a href="'.get_permalink().'"><strong>'.get_the_title().'</strong><br>';
+                      foreach( $blocks as $block ) {
+                        if( 'core/paragraph' === $block['blockName'] ) {
+                          $ev_res .= strip_tags(render_block( $block ), '<br>');
+                        break;
+                        }
+                      }
+                      $ev_res .= '</a></p>';
+
+
+
+                      
+                      $i++;
+
                     }
-                  }
-                  
-                  if ($i==0 || $i == count($cfalive_paragraphs)) {
-                    echo '</div>';
+                    /* Restore original Post Data */
+                    wp_reset_postdata();
+                  } else {
+                    // no posts found
                   }
 
+                    echo $ev_res .'</div>';
+  
                 }
+
+
+                get_live_events('upcoming','in programma');
+                get_live_events('current','in mostra');
+                get_live_events('past','precedenti');
+                get_live_events('specials','progetti');
+
+
                 ?>
             </div>
 

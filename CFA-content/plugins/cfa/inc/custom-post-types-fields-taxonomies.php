@@ -111,7 +111,6 @@ function CFA_custom_post_type() {
 	);
 
 
-
 	$labels3 = array(
 		'name'                => _x( 'CFA Sponsors', 'Post Type General Name', 'text_domain' ),
 		'singular_name'       => _x( 'CFA Sponsor', 'Post Type Singular Name', 'text_domain' ),
@@ -150,12 +149,96 @@ function CFA_custom_post_type() {
 		'capability_type'     => 'post',
 	);
 
-	register_post_type( 'cfa_authors', $args );
+
+
+
+	$labels4 = array(
+		'name'                => _x( 'CFA Live', 'Post Type General Name', 'text_domain' ),
+		'singular_name'       => _x( 'CFA Live', 'Post Type Singular Name', 'text_domain' ),
+		'menu_name'           => __( 'CFA Live', 'text_domain' ),
+		'name_admin_bar'      => __( 'CFA Live', 'text_domain' ),
+		'parent_item_colon'   => __( 'Parent Item:', 'text_domain' ),
+		'all_items'           => __( 'All Items', 'text_domain' ),
+		'add_new_item'        => __( 'Add New Item', 'text_domain' ),
+		'add_new'             => __( 'Add New', 'text_domain' ),
+		'new_item'            => __( 'New Item', 'text_domain' ),
+		'edit_item'           => __( 'Edit Item', 'text_domain' ),
+		'update_item'         => __( 'Update Item', 'text_domain' ),
+		'view_item'           => __( 'View Item', 'text_domain' ),
+		'search_items'        => __( 'Search Item', 'text_domain' ),
+		'not_found'           => __( 'Not found', 'text_domain' ),
+		'not_found_in_trash'  => __( 'Not found in Trash', 'text_domain' ),
+	);
+	$args4 = array(
+		'label'               => __( 'CFA Live', 'text_domain' ),
+		'description'         => __( 'CFA Live', 'text_domain' ),
+		'labels'              => $labels4,
+		'supports'            => array( 'title', 'editor', 'thumbnail', ),
+		'taxonomies'          => array( 'event_label' ),
+		'hierarchical'        => false,
+		'public'              => true,
+		'show_ui'             => true,
+		'show_in_menu'        => true,
+		'menu_position'       => 20,
+		'menu_icon'           => 'dashicons-tickets-alt',
+		'show_in_admin_bar'   => true,
+		'show_in_nav_menus'   => true,
+		'can_export'          => true,
+		'has_archive'         => false,
+		'exclude_from_search' => false,
+		'publicly_queryable'  => true,
+		'capability_type'     => 'post',
+		'show_in_rest' 		  => true
+	);
+
+
+	// register_post_type( 'cfa_authors', $args );
 	register_post_type( 'cfa_translations', $args2 );
 	register_post_type( 'cfa_sponsors', $args3 );
+	register_post_type( 'cfa_live', $args4 );
 
 }
 add_action( 'init', 'CFA_custom_post_type', 0 );
+
+
+
+// Register Custom Taxonomy
+function event_label_tax() {
+
+	$labels = array(
+		'name'                       => _x( 'event labels', 'Taxonomy General Name', 'text_domain' ),
+		'singular_name'              => _x( 'event label', 'Taxonomy Singular Name', 'text_domain' ),
+		'menu_name'                  => __( 'event label', 'text_domain' ),
+		'all_items'                  => __( 'All event labels', 'text_domain' ),
+		'parent_item'                => __( 'Parent Item', 'text_domain' ),
+		'parent_item_colon'          => __( 'Parent event label:', 'text_domain' ),
+		'new_item_name'              => __( 'New event label', 'text_domain' ),
+		'add_new_item'               => __( 'Add New event label', 'text_domain' ),
+		'edit_item'                  => __( 'Edit event label', 'text_domain' ),
+		'update_item'                => __( 'Update event label', 'text_domain' ),
+		'view_item'                  => __( 'View event label', 'text_domain' ),
+		'separate_items_with_commas' => __( 'Separate items with commas', 'text_domain' ),
+		'add_or_remove_items'        => __( 'Add or remove event label', 'text_domain' ),
+		'choose_from_most_used'      => __( 'Choose from the most used', 'text_domain' ),
+		'popular_items'              => __( 'Popular event labels', 'text_domain' ),
+		'search_items'               => __( 'Search event labels', 'text_domain' ),
+		'not_found'                  => __( 'Not Found', 'text_domain' ),
+		'no_terms'                   => __( 'No items', 'text_domain' ),
+		'items_list'                 => __( 'event labels list', 'text_domain' ),
+		'items_list_navigation'      => __( 'event labels list navigation', 'text_domain' ),
+	);
+	$args = array(
+		'labels'                     => $labels,
+		'hierarchical'               => true,
+		'show_ui'					 => true,
+		'show_admin_column'			 => true,
+		'show_in_rest'				 => true, // Needed for tax to appear in Gutenberg editor.
+		'query_var'					 => true,
+	);
+	register_taxonomy( 'event_label', array( 'cfa_live' ), $args );
+
+}
+add_action( 'init', 'event_label_tax', 0 );
 
 
 
