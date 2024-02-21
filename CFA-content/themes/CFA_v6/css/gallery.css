@@ -1,0 +1,126 @@
+@font-face {
+    font-family: 'NeueHaasGroteskDisp Std';
+    src: url('<?php echo get_template_directory_uri(); ?>/fonts/NHaasGroteskDSStd-55Rg.woff2') format('woff2'),
+        url('<?php echo get_template_directory_uri(); ?>/fonts/NHaasGroteskDSStd-55Rg.woff') format('woff'),
+        url('<?php echo get_template_directory_uri(); ?>/fonts/NHaasGroteskDSStd-55Rg.svg#NHaasGroteskDSStd-55Rg') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'Sometimes Times';
+    src: url('<?php echo get_template_directory_uri(); ?>/fonts/SometimesTimes-Regular.woff2') format('woff2'),
+        url('<?php echo get_template_directory_uri(); ?>/fonts/SometimesTimes-Regular.woff') format('woff'),
+        url('<?php echo get_template_directory_uri(); ?>/fonts/SometimesTimes-Regular.svg#SometimesTimes-Regular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+.single-cfa_live article,
+.single-cfa_live,
+.single-cfa_live article .container {
+	background: #000;
+    height: 100vh;
+    width: 100vw;
+    margin: 20px 0;
+}
+.single-cfa_live article .container {
+	display: flex;
+	flex-flow: column nowrap;
+	align-items: center;
+}
+
+.single-cfa_live article h1  {
+	font-family: 'NeueHaasGroteskDisp Std', sans-serif;
+	font-size: 40px;
+	line-height: 48px;
+	font-weight: 300;
+	text-transform: uppercase;
+	text-align: left;
+	width: 100%;
+	color: #fff;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 80px 30px 10px 30px;
+}
+.single-cfa_live article p {
+	width: 100%;
+	color: #fff;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 20px 30px 40px 30px;
+	font-family: 'NeueHaasGroteskDisp Std', sans-serif;
+	font-size: 28px;
+	line-height: 40px;
+	font-weight: 300;
+}
+.single-cfa_live article a {
+	color: #fff;
+	text-decoration: underline;
+	font-weight: 600;
+}
+.single-cfa_live figure { 
+	margin: 0; 
+	text-align: center;
+	width: 100%;
+	margin-bottom: 40px;
+}
+
+.single-cfa_live figure img { 
+	width: 100%;
+	height: auto;
+}
+
+.single-cfa_live figcaption {
+	display: none;
+}
+.single-cfa_live #uplink {
+	outline: none;
+	position: fixed;
+	top: 30px;
+	left: 20px;
+	width: auto;
+	height: 35px;
+	border: none;
+	border-radius: 8px;
+	z-index: 10;
+	opacity: .75;
+	transition: opacity 150ms ease-in-out;
+	margin: 0;
+	padding: 0;
+	cursor: pointer;
+	background-color: #000;
+	color: #fff;
+	text-decoration: none;
+	padding: 7px 30px;
+	font-size: 28px;
+	line-height: 36px;
+	text-decoration: none;
+	font-family: 'Sometimes Times', serif;
+	font-weight: 300;
+}
+
+.single-cfa_live #uplink:hover { opacity: 1 }
+.single-cfa_live #uplink:before,
+.single-cfa_live #uplink:after {
+	content: "";
+	position: absolute;
+	top: 22px;
+	left: 12px;
+	width: 8px;
+	height: 1px;
+	border-radius: 0;
+	background-color: #fff;
+	transform: rotate(-50deg);
+	display: inline-block;
+}
+.single-cfa_live #uplink:after {
+	top: 28px;
+	transform: rotate(50deg);
+}
+
+@media all and (min-width: 768px) {
+
+}
