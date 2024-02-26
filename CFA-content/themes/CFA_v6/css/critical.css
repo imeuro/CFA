@@ -1014,8 +1014,9 @@ img.author-pic { margin: 0 20px 20px 0; }
 .tribe-events-page-template .pinbin-copy h2 + p,
 .tribe-events-page-template .pinbin-copy h2 + .wp-block-group p,
 .tribe-events-page-template .pinbin-copy form.widget_wysija input {
-  font-size: 20px;
-  line-height: 28px;
+  font-size: 18px;
+  line-height: 22px;
+  letter-spacing: 1px;
   padding-top: 14px;
   letter-spacing: 0;
   text-align: justify;
