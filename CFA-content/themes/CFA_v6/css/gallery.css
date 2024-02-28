@@ -147,7 +147,9 @@
   overflow: hidden;
   transition: all 1s;
 }
-
+.single-cfa_live article .outer-swiper-container.container {
+    margin: 60px 0 0 0;
+}
 .gutenberg-swiper-block {
   width: 100%;
   margin: 0 auto;

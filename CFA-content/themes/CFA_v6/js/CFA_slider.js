@@ -74,7 +74,7 @@ function gallery2swiper () {
 			Swrapper.className = '';
 			da_element.className = '';
 			Swrapper.classList.add('swiper-container','CFAslider');
-			Swrapper2.classList.add('container');
+			Swrapper2.classList.add('outer-swiper-container','container');
 
 			da_element.classList.add('swiper-wrapper','gutenberg-swiper-block');
 
