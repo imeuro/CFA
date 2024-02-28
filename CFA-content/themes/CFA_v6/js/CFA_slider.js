@@ -8,7 +8,7 @@ var CFAslidersettings = {
 	keyboard: true,
 	preloadImages: false,
 	lazy: {
-    	loadPrevNext: false,
+    	loadPrevNext: true,
     	loadPrevNextAmount: 2,
     	loadOnTransitionStart: true
   	},
@@ -19,8 +19,15 @@ var CFAslidersettings = {
   // If we need pagination
   pagination: {
     el: '.swiper-pagination',
-		clickable: true
+		clickable: true,
+		type: "fraction",
+		renderFraction: function (currentClass, totalClass) {
+      return 'Image <span class="' + currentClass + '"></span>' +
+              ' of ' +
+              '<span class="' + totalClass + '"></span>';
+  	}
   },
+
 
   // Navigation arrows
   navigation: {
@@ -106,9 +113,16 @@ function gallery2swiper () {
 			var SLarr = document.createElement('div');
 			var SRarr = document.createElement('div');
 
-			Swrapper.appendChild(Snavigation);
-			Swrapper.appendChild(SLarr);
-			Swrapper.appendChild(SRarr);
+			if(document.body.classList.contains('single-cfa_live')) {
+				Swrapper.parentNode.prepend(Snavigation);
+				Swrapper.parentNode.prepend(SLarr);
+				Swrapper.parentNode.prepend(SRarr);
+			} else {
+				Swrapper.appendChild(Snavigation);
+				Swrapper.appendChild(SLarr);
+				Swrapper.appendChild(SRarr);		
+			}
+
 
 			Snavigation.classList.add('swiper-pagination');
 			SLarr.classList.add('prevContainer');
