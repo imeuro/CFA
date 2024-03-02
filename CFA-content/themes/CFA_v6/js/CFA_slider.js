@@ -109,15 +109,19 @@ function gallery2swiper () {
 
 
 			// add the navigation bullets + arrows...
+			var Stoolwrapper = document.createElement('div');
 			var Snavigation = document.createElement('div');
 			var SLarr = document.createElement('div');
 			var SRarr = document.createElement('div');
 
 			if(document.body.classList.contains('single-cfa_live')) {
-				Swrapper.parentNode.prepend(Snavigation);
-				Swrapper.parentNode.prepend(SLarr);
-				Swrapper.parentNode.prepend(SRarr);
+				Stoolwrapper.classList = 'swiper-tools';
+				Swrapper.parentNode.prepend(Stoolwrapper)
+				Stoolwrapper.prepend(SRarr);
+				Stoolwrapper.prepend(SLarr);
+				Stoolwrapper.prepend(Snavigation);
 			} else {
+
 				Swrapper.appendChild(Snavigation);
 				Swrapper.appendChild(SLarr);
 				Swrapper.appendChild(SRarr);		
