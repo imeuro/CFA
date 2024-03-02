@@ -78,8 +78,8 @@ if ( bodyClasses.contains('home') || bodyClasses.contains('page-template-index_i
 } else {
 	if (!bodyClasses.contains('tribe-events-page-template')) {
 		CFALoader({
-			src: themepath+'js/CFA_functions_foglia.js'
-			// src: themepath+'js/CFA_functions_foglia.js?cb='+parseInt(Math.random()*1000000)
+			// src: themepath+'js/CFA_functions_foglia.js'
+			src: themepath+'js/CFA_functions_foglia.js?cb='+parseInt(Math.random()*1000000)
 		}, "CFA_Foglia_Chain")
 		.then( element => {
 			if ( bodyClasses.contains('no-header') === false ) {
