@@ -32,7 +32,7 @@ if (fogliaSwiper && fogliaSwiper.length > 0) {
 			async: true
 		}, "CFA_Foglia_Chain"))
 	.then( element => CFALoader({
-			src: themepath+'js/CFA_slider.js',
+			src: themepath+'js/CFA_slider.js?cb='+parseInt(Math.random()*1000000),
 			async: true
 		}, "CFA_Foglia_Chain"))
 	.then( element => {
