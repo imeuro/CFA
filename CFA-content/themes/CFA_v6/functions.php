@@ -170,6 +170,7 @@ function remove_jquery_migrate( $scripts ) {
 			$script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
 		}
 	}
+// hide password protected posts from homepage
 }
 add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
 
