@@ -158,21 +158,15 @@ function CFA_scripts() {
 
 }
 
-
-// Remove JQuery migrate:
-// https://www.infophilic.com/remove-jquery-migrate-wordpress/
-
-function remove_jquery_migrate( $scripts ) {
-	global $post;
-	if ( !is_admin() && isset( $scripts->registered['jquery'] ) ) {
-		$script = $scripts->registered['jquery'];
-		if ( $script->deps ) { // Check whether the script has any dependencies
-			$script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
-		}
-	}
 // hide password protected posts from homepage
+function wpb_password_post_filter( $where = '' ) {
+if (!is_single() && !current_user_can('edit_private_posts') && !is_admin()) {
+	$where .= " AND post_password = ''";
 }
-add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
+	return $where;
+}
+add_filter( 'posts_where', 'wpb_password_post_filter' );
+
 
 /**
  * wp_title() Filter for better SEO.
