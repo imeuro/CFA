@@ -201,12 +201,6 @@ if ( !function_exists('pinbin_wp_title') && !defined( 'AIOSEOP_VERSION' ) ) :
 
 endif;
 
-
-
-
-
-
-
 /* limite a X parole */
 function string_limit_words($string, $word_limit) {
   $words = explode(' ', $string, ($word_limit + 1));
@@ -214,187 +208,6 @@ function string_limit_words($string, $word_limit) {
   array_pop($words);
   return implode(' ', $words);
 }
-
-/* non voglio le thumbs nella gallery!! 
-function CFA_gallery_shortcode($attr) {
-	$post = get_post();
-
-	static $instance = 0;
-	$instance++;
-
-	if ( ! empty( $attr['ids'] ) ) {
-		// 'ids' is explicitly ordered, unless you specify otherwise.
-		if ( empty( $attr['orderby'] ) )
-			$attr['orderby'] = 'post__in';
-		$attr['include'] = $attr['ids'];
-	}
-
-	// Allow plugins/themes to override the default gallery template.
-	$output = apply_filters('post_gallery', '', $attr);
-	if ( $output != '' )
-		return $output;
-
-	// We're trusting author input, so let's at least make sure it looks like a valid orderby statement
-	if ( isset( $attr['orderby'] ) ) {
-		$attr['orderby'] = sanitize_sql_orderby( $attr['orderby'] );
-		if ( !$attr['orderby'] )
-			unset( $attr['orderby'] );
-	}
-
-	extract(shortcode_atts(array(
-		'order'      => 'ASC',
-		'orderby'    => 'menu_order ID',
-		'id'         => $post ? $post->ID : 0,
-		'itemtag'    => 'li',
-		'icontag'    => 'span',
-		'captiontag' => 'h3',
-		'columns'    => 1,
-		'size'       => 'large',
-		'include'    => '',
-		'exclude'    => ''
-	), $attr, 'gallery'));
-
-	$id = intval($id);
-	if ( 'RAND' == $order )
-		$orderby = 'none';
-
-	if ( !empty($include) ) {
-		$_attachments = get_posts( array('include' => $include, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
-
-		$attachments = array();
-		foreach ( $_attachments as $key => $val ) {
-			$attachments[$val->ID] = $_attachments[$key];
-		}
-	} elseif ( !empty($exclude) ) {
-		$attachments = get_children( array('post_parent' => $id, 'exclude' => $exclude, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
-	} else {
-		$attachments = get_children( array('post_parent' => $id, 'post_status' => 'inherit', 'post_type' => 'attachment', 'post_mime_type' => 'image', 'order' => $order, 'orderby' => $orderby) );
-	}
-
-	if ( empty($attachments) )
-		return '';
-
-	if ( is_feed() ) {
-		$output = "\n";
-		foreach ( $attachments as $att_id => $attachment )
-			$output .= wp_get_attachment_link($att_id, $size, true) . "\n";
-		return $output;
-	}
-
-	$itemtag = tag_escape($itemtag);
-	$captiontag = tag_escape($captiontag);
-	$icontag = tag_escape($icontag);
-	$valid_tags = wp_kses_allowed_html( 'post' );
-	if ( ! isset( $valid_tags[ $itemtag ] ) )
-		$itemtag = 'li';
-	if ( ! isset( $valid_tags[ $captiontag ] ) )
-		$captiontag = 'span';
-	if ( ! isset( $valid_tags[ $icontag ] ) )
-		$icontag = 'h3';
-
-	$columns = intval($columns);
-	$itemwidth = $columns > 0 ? floor(100/$columns) : 100;
-	$float = is_rtl() ? 'right' : 'left';
-
-	$selector = "gallery-{$instance}";
-
-	$gallery_style = $gallery_div = '';
-	if ( apply_filters( 'use_default_gallery_style', true ) )
-		$gallery_style = "
-		<style type='text/css'>
-
-			#{$selector} {
-				width: 100%;
-				max-width: 640px;
-				margin: 0 auto;
-				padding: 0;
-				list-style:none;
-			}
-			#{$selector} .gallery-item {
-				text-align: center;
-				width: {$itemwidth}%;
-			}
-			#{$selector} img {
-				width: 100%;
-				max-width: 640px;
-				height: auto;
-				margin: 0 auto;
-			}
-			#{$selector} .gallery-caption {
-				margin-left: 0;
-			}
-			// see gallery_shortcode() in wp-includes/media.php
-		</style>";
-	$size_class = sanitize_html_class( $size );
-	$gallery_div = "<div class='container'>\n
-	<div class='swiper-container CFAslider'>\n
-	<ul id='$selector' class='gallery slider swiper-wrapper galleryid-{$id} gallery-columns-{$columns} gallery-size-{$size_class}'>\n\n";
-	$output = apply_filters( 'gallery_style', $gallery_style . "\n\t\t" . $gallery_div );
-
-	$i = 0;
-	foreach ( $attachments as $id => $attachment ) {
-		$image_output = "<img data-src=\"";
-		$image_output .= wp_get_attachment_image_src( $id, $size, false )[0];
-		$image_output .= "\" alt=\"".$attachment->post_title."\" width=\"";
-		$image_output .= wp_get_attachment_image_src( $id, $size, false )[1];
-		$image_output .= "\" height=\"";
-		$image_output .= wp_get_attachment_image_src( $id, $size, false )[2];
-		$image_output .= "\" class=\"swiper-lazy\" />\n";
-    	$image_output .= "<div class=\"swiper-lazy-preloader\"></div>";
-
-		$image_meta  = wp_get_attachment_metadata( $id );
-
-		$orientation = '';
-		if ( isset( $image_meta['height'], $image_meta['width'] ) )
-			$orientation = ( $image_meta['height'] > $image_meta['width'] ) ? 'portrait' : 'landscape';
-
-		$output .= "<{$itemtag} class='swiper-slide gallery-item item'>";
-		$output .= "$image_output\n";
-		if ( $captiontag && trim($attachment->post_excerpt) ) {
-			$output .= "
-				<{$captiontag} class='wp-caption-text gallery-caption'>
-				" . wptexturize($attachment->post_excerpt) . "
-				</{$captiontag}>\n";
-		}
-		$output .= "</{$itemtag}>\n\n";
-		if ( $columns > 0 && ++$i % $columns == 0 )
-			$output .= '';
-	}
-	$output .= "\n\n
-		</ul>\n";
-
-	$frecce='no';
-	foreach ( $attachments as $id => $attachment ) {
-		$i++;
-		if ($i>2):
-			$frecce='ok';
-		endif;
-	}
-	if($frecce=='ok') :
-
-		$output .= "\n
-		<div class=\"prevContainer\"></div>\n
-		<div class=\"nextContainer\"></div>\n
-		<div class=\"swiper-pagination\"></div>\n
-		</div>\n\n";
-		// $output .= "\n
-		// <div class=\"swiper-pagination\"></div>\n
-		// </div>\n\n";
-
-	else:
-
-		$output .= "</div>\n\n";
-
-	endif;
-
-
-
-	return $output;
-}
-
-//remove_shortcode('gallery', 'gallery_shortcode');
-//add_shortcode('gallery', 'CFA_gallery_shortcode');
-*/
 
 add_filter('show_admin_bar', '__return_false');
 
@@ -427,13 +240,10 @@ function fixed_img_caption_shortcode($attr, $content = null) {
  . do_shortcode( $content ) . '<p class="wp-caption-text">' . $caption . '</p></div>';
 }
 
-//////////////////////////////////////
-//
-// 27 jan 2016
-// add real author, not WP author
-// in Admin Post List
-//
-//////////////////////////////////////
+
+
+
+// 27 jan 2016: add real author, not WP author, in Admin Post List
 
 //Add custom column
 add_filter('manage_edit-post_columns', 'real_auth_head');
@@ -459,18 +269,10 @@ function set_columns_order($columns) {
         'categories' =>__('Categories'),
         'tags' =>__('Tags'),
         'date' => __('Date'),
-        'gadwp_stats' => __('Analytics')
+        //'gadwp_stats' => __('Analytics')
     );
 }
 add_filter('manage_post_posts_columns' , 'set_columns_order');
-
-
-add_filter('xmlrpc_enabled', '__return_false');
-
-remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
-remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
-remove_action( 'wp_print_styles', 'print_emoji_styles' );
-remove_action( 'admin_print_styles', 'print_emoji_styles' );
 
 
 // MAILPOET STUFF (newsletter)
@@ -495,7 +297,7 @@ add_shortcode('mailpoet_undo_unsubscribe', 'mpoet_get_undo_unsubscribe');
 
 
 
-// shortcode to insert
+// shortcode to insert post count
 function tagline_shortcode() {
 		$count_posts = wp_count_posts();
 		$doubled_posts = str_split($count_posts->publish * 2);
@@ -529,11 +331,6 @@ add_filter( 'wpseo_schema_webpage', 'CFA_change_pubdate' );
 
 add_theme_support( 'align-wide' );
 
-// rimuove stupide immagini scaled:
-// https://hollypryce.com/disable-image-scaling-wordpress/
-add_filter( 'big_image_size_threshold', '__return_false' );
-
-add_filter('jpeg_quality', function($arg){return 100;});
 
 
 // add capability to upload svg or other mime types
@@ -546,6 +343,31 @@ function CFA_mime_types( $mimes ) {
 	return $mimes;
 }
 add_filter( 'upload_mimes', 'CFA_mime_types' );
+
+
+
+/*///////////////////////////////////////////////////////////
+					W P   D E B L O A T
+///////////////////////////////////////////////////////////*/
+
+add_filter('xmlrpc_enabled', '__return_false');
+remove_action( 'wp_head', 'print_emoji_detection_script', 7 );
+remove_action( 'admin_print_scripts', 'print_emoji_detection_script' );
+remove_action( 'wp_print_styles', 'print_emoji_styles' );
+remove_action( 'admin_print_styles', 'print_emoji_styles' );
+
+// Remove JQuery migrate:
+// https://www.infophilic.com/remove-jquery-migrate-wordpress/
+function remove_jquery_migrate( $scripts ) {
+	global $post;
+	if ( !is_admin() && isset( $scripts->registered['jquery'] ) ) {
+		$script = $scripts->registered['jquery'];
+		if ( $script->deps ) { // Check whether the script has any dependencies
+			$script->deps = array_diff( $script->deps, array( 'jquery-migrate' ) );
+		}
+	}
+}
+add_action( 'wp_default_scripts', 'remove_jquery_migrate' );
 
 // remove block-library/style.css:
 // /cfa/wordpress/wp-includes/css/dist/block-library/style.min.css?ver=5.5.3
@@ -564,6 +386,10 @@ function disable_wpembedJS(){
 add_action( 'wp_footer', 'disable_wpembedJS' );
 
 
+// rimuove stupide immagini scaled:
+// https://hollypryce.com/disable-image-scaling-wordpress/
+add_filter( 'big_image_size_threshold', '__return_false' );
+add_filter('jpeg_quality', function($arg){return 100;});
 
 // https://wordpress.stackexchange.com/questions/240765/how-to-delete-resized-cropped-image-uploads-and-prevent-future-resizing
 function unset_oldImageSizes( $sizes ){
@@ -574,3 +400,6 @@ function unset_oldImageSizes( $sizes ){
     return $sizes;
 }
 add_filter( 'intermediate_image_sizes_advanced', 'unset_oldImageSizes' );
+
+
+
