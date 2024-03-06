@@ -919,7 +919,7 @@ nav#archive-nav-below a {
     margin-top: 50px;
     box-sizing: border-box;
 }
-
+/* 
 .single .single-pinbin-copy {
     width: 80vw;
     max-width: 550px;
@@ -938,7 +938,7 @@ nav#archive-nav-below a {
         position: relative;
     }
 }
-
+ */
 /* roba Bio (contenuto del post type: cfa_authors) */
 small.author { font-size: 100%; }
 small.author:before { content: "by  "; }
@@ -1045,7 +1045,7 @@ img.author-pic { margin: 0 20px 20px 0; }
 }
 
 .home .pinbin-copy p,
-.archive:not(.tribe-events-page-template) .pinbin-copy p,
+/* .archive:not(.tribe-events-page-template) .pinbin-copy p, */
 .search .pinbin-copy p,
 .append-posts .pinbin-copy p {
   line-height: 36px;

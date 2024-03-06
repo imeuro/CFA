@@ -36,6 +36,80 @@ function getOutYouFreakinBot() {
 add_action( 'template_redirect', 'getOutYouFreakinBot' );
 
 
+/**
+ * Remove the Tribe css <script>
+ */
+function tribe_remove_customizer_css(){
+	if ( class_exists( 'Tribe__Customizer' ) ) {
+		remove_action( 'wp_print_footer_scripts', array( Tribe__Customizer::instance(), 'print_css_template' ), 15 );
+	}
+}
+add_action( 'wp_footer', 'tribe_remove_customizer_css' );
+
+
+add_action( 'wp_enqueue_scripts', function() {
+
+    //this is based on using the "skeleton styles" option
+    $styles = [
+        'tribe-events-bootstrap-datepicker-css',
+        'tribe-events-calendar-style',
+        'tribe-events-custom-jquery-styles',
+        'tribe-events-calendar-style',
+        'tribe-events-calendar-pro-style',
+        'tribe-events-full-calendar-style-css',
+        'tribe-common-skeleton-style-css',
+        'tribe-tooltip',
+        'tribe-accessibility-css'
+    ];
+
+    $scripts = [
+       "tribe-common",
+       "tribe-admin-url-fragment-scroll",
+       "tribe-buttonset",
+       "tribe-dependency",
+       "tribe-pue-notices",
+       "tribe-validation",
+       "tribe-timepicker",
+       "tribe-jquery-timepicker",
+       "tribe-dropdowns",
+       "tribe-attrchange",
+       "tribe-bumpdown",
+       "tribe-datatables",
+       "tribe-migrate-legacy-settings",
+       "tribe-admin-help-page",
+       "tribe-tooltip-js",
+       "mt-a11y-dialog",
+       "tribe-dialog-js",
+       "tribe-moment",
+       "tribe-tooltipster",
+       "tribe-events-settings",
+       "tribe-events-php-date-formatter",
+       "tribe-events-jquery-resize",
+       "tribe-events-chosen-jquery",
+       "tribe-events-bootstrap-datepicker",
+       "tribe-events-ecp-plugins",
+       "tribe-events-editor",
+       "tribe-events-dynamic",
+       "jquery-placeholder",
+       "tribe-events-calendar-script",
+       "tribe-events-bar",
+       "the-events-calendar",
+       "tribe-events-ajax-day",
+       "tribe-events-list",
+       "tribe-query-string",
+       "tribe-clipboard",
+       "datatables",
+       "tribe-select2",
+       "tribe-utils-camelcase",
+       "tribe-app-shop-js"
+    ];
+
+    wp_deregister_script($scripts);
+
+    wp_deregister_style($styles);
+
+}, 9999);
+
 
 if ( ! isset( $content_width ) )
 	$content_width = 630; /* pixels */

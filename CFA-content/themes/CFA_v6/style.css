@@ -1777,6 +1777,46 @@ body #cookie-notice .cn-button {
     --tec-color-background-view-selector: #000;
     --tec-color-border-secondary: #fff;
 }
+
+
+.tribe-events-page-template .pinbin-copy h1 { color: #fff; margin: 0; }
+
+.tribe-events-page-template .tribe-common--breakpoint-medium.tribe-events .tribe-events-l-container { padding-top: 30px; }
+
+
+article.status-publish .tribe-events-before-html {
+  font-family: 'Sometimes Times', serif;
+  width: 100%;
+  font-style: italic;
+  text-align: center;
+  margin: 15px auto 70px auto;
+}
+article.status-publish .tribe-events-before-html p {
+  font-size: 1.625em;
+  font-weight: 600;
+  letter-spacing: 0.75px;
+  text-rendering: optimizeLegibility;
+}
+
+.tribe-common--breakpoint-medium.tribe-events .tribe-events-header--has-event-search .tribe-events-c-events-bar {
+  display: none;
+}
+
+.tribe-events-page-template .tribe-events-calendar-list {
+    display: flex;
+    flex-flow: row wrap;
+    align-items: center;
+    justify-content: flex-start;
+}
+
+.tribe-events-page-template .tribe-events-calendar-list .tribe-common-g-row {
+  flex: 0 0 33%;
+}
+
+
+/*
+
+
 #tribe-events-pg-template.tribe-events-pg-template { 
   margin: 0 5vw;
   padding-top: 0;
@@ -1886,5 +1926,5 @@ article.status-publish .single-tribe_events .tribe-events-single .tribe-events-s
   .single-tribe_events .tribe-events-single .tribe-events-event-meta .tribe-events-meta-group.tribe-events-meta-group-gmap .tribe-events-venue-map { width: 100%; }
 }
 
-
+*/
 
