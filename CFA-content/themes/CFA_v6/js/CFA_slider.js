@@ -3,10 +3,10 @@
 var CFAslidersettings = {
 	init: false,
 	direction: 'horizontal',
-	autoHeight: true,
+	autoHeight: false,
 	loop: true,
 	keyboard: true,
-	preloadImages: false,
+	preloadImages: true,
 	lazy: {
     	loadPrevNext: true,
     	loadPrevNextAmount: 2,
@@ -74,6 +74,8 @@ function gallery2swiper () {
 			Swrapper.className = '';
 			da_element.className = '';
 			Swrapper.classList.add('swiper-container','CFAslider');
+			Swrapper.id = 'CFAslider-'+index;
+			Swrapper.dataset.id = 'CFAslider-'+index;
 			Swrapper2.classList.add('outer-swiper-container','container');
 
 			da_element.classList.add('swiper-wrapper','gutenberg-swiper-block');
