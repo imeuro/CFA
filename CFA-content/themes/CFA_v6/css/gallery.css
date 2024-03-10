@@ -258,5 +258,6 @@
 @media all and (min-width: 1000px) {
 	.single-cfa_live .gutenberg-swiper-block img {
 		max-width: 1000px;
+		border-radius: 2px;
 	}
 }
