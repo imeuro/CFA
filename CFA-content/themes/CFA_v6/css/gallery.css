@@ -157,6 +157,7 @@
 }
 .single-cfa_live article .outer-swiper-container.container {
     margin: 60px 0 0 0;
+    max-width: 1000px;
 }
 
 .gutenberg-swiper-block .gallery-item {
@@ -250,7 +251,7 @@
 }
 
 .CFAslider .swiper-lazy-preloader:after {
-  background-image: url('/conceptualfinearts/cfa/CFA-content/themes/CFA_v6/images/cross-white.svg');
+  background-image: url('/cfa/CFA-content/themes/CFA_v6/images/cross-white.svg');
   background-size: 25px;
 }
 
