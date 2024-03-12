@@ -1217,9 +1217,7 @@ img.author-pic { margin: 0 20px 20px 0; }
     .tribe-events-page-template #wrap {
         overflow-x: hidden;
         margin-top: 150px;
-        max-width: 90vw;
-        margin-left: 5vw;
-        margin-right: 5vw; 
+        max-width: 100vw;
     }
     
     .home .sponsored .pinbin-copy p {

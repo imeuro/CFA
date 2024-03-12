@@ -22,11 +22,6 @@
  * @var string   $breakpoint_pointer   String we use as pointer to the current view we are setting up with breakpoints.
  */
 
-$header_classes = [ 'tribe-events-header' ];
-if ( empty( $disable_event_search ) ) {
-	$header_classes[] = 'tribe-events-header--has-event-search';
-}
-
 ?>
 <div
 	<?php tribe_classes( $container_classes ); ?>
@@ -42,7 +37,7 @@ if ( empty( $disable_event_search ) ) {
 		data-view-breakpoint-pointer="<?php echo esc_attr( $breakpoint_pointer ); ?>"
 	<?php endif; ?>
 >
-	<div class="tribe-common-l-container tribe-events-l-container">
+	<div class="tribe-common-container">
 		<?php $this->template( 'components/loader', [ 'text' => __( 'Loading...', 'the-events-calendar' ) ] ); ?>
 
 		<?php $this->template( 'components/json-ld-data' ); ?>
@@ -51,20 +46,12 @@ if ( empty( $disable_event_search ) ) {
 		
 		<?php $this->template( 'components/before' ); ?>
 
-		<header <?php tribe_classes( $header_classes ); ?>>
-			<?php $this->template( 'components/messages' ); ?>
-			<?php $this->template( 'components/messages', [ 'classes' => [ 'tribe-events-header__messages--mobile' ] ] ); ?>
-
-			<?php $this->template( 'components/breadcrumbs' ); ?>
-
-			<?php $this->template( 'components/events-bar' ); ?>
-
-			<?php $this->template( 'list/top-bar' ); ?>
+		<header class="tribe-events-header">
+			<?php $this->template( 'list/top-bar/datepicker' ); ?>
 		</header>
 
-		<?php $this->template( 'components/filter-bar' ); ?>
 
-		<div class="tribe-events-calendar-list">
+		<div class="tec-list">
 
 			<?php
 
