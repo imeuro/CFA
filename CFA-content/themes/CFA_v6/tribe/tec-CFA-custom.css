@@ -56,24 +56,19 @@ time.tribe-events-c-top-bar__datepicker-time {
     flex: 0 0 calc(100% - 10px);
     text-wrap: wrap;
 }
-@media all and (min-width: 1000px) {
-	.tribe-events-page-template .tec-list-event {
-    	flex: 0 0 calc(33% - 10px);
-	}
-}
+
 .tribe-events-page-template .tec-list-event-link {
-    
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: flex-start;
     gap: 5px;
-    margin: 0 0 20px 0;
+    margin: 0 0 10px 0;
 }
 
 .tribe-events-page-template .tribe-common .tec-list-event-link {
 	flex: 1 0 100%;
-	min-height: 150px;
+	min-height: 100px;
 	color: #fff;
 	opacity: 1;
 	text-decoration: none;
@@ -87,7 +82,10 @@ time.tribe-events-c-top-bar__datepicker-time {
 	color: #ffffff80;
 }
 
-
+.tribe-events-page-template .tec-list-event-image {
+    height: 150px;
+    object-fit: cover;
+}
 .tribe-events-page-template .tec-list-event-datetime {
 	flex: 0 0 70px;
 	font-size: 1rem;
@@ -99,7 +97,7 @@ time.tribe-events-c-top-bar__datepicker-time {
 	font-family: 'NeueHaasGroteskDisp Std', sans-serif;
 	font-size: 24px;
 	font-weight: 700;
-	line-height: 24px;
+	line-height: 20px;
 	text-transform: uppercase;
 }
 .tribe-events-page-template .tec-list-event-datetime > span.tribe-event-date-start { display: none; }
@@ -107,6 +105,7 @@ time.tribe-events-c-top-bar__datepicker-time {
 	content: "UNTIL";
 	display: block;
 	font-size: 11px;
+	line-height: 22px;
 	text-align: center;
 }
 
@@ -124,6 +123,10 @@ time.tribe-events-c-top-bar__datepicker-time {
     letter-spacing: 0.75px;
     text-rendering: optimizeLegibility;
     text-align: left;
+    display: -webkit-box;
+	-webkit-line-clamp: 3;
+	-webkit-box-orient: vertical;  
+	overflow: hidden;
 }
 .tribe-events-page-template .tec-event-venue {
 	font-size: 1rem;
@@ -131,6 +134,20 @@ time.tribe-events-c-top-bar__datepicker-time {
 }
 
 
+
+
+
+@media all and (min-width: 1000px) {
+	.tribe-events-page-template .tec-list-event {
+	flex: 0 0 calc(33% - 10px);
+	}
+	.tribe-events-page-template .tec-list-event-link {
+		margin: 0;
+	}
+	.tribe-events-page-template .tribe-common .tec-list-event-link {
+		min-height: 150px;
+	}
+}
 
 
 
