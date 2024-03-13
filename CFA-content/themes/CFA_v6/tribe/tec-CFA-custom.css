@@ -168,6 +168,44 @@ time.tribe-events-c-top-bar__datepicker-time {
 }
 
 
+/* BOTTOM NAVI*/
+.tribe-events .tribe-events-c-nav__list {
+	display: flex;
+	flex-flow: row nowrap;
+	justify-content: space-between;
+
+    border-top: 1px solid #dedede;
+	padding: 20px 0px;
+	margin-top: 40px;
+}
+
+.tribe-common .tec-nav--prev,
+.tribe-common .tec-nav--today,
+.tribe-common .tec-nav--next {
+	flex: 0 1 auto;
+	border: 1px solid #dedede3b;
+}
+
+/* .tec-nav--prev { align-self: flex-start; }
+.tec-nav--today { align-self: center; }
+.tec-nav--next { align-self: flex-end; } */
+.tec-nav-disabled { opacity: 0; }
+
+.tribe-common a.tec-nav-link {
+	background: #000;
+	font-size: 18px;
+	font-weight: 700;
+	display: inline-block;
+    line-height: 30px;
+    text-decoration: none;
+    padding: 5px 25px;
+    color: #fff;
+    border-radius: 2px;
+    opacity: 1;
+    transition: opacity 250ms ease-in-out;
+}
+.tribe-common a.tec-nav-link:hover { opacity: .75; }
 
 
 
+.tribe-events .tribe-events-c-subscribe-dropdown__container { display: none; }
