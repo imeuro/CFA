@@ -45,7 +45,7 @@ time.tribe-events-c-top-bar__datepicker-time {
 	display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
-    justify-content: flex-start;
+    justify-content: space-around;
     gap: 10px;
 }
 .tribe-events-page-template .tec-list-event {
@@ -53,41 +53,40 @@ time.tribe-events-c-top-bar__datepicker-time {
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    flex: 0 0 calc(100% - 10px);
+    flex: 1 0 100%;
     text-wrap: wrap;
+    border: 1px solid #dedede3b;
+    border-radius: 2px;
+    margin-bottom: 30px;
+    position: relative;
 }
 
-.tribe-events-page-template .tec-list-event-link {
+.tribe-events-page-template .tribe-common .tec-list-event-link {
     display: flex;
     flex-flow: row wrap;
     align-items: flex-start;
     justify-content: flex-start;
-    gap: 5px;
-    margin: 0 0 10px 0;
-}
+    gap:10px;
+    margin: 0;
 
-.tribe-events-page-template .tribe-common .tec-list-event-link {
 	flex: 1 0 100%;
-	min-height: 100px;
 	color: #fff;
 	opacity: 1;
 	text-decoration: none;
-	transition: color 250ms ease-in-out;
-	border: 1px solid #dedede3b;
-	border-radius: 2px;
+	transition: opacity 250ms ease-in-out;
 	padding: 10px;
 	box-sizing: border-box;
 }
-.tribe-events-page-template .tribe-common .tec-list-event-link:hover {
-	color: #ffffff80;
-}
+.tribe-events-page-template .tribe-common .tec-list-event-link:hover { opacity: .75; }
 
 .tribe-events-page-template .tec-list-event-image {
-    height: 150px;
-    object-fit: cover;
+	width: 75px;
+	height: auto;
+	max-height: 130px;
+	object-fit: contain;
 }
 .tribe-events-page-template .tec-list-event-datetime {
-	flex: 0 0 70px;
+	flex: 0 0 60px;
 	font-size: 1rem;
 	text-align: center;
 }
@@ -97,7 +96,7 @@ time.tribe-events-c-top-bar__datepicker-time {
 	font-family: 'NeueHaasGroteskDisp Std', sans-serif;
 	font-size: 24px;
 	font-weight: 700;
-	line-height: 20px;
+	line-height: 24px;
 	text-transform: uppercase;
 }
 .tribe-events-page-template .tec-list-event-datetime > span.tribe-event-date-start { display: none; }
@@ -111,7 +110,7 @@ time.tribe-events-c-top-bar__datepicker-time {
 
 
 .tribe-events-page-template .tec-list-event-text {
-	flex: 0 1 calc(100% - 75px);
+	flex: 1 0 calc(100% - 180px);
 	display: flex;
 	flex-flow: column;
 	align-items: flex-start;
@@ -139,13 +138,32 @@ time.tribe-events-c-top-bar__datepicker-time {
 
 @media all and (min-width: 1000px) {
 	.tribe-events-page-template .tec-list-event {
-	flex: 0 0 calc(33% - 10px);
+		flex: 0 0 calc(33% - 10px);
+		max-width: 600px;
+		min-height: 130px;
+		margin-bottom: 15px;
 	}
-	.tribe-events-page-template .tec-list-event-link {
-		margin: 0;
+	.tribe-events-page-template .tec-list-event-text {
+    	flex: 1 0 calc(100% - 180px);
+    }
+
+    .tribe-events-page-template .tribe-common .tec-list-event-link {
+    	height: 128px;
+    }
+    .tribe-events-page-template .tribe-common .tec-list-event-link:after {
+		content: "more details";
+		position: absolute;
+		bottom: 10px;
+		right: 10px;
+		font-size: 12px;
+		font-weight: 700;
+		text-transform: uppercase;
+		opacity: 0;
+		transition: opacity 250ms ease-in-out;
 	}
-	.tribe-events-page-template .tribe-common .tec-list-event-link {
-		min-height: 150px;
+
+    .tribe-events-page-template .tribe-common .tec-list-event-link:hover:after {
+		opacity: .75;
 	}
 }
 

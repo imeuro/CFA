@@ -16,8 +16,8 @@ use Tribe\Events\Views\V2\Template_Bootstrap;
 
 get_header(); ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('single'); ?>>
-	<div class="pinbin-copy single-pinbin-copy">
+<article id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
+	<div class="pinbin-copy container">
 
         <h1>art calendar</h1>
 

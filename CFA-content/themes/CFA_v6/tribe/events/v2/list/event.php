@@ -21,7 +21,6 @@
 		href="<?php echo esc_url( $event->permalink ); ?>"
 		title="<?php echo esc_attr( $event->title ); ?>">
 
-	<?php $this->template( 'list/event/featured-image', [ 'event' => $event ] ); ?>
 	<time class="tec-list-event-datetime" datetime="<?php echo $event->dates->start->format( 'Y-m-d' ) ?>">
 		<span class="tribe-event-date-start">
 			<?php echo $event->dates->start->format( 'M, j Y' ) ?>
@@ -31,7 +30,9 @@
 		</span>	
 	</time>
 	
-	<header class="tec-list-event-text">
+	<?php $this->template( 'list/event/featured-image', [ 'event' => $event ] ); ?>
+
+	<div class="tec-list-event-text">
 		
 		<h3 class="tec-event-title"><?php echo $event->title; ?></h3>
 		<p class="tec-event-venue">
@@ -47,7 +48,7 @@
 
 			?>
 		</p>
-	</header>
+	</div>
 	</a>
 </div>
 

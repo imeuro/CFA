@@ -913,13 +913,16 @@ nav#archive-nav-below a {
     font-size: 15px;
     line-height: 18px;
     width: 100%;
-    max-width: 1140px;
     margin: 0 auto;
     text-align: center;
     margin-top: 50px;
     box-sizing: border-box;
 }
-/* 
+.page .pinbin-copy {
+    max-width: 100%;
+    background: #000;
+}
+
 .single .single-pinbin-copy {
     width: 80vw;
     max-width: 550px;
@@ -938,7 +941,7 @@ nav#archive-nav-below a {
         position: relative;
     }
 }
- */
+
 /* roba Bio (contenuto del post type: cfa_authors) */
 small.author { font-size: 100%; }
 small.author:before { content: "by  "; }
