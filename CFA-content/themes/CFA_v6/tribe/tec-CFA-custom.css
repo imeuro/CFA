@@ -186,9 +186,6 @@ time.tribe-events-c-top-bar__datepicker-time {
 	border: 1px solid #dedede3b;
 }
 
-/* .tec-nav--prev { align-self: flex-start; }
-.tec-nav--today { align-self: center; }
-.tec-nav--next { align-self: flex-end; } */
 .tec-nav-disabled { opacity: 0; }
 
 .tribe-common a.tec-nav-link {
@@ -206,6 +203,19 @@ time.tribe-events-c-top-bar__datepicker-time {
 }
 .tribe-common a.tec-nav-link:hover { opacity: .75; }
 
+.tribe-common a.tec-nav-link--prev:before,
+.tribe-common a.tec-nav-link--next:after {
+    content: "";
+    width: 12px;
+    height: 12px;
+    display: inline-block;
+}
+.tribe-common a.tec-nav-link--prev:before {
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='12' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M11.916 17.841L10 19.757l-9.9-9.9L10-.041l1.916 1.916-7.983 7.984z' fill='%23fff'/%3E%3C/svg%3E") 0/7px no-repeat;
+}
+.tribe-common a.tec-nav-link--next:after {
+    background: url("data:image/svg+xml;charset=utf-8,%3Csvg width='12' height='20' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M.084 2.159L2 .243l9.9 9.9L2 20.041.084 18.126l7.983-7.984z' fill='%23fff'/%3E%3C/svg%3E") 100% / 7px no-repeat;
+}
 
 
 .tribe-events .tribe-events-c-subscribe-dropdown__container { display: none; }
