@@ -169,7 +169,7 @@ time.tribe-events-c-top-bar__datepicker-time {
 
 
 /* BOTTOM NAVI*/
-.tribe-events .tribe-events-c-nav__list {
+.tribe-events .tec-bottom-nav-container {
 	display: flex;
 	flex-flow: row nowrap;
 	justify-content: space-between;
