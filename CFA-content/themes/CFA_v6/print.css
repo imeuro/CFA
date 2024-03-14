@@ -47,12 +47,11 @@ article img {
 	page-break-before: avoid; 
     page-break-after::avoid;
     page-break-inside:avoid;
-    max-height: 400px;
+    /* max-height: 400px; */
 	height: auto;
-	width: auto !important;
+	width: 100% !important;
 	max-width: 100%;
 	margin: 0 auto 30px auto;
-
 }
 /*
 .container .CFAslider,
