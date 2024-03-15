@@ -4,11 +4,13 @@
 /**********************************/
 
 @page {
-   margin: 2cm;
+   margin: 15px 2cm;
    size: portrait;
 }
 body { 
 	width: 100%;
+	padding-top: 72px;
+	padding-bottom: 72px ;
 	margin: 0 auto;
 }
 #logo-print { 
@@ -25,7 +27,8 @@ body {
 .posttags,
 #post-area,
 #uplink,
-#showmehome {
+#showmehome,
+article.type-post:not(.isotope-item):after {
     display: none;
 }
 
@@ -51,7 +54,7 @@ article img {
 	height: auto;
 	width: 100% !important;
 	max-width: 100%;
-	margin: 0 auto 30px auto;
+	margin: 10px auto 30px auto;
 }
 /*
 .container .CFAslider,
