@@ -16,14 +16,14 @@ use Tribe\Events\Views\V2\Template_Bootstrap;
 
 get_header(); ?>
 
-<article id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
+<section id="post-<?php the_ID(); ?>" <?php post_class('page'); ?>>
 	<div class="pinbin-copy container">
 
-        <h1>art calendar</h1>
+        
 
 		<?php echo tribe( Template_Bootstrap::class )->get_view_html(); ?>
 
 	</div>
-</article>
+</section>
 
 <?php get_footer();

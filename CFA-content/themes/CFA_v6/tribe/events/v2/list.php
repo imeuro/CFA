@@ -23,6 +23,7 @@
  */
 
 ?>
+<h1>art calendar</h1>
 <div
 	<?php tribe_classes( $container_classes ); ?>
 	data-js="tribe-events-view"
