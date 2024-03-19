@@ -55,7 +55,7 @@ button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-bu
 time.tribe-events-c-top-bar__datepicker-time {
     font-size: 36px;
 }
-.tribe-events .tribe-events-header__events-bar { display: none; }
+/*.tribe-events .tribe-events-header__events-bar { display: none; }*/
 
 
 /* LISTATO EVENTI */
@@ -207,6 +207,7 @@ time.tribe-events-c-top-bar__datepicker-time {
 .tribe-common .tec-nav--prev,
 .tribe-common .tec-nav--today,
 .tribe-common .tec-nav--next {
+	list-style: none;
 	flex: 0 1 auto;
 	border: 1px solid #dedede3b;
 	border-radius: 2px;

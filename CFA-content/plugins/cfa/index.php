@@ -97,7 +97,7 @@ add_filter('max_srcset_image_width', 'disable_wp_responsive_images');
 */
 function tribe_replace_strings() {
   $custom_text = [
-    'Upcoming' => 'On View',
+    'Now' => 'On View',
     // 'Related %s' => 'Similar %s',
     // '%s onwards' => 'Calendar',
   ];
