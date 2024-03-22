@@ -129,8 +129,10 @@ add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 function CFA_scripts() {
 	global $post;
 
-	wp_deregister_script('jquery');
-	wp_deregister_script('jquery-migrate');
+	if  (!is_tribe_calendar()) {
+		wp_deregister_script('jquery');
+		wp_deregister_script('jquery-migrate');
+	}
 
 	wp_enqueue_script( 'CFA-functions', get_template_directory_uri() . '/js/CFA_functions.js', array(), null, true );
 
@@ -410,36 +412,36 @@ add_filter( 'intermediate_image_sizes_advanced', 'unset_oldImageSizes' );
 // LIST ALL JS/CSS ENQUEUED IN PAGE
 // DEBUG ONLY
 
+/*
+global $enqueued_scripts;
+global $enqueued_styles;
 
-// global $enqueued_scripts;
-// global $enqueued_styles;
+add_action( 'wp_print_scripts', 'cyb_list_scripts' );
+function cyb_list_scripts() {
+    global $wp_scripts;
+    global $enqueued_scripts;
+    $enqueued_scripts = array();
+    foreach( $wp_scripts->queue as $handle ) {
+        $enqueued_scripts[] = $wp_scripts->registered[$handle]->handle;
+    }
+}
+add_action( 'wp_print_styles', 'cyb_list_styles' ,10000);
+function cyb_list_styles() {
+    global $wp_styles;
+    global $enqueued_styles;
+    $enqueued_styles = array();
+    foreach( $wp_styles->queue as $handle ) {
+        $enqueued_styles[] = $wp_styles->registered[$handle]->handle;
+    }
+}
 
-// add_action( 'wp_print_scripts', 'cyb_list_scripts' );
-// function cyb_list_scripts() {
-//     global $wp_scripts;
-//     global $enqueued_scripts;
-//     $enqueued_scripts = array();
-//     foreach( $wp_scripts->queue as $handle ) {
-//         $enqueued_scripts[] = $wp_scripts->registered[$handle]->handle;
-//     }
-// }
-// add_action( 'wp_print_styles', 'cyb_list_styles' ,10000);
-// function cyb_list_styles() {
-//     global $wp_styles;
-//     global $enqueued_styles;
-//     $enqueued_styles = array();
-//     foreach( $wp_styles->queue as $handle ) {
-//         $enqueued_styles[] = $wp_styles->registered[$handle]->handle;
-//     }
-// }
-
-// add_action( 'wp_head', function() {
-//     global $enqueued_scripts;
-//     var_dump( $enqueued_scripts );
-//     global $enqueued_styles;
-//     var_dump( $enqueued_styles );
-// } , 11111);
-
+add_action( 'wp_head', function() {
+    global $enqueued_scripts;
+    var_dump( $enqueued_scripts );
+    global $enqueued_styles;
+    var_dump( $enqueued_styles );
+} , 11111);
+*/
 
 
 
@@ -462,7 +464,7 @@ add_action( 'wp_enqueue_scripts', 'remove_tribe_events_styles', 1 );
 function remove_tribe_events_scripts() {
 
   $core_script_handles = array(
-    'tribe-events-views-v2-bootstrap-datepicker',
+    //'tribe-events-views-v2-bootstrap-datepicker',
     'tribe-events-views-v2-viewport',
     'tribe-events-views-v2-accordion',
     'tribe-events-views-v2-view-selector',
@@ -474,7 +476,7 @@ function remove_tribe_events_scripts() {
     'tribe-events-views-v2-tooltip',
     'tribe-events-views-v2-events-bar',
     'tribe-events-views-v2-events-bar-inputs',
-    'tribe-events-views-v2-datepicker',
+    //'tribe-events-views-v2-datepicker',
     'tribe-events-views-v2-breakpoints'
   );
   
@@ -488,11 +490,11 @@ function remove_tribe_events_scripts() {
 function remove_tribe_events_styles() {
 
   $core_style_handles = array(
-    // 'tribe-events-views-v2-bootstrap-datepicker-styles',
-    // 'tribe-events-views-v2-skeleton',
-    // 'tribe-events-views-v2-full',
-    // 'tribe-events-views-v2-print',
-    // 'tribe-tooltipster-css'
+	'tribe-events-views-v2-bootstrap-datepicker-styles',
+	'tribe-events-views-v2-skeleton',
+	'tribe-events-views-v2-full',
+	'tribe-events-views-v2-print',
+	'tribe-tooltipster-css'
   );
   
   $handles_to_remove = array_unique( $core_style_handles ); // shouldn't be necessary but just in case
