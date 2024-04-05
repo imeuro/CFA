@@ -18,9 +18,11 @@
 
 if ( ! $event->thumbnail->exists ) {
 	return;
-} ?>
+} 
+//print_r($event->thumbnail);
+?>
 
-<img src="<?php echo esc_url( $event->thumbnail->full->url ); ?>" <?php if ( ! empty( $event->thumbnail->alt ) ) : ?>
+<img src="<?php echo esc_url( $event->thumbnail->medium->url ); ?>" <?php if ( ! empty( $event->thumbnail->alt ) ) : ?>
 	alt="<?php echo esc_attr( $event->thumbnail->alt ); ?>"
 <?php else : // We need to ensure we have an empty alt tag for accessibility reasons if the user doesn't set one for the featured image ?>
 	alt="event image"
@@ -29,5 +31,6 @@ if ( ! $event->thumbnail->exists ) {
 	title="<?php echo esc_attr( $event->thumbnail->title ); ?>"
 <?php endif; ?>
 class="tec-list-event-image"
-width="<?php echo esc_attr( $event->thumbnail->full->width ); ?>"
-height="<?php echo esc_attr( $event->thumbnail->full->height ); ?>"/>
+width="<?php echo esc_attr( $event->thumbnail->medium->width ); ?>"
+height="<?php echo esc_attr( $event->thumbnail->medium->height ); ?>"
+loading="lazy" />

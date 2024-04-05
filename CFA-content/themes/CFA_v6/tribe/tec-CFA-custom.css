@@ -53,8 +53,8 @@ body.single section .tribe-events-before-html { display: none; }
 .tribe-common .tribe-events-c-top-bar__datepicker > input { display: none; }
 .tribe-common .tribe-events-c-top-bar__datepicker .tribe-common-c-svgicon {
 	fill: #fff;
-	width: 10px;
-	height: 10px;
+	width: 14px;
+	height: 14px;
 }
 .tribe-common .tribe-events-c-top-bar__datepicker .tribe-events-c-top-bar__datepicker-time {
     font-size: 36px;
@@ -70,7 +70,7 @@ button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-bu
 	position: absolute;
 	z-index: 10;
 	top: 50px;
-	left: 140px;
+	left: 0;
 }
 .tribe-common .tribe-events-c-top-bar__datepicker .tribe-events-c-top-bar__datepicker-container > .datepicker {
 	background: #000;
@@ -78,10 +78,63 @@ button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-bu
 	border: 2px solid #dedede3b;
 	border-radius: 2px;
 	font-family: 'NeueHaasGroteskDisp Std', sans-serif;
+	min-width: 300px;
+    width: auto;
+}
+.tribe-common-a11y-visual-hide {
+    display: none;
 }
 
-.datepicker.dropdown-menu th {
-    padding: 4px 5px;
+
+.datepicker .table-condensed {
+    width: 100%;
+}
+table.table-condensed tr { 
+	display: flex;
+	flex-flow: row nowrap;
+	align-items: center;
+	justify-content: space-between;
+}
+.datepicker .table-condensed tr td,
+.datepicker .table-condensed tr th {
+    text-align: center;
+    flex: 0 0 calc(100% / 7);
+    box-sizing: border-box;
+}
+.datepicker .table-condensed tr th {
+    font-weight: 700;
+    font-size: 13px;
+    line-height: 16px;
+}
+.datepicker .table-condensed tr th.datepicker-switch {
+    flex: 0 0 150px;
+    font-size: 18px;
+}
+.datepicker .table-condensed tr th.dow {
+    border-top: 1px solid #fff4;
+    border-bottom: 1px solid #fff4;
+    padding: 8px 0;
+    margin: 10px 0;
+}
+
+.datepicker .table-condensed tr td {
+    font-size: 20px;
+    line-height: 26px;
+    padding: 5px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+.datepicker td.day.past,
+.datepicker td.day.new,
+.datepicker td.day.old { opacity: .25; }
+.datepicker td.day.active.current { 
+	background: #fff;
+	color: #000;
+}
+.datepicker td.day:hover { color: #fff8; }
+.datepicker td.day.active.current:hover { 
+	background: #fff9;
+	color: #0008;
 }
 
 
@@ -387,3 +440,9 @@ button.tribe-common-h3.tribe-common-h--alt.tribe-events-c-top-bar__datepicker-bu
 		flex: 1 0 100%;
 	}
 }
+
+
+
+/* CAZZ di calendarietto */
+
+

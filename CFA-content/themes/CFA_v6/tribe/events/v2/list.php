@@ -23,7 +23,6 @@
  */
 
 ?>
-<h1>art calendar</h1>
 <div
 	<?php tribe_classes( $container_classes ); ?>
 	data-js="tribe-events-view"
@@ -39,6 +38,9 @@
 	<?php endif; ?>
 >
 	<div class="tribe-common-container">
+
+		<h1>art calendar</h1>
+
 		<?php $this->template( 'components/loader', [ 'text' => __( 'Loading...', 'the-events-calendar' ) ] ); ?>
 
 		<?php $this->template( 'components/json-ld-data' ); ?>
