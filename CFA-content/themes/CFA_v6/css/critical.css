@@ -932,7 +932,7 @@ nav#archive-nav-below a {
 }
 
 @media all and (min-width: 768px) {
-
+    .page .pinbin-copy { max-width: 75vw; }
     .single .single-pinbin-copy,
     .error404 .pinbin-copy {
         margin-top: 200px;
