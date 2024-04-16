@@ -199,6 +199,7 @@ table.table-condensed tr {
 	font-weight: 700;
 	line-height: 24px;
 	text-transform: uppercase;
+	text-align: left;
 }
 
 
@@ -239,6 +240,11 @@ table.table-condensed tr {
 .tribe-events-page-template .tec-event-venue {
 	font-size: 1rem;
 	font-weight: 500;
+	text-align: left;
+	line-height: 1.5;
+	border-top: 1px solid #dedede3b;
+	padding: 5px 15px 0 0;
+	margin-top: 10px;
 }
 
 

@@ -41,6 +41,11 @@
 		<p class="tec-event-venue">
 			<?php
 			$venue = $event->venues[0];
+
+			if ( ! empty( $venue->post_title ) ) :
+				echo esc_html( $venue->post_title ).'<br>';
+			endif;
+			
 			if ( ! empty( $venue->city ) ) :
 				echo esc_html( $venue->city );
 			endif;
