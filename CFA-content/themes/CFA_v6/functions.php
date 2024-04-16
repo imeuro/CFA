@@ -37,6 +37,8 @@ add_action( 'template_redirect', 'getOutYouFreakinBot' );
 
 
 
+
+
 if ( ! isset( $content_width ) )
 	$content_width = 630; /* pixels */
 
@@ -122,19 +124,15 @@ function wpdocs_theme_add_editor_styles() {
 add_action( 'admin_init', 'wpdocs_theme_add_editor_styles' );
 
 
-function is_tribe_calendar() { // detect if we're on an Events Calendar page
-	if (tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() || tribe_is_view() || 'tribe_events' == get_post_type() || is_singular( 'tribe_events' ))
-		return true;
-	else return false;
-}
+
 
 function CFA_scripts() {
 	global $post;
 
-	if (!is_tribe_calendar()) {
+	if  (!is_tribe_calendar()) {
 		wp_deregister_script('jquery');
 		wp_deregister_script('jquery-migrate');
-	}	
+	}
 
 	wp_enqueue_script( 'CFA-functions', get_template_directory_uri() . '/js/CFA_functions.js', array(), null, true );
 
@@ -401,5 +399,120 @@ function unset_oldImageSizes( $sizes ){
 }
 add_filter( 'intermediate_image_sizes_advanced', 'unset_oldImageSizes' );
 
+
+
+
+
+
+
+
+
+
+
+// LIST ALL JS/CSS ENQUEUED IN PAGE
+// DEBUG ONLY
+
+/*
+global $enqueued_scripts;
+global $enqueued_styles;
+
+add_action( 'wp_print_scripts', 'cyb_list_scripts' );
+function cyb_list_scripts() {
+    global $wp_scripts;
+    global $enqueued_scripts;
+    $enqueued_scripts = array();
+    foreach( $wp_scripts->queue as $handle ) {
+        $enqueued_scripts[] = $wp_scripts->registered[$handle]->handle;
+    }
+}
+add_action( 'wp_print_styles', 'cyb_list_styles' ,10000);
+function cyb_list_styles() {
+    global $wp_styles;
+    global $enqueued_styles;
+    $enqueued_styles = array();
+    foreach( $wp_styles->queue as $handle ) {
+        $enqueued_styles[] = $wp_styles->registered[$handle]->handle;
+    }
+}
+
+add_action( 'wp_head', function() {
+    global $enqueued_scripts;
+    var_dump( $enqueued_scripts );
+    global $enqueued_styles;
+    var_dump( $enqueued_styles );
+} , 11111);
+*/
+
+
+
+
+
+
+/*///////////////////////////////////////////////////////////
+			TRIBE EVENTS   D E B L O A T
+///////////////////////////////////////////////////////////*/
+
+function is_tribe_calendar() { // detect if we're on an Events Calendar page
+	if (tribe_is_event() || tribe_is_event_category() || tribe_is_in_main_loop() || tribe_is_view() || 'tribe_events' == get_post_type() || is_singular( 'tribe_events' ))
+		return true;
+	else return false;
+}
+
+add_action( 'wp_enqueue_scripts', 'remove_tribe_events_scripts', 1 );
+add_action( 'wp_enqueue_scripts', 'remove_tribe_events_styles', 1 );
+
+function remove_tribe_events_scripts() {
+
+  $core_script_handles = array(
+    //'tribe-events-views-v2-bootstrap-datepicker',
+    'tribe-events-views-v2-viewport',
+    'tribe-events-views-v2-accordion',
+    'tribe-events-views-v2-view-selector',
+    'tribe-events-views-v2-ical-links',
+    'tribe-events-views-v2-navigation-scroll',
+    'tribe-events-views-v2-multiday-events',
+    'tribe-events-views-v2-month-mobile-events',
+    'tribe-events-views-v2-month-grid',
+    'tribe-events-views-v2-tooltip',
+    'tribe-events-views-v2-events-bar',
+    'tribe-events-views-v2-events-bar-inputs',
+    //'tribe-events-views-v2-datepicker',
+    'tribe-events-views-v2-breakpoints'
+  );
+  
+  $handles_to_remove = array_unique( $core_script_handles ); // shouldn't be necessary but just in case
+  
+  foreach( $handles_to_remove as $key => $handle ) {
+  	//print_r($handle);
+      wp_deregister_script( $handle );
+  }
+}
+function remove_tribe_events_styles() {
+
+  $core_style_handles = array(
+	'tribe-events-views-v2-bootstrap-datepicker-styles',
+	'tribe-events-views-v2-skeleton',
+	'tribe-events-views-v2-full',
+	'tribe-events-views-v2-print',
+	'tribe-tooltipster-css'
+  );
+  
+  $handles_to_remove = array_unique( $core_style_handles ); // shouldn't be necessary but just in case
+  
+  foreach( $handles_to_remove as $key => $handle ) {
+  	//print_r($handle);
+    wp_deregister_style( $handle );
+  }
+
+  //loads OUR CSS
+  wp_enqueue_style( 'tribe-CFA-reset', get_template_directory_uri() . "/tribe/tec-CFA-custom.css", 'style-css', '1.5', 'all' );
+}
+
+function tribe_remove_customizer_css(){
+	if ( class_exists( 'Tribe__Customizer' ) ) {
+		remove_action( 'wp_print_footer_scripts', array( Tribe__Customizer::instance(), 'print_css_template' ), 15 );
+	}
+}
+add_action( 'wp_footer', 'tribe_remove_customizer_css' );
 
 

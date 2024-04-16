@@ -15,33 +15,48 @@
  *
  * @see tribe_get_event() For the format of the event object.
  */
-
-$container_classes = [ 'tribe-common-g-row', 'tribe-events-calendar-list__event-row' ];
-$container_classes['tribe-events-calendar-list__event-row--featured'] = $event->featured;
-
-$event_classes = tribe_get_post_class( [ 'tribe-events-calendar-list__event', 'tribe-common-g-row', 'tribe-common-g-row--gutters' ], $event->ID );
 ?>
-<div <?php tribe_classes( $container_classes ); ?>>
+<div class="tec-list-event">
+	<a	class="tec-list-event-link"
+		href="<?php echo esc_url( $event->permalink ); ?>"
+		title="<?php echo esc_attr( $event->title ); ?>">
 
-	<?php // $this->template( 'list/event/date-tag', [ 'event' => $event ] ); ?>
 
-	<div class="tribe-events-calendar-list__event-wrapper tribe-common-g-col">
-		<article <?php tribe_classes( $event_classes ) ?>>
-			<?php $this->template( 'list/event/featured-image', [ 'event' => $event ] ); ?>
+	
+	<?php $this->template( 'list/event/featured-image', [ 'event' => $event ] ); ?>
 
-			<div class="tribe-events-calendar-list__event-details tribe-common-g-col">
+	<div class="tec-list-event-text">
+		
+		<time class="tec-list-event-datetime" datetime="<?php echo $event->dates->start->format( 'Y-m-d' ) ?>">
+			<span class="tribe-event-date-start">
+				<?php echo $event->dates->start->format( 'j M Y' ) ?>
+			</span>
+			 - 
+			<span class="tribe-event-date-end">
+				<?php echo $event->dates->end->format( 'j M Y' ) ?>
+			</span>	
+		</time>
 
-				<header class="tribe-events-calendar-list__event-header">
-					<?php $this->template( 'list/event/date', [ 'event' => $event ] ); ?>
-					<?php $this->template( 'list/event/title', [ 'event' => $event ] ); ?>
-					<?php $this->template( 'list/event/venue', [ 'event' => $event ] ); ?>
-				</header>
+		<h3 class="tec-event-title"><?php echo $event->title; ?></h3>
+		<p class="tec-event-venue">
+			<?php
+			$venue = $event->venues[0];
 
-				<?php $this->template( 'list/event/description', [ 'event' => $event ] ); ?>
-				<?php $this->template( 'list/event/cost', [ 'event' => $event ] ); ?>
+			if ( ! empty( $venue->post_title ) ) :
+				echo esc_html( $venue->post_title ).'<br>';
+			endif;
+			
+			if ( ! empty( $venue->city ) ) :
+				echo esc_html( $venue->city );
+			endif;
 
-			</div>
-		</article>
+			if ( ! empty( $venue->country ) ):
+				echo ', ' . esc_html( $venue->country );
+			endif;
+
+			?>
+		</p>
 	</div>
-
+	</a>
 </div>
+

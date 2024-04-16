@@ -97,9 +97,9 @@ add_filter('max_srcset_image_width', 'disable_wp_responsive_images');
 */
 function tribe_replace_strings() {
   $custom_text = [
-    'Upcoming' => 'On View',
+    'Now' => 'On View',
     // 'Related %s' => 'Similar %s',
-    // '%s onwards' => 'Calendar',
+    '%s onwards' => 'Calendar',
   ];
   return $custom_text;
 }
@@ -218,4 +218,13 @@ function tribe_list_reverse_chronological_v2( $template_vars ) {
 }
 
 // add_filter( 'tribe_events_views_v2_view_list_template_vars', 'tribe_list_reverse_chronological_v2', 100 );
+
+
+function filter_events_title( $title ) {
+    if( tribe_context()->get( 'view_request' ) === 'default' ) {
+        $title = 'Art Calendar | Conceptual Fine Arts';
+    }
+    return $title;
+}
+add_filter( 'tribe_events_title_tag', 'filter_events_title' );
 ?>
