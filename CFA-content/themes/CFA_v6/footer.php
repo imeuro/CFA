@@ -40,44 +40,5 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   });
 </script>
 
-
-<script type="module">
-    import {getCLS, getFCP, getFID, getLCP} from 'https://unpkg.com/web-vitals?module';
-    let addWebVitals = () => {
-        getCLS(data => {
-            console.debug("coreWebVitals cls",data);
-            gtag('event', 'timing_complete', {
-                'event_category': 'Performance',
-                'name': 'cumulative-layout-shift',
-                'value': Math.round(data.value*1000)
-            });
-        });
-        getFCP(data => {
-            console.debug("coreWebVitals fcp",data);
-            gtag('event', 'timing_complete', {
-                'event_category': 'Performance',
-                'name': 'first-contentful-paint',
-                'value': Math.round(data.value)
-            });
-        });
-        getFID(data => {
-            console.debug("coreWebVitals fid",data);
-            gtag('event', 'timing_complete', {
-                'event_category': 'Performance',
-                'name': 'first-input-delay',
-                'value': Math.round(data.value)
-            });
-        });
-        getLCP(data => {
-            console.debug("coreWebVitals lcp",data);
-            gtag('event', 'timing_complete', {
-                'event_category': 'Performance',
-                'name': 'largest-contentful-paint',
-                'value': Math.round(data.value)
-            });
-        });
-    }
-    addWebVitals();
-</script>
 </body>
 </html>
