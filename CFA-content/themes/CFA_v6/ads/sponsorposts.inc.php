@@ -1,17 +1,29 @@
 <?php
 $pagenum = get_query_var('paged') ? get_query_var('paged') : 1 ;
 
+// carico uno sponsor con status publish * che ha sponsor_end_date > oggi *
 $sponsorposts = get_posts(array(
   'numberposts' => 1,
   'post_status' => 'publish',
   'post_type'   => 'cfa_sponsors',
   'offset'     => $sponsornum,
+  'meta_key'          => 'sponsor_end_date',
+  'orderby'           => 'meta_value_num',
+  'order'             => 'asc',
+  'meta_query'    => array(
+    'relation'      => 'AND',
+    array(
+      'key'       => 'sponsor_end_date',
+      'compare'   => '>=',
+      'value'     => date( 'Ymd' ),
+    )
+  ),
 ));
 if (!empty($sponsorposts)) {
   foreach ($sponsorposts as $sponsorpost) {
-  // echo '<pre>';
-  // print_r($sponsorposts);
-  // echo '</pre>';
+   echo '<pre>';
+   print_r($sponsorposts);
+   echo '</pre>';
   //$sponsorpost = $sponsorposts[0];
   $sponsorpics = get_field('sponsor_pics',$sponsorpost->ID);
   $sponsorlogo = get_field('sponsor_logo',$sponsorpost->ID);
