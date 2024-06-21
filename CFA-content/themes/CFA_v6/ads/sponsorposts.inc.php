@@ -21,9 +21,9 @@ $sponsorposts = get_posts(array(
 ));
 if (!empty($sponsorposts)) {
   foreach ($sponsorposts as $sponsorpost) {
-   echo '<pre>';
-   print_r($sponsorposts);
-   echo '</pre>';
+   // echo '<pre>';
+   // print_r($sponsorposts);
+   // echo '</pre>';
   //$sponsorpost = $sponsorposts[0];
   $sponsorpics = get_field('sponsor_pics',$sponsorpost->ID);
   $sponsorlogo = get_field('sponsor_logo',$sponsorpost->ID);
