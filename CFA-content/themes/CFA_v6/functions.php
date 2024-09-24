@@ -505,7 +505,9 @@ function remove_tribe_events_styles() {
   }
 
   //loads OUR CSS
-  wp_enqueue_style( 'tribe-CFA-reset', get_template_directory_uri() . "/tribe/tec-CFA-custom.css", 'style-css', '1.5', 'all' );
+  if ( tribe_is_event_query() ) {
+  	wp_enqueue_style( 'tribe-CFA-reset', get_template_directory_uri() . "/tribe/tec-CFA-custom.css", 'style-css', '1.5', 'all' );
+  }
 }
 
 function tribe_remove_customizer_css(){
