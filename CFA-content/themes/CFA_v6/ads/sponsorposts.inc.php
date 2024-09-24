@@ -37,14 +37,18 @@ if (!empty($sponsorposts)) {
         <a href="<?php echo get_field('sponsor_url',$sponsorpost->ID); ?>?cid=CFAsponsor" target="_blank" rel="nofollow noopener" class="left">
             <div class="spi">
               <?php foreach ($sponsorpics as $sponsorpic) {
+                
+                $ll = '';
+                if ($sponsornum>1) { $ll = ' loading="lazy"'; }
+
                 $sponsorpicsrc =  wp_get_attachment_image_src($sponsorpic["sponsor_pic"]["ID"], 'large' );
-                echo '<img src="'.$sponsorpicsrc[0].'" loading="lazy" id="splink-'. $sponsorpost->post_name.'" />';
+                echo '<img src="'.$sponsorpicsrc[0].'"'.$ll.' width="'.$sponsorpicsrc[1].'" height="'.$sponsorpicsrc[2].'" id="splink-'. $sponsorpost->post_name.'" />';
               }
               ?>
             </div>
             <?php if ($sponsorlogo): ?>
               <div class="spc" id="<?php echo $sponsorpost->post_title ?>">
-                <p><img src="<?php echo $sponsorlogo; ?>" loading="lazy" /></p>
+                <p><img src="<?php echo $sponsorlogo; ?>" /></p>
               </div>
             <?php endif ?>
         </a>

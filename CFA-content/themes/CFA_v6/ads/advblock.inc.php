@@ -26,13 +26,13 @@ if (!empty($advposts)) {
           <div class="spi">
             <?php foreach ($advpics as $advpic) {
               $advpicsrc =  wp_get_attachment_image_src($advpic["sponsor_pic"]["ID"], 'large' );
-              echo '<img src="'.$advpicsrc[0].'" loading="lazy" id="splink-'. $advpost->post_name.'" />';
+              echo '<img src="'.$advpicsrc[0].'" id="splink-'. $advpost->post_name.'" />';
             }
             ?>
           </div>
           <?php if ($advlogo): ?>
             <div class="spc" id="<?php echo $advpost->post_title ?>">
-              <p><img src="<?php echo $advlogo; ?>" loading="lazy" /></p>
+              <p><img src="<?php echo $advlogo; ?>" /></p>
             </div>
           <?php endif ?>
       </a>

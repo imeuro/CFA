@@ -55,13 +55,13 @@ while (have_posts()) : the_post();
                 <?php
                 // check if the post has a Post Thumbnail assigned to it.
                 $ll = '';
-                if ($postnum>2) { $ll = ' loading="lazy"'; }
+                if ($postnum>1) { $ll = ' loading="lazy"'; }
                 if ( has_post_thumbnail() ) {
                   $imgsrc =  wp_get_attachment_image_src(get_post_thumbnail_id($post->ID), 'large' );
                 } else {
                   $imgsrc =  wp_get_attachment_image_src($first_attachment->ID, 'large' );
                 }
-                echo '<img src="'.$imgsrc[0].'"'.$ll.' />';
+                echo '<img src="'.$imgsrc[0].'"'.$ll.' width="'.$imgsrc[1].'" height="'.$imgsrc[2].'" alt="'.get_the_title().'" />';
                 ?>
                 <div class="pinbin-copy">
                   <p>
