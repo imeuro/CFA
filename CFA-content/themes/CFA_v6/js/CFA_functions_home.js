@@ -30,10 +30,9 @@ if (typeof jQuery == "function") {
 					}
 				}
 				var resizedwidth = blockwidth-((percent*blockwidth)/100);
-				var resizedheight = blockheight-((percent*blockheight)/100);
 				//console.log('resizedwidth: '+resizedwidth);
 				jQuery(this).css('width',resizedwidth+'px');
-				jQuery(this).css('height',resizedheight+'px');
+				jQuery(this).css('height','auto');
 
 				jQuery(this).parent().parent().removeClass('newitem');
 			});
