@@ -22,7 +22,7 @@ $sponsorposts = get_posts(array(
 if (!empty($sponsorposts)) {
   foreach ($sponsorposts as $sponsorpost) {
    // echo '<pre>';
-   // print_r($sponsorposts);
+   // print_r($sponsorpost);
    // echo '</pre>';
   //$sponsorpost = $sponsorposts[0];
   $sponsorpics = get_field('sponsor_pics',$sponsorpost->ID);
@@ -34,15 +34,15 @@ if (!empty($sponsorposts)) {
       ?>
       <article id="spblock-<?php echo $sponsorpost->post_name; ?>" class="post type-post has-post-thumbnail hentry status-publish format-adv3 post-spinsert">
         <div class="spb newitem">
-        <a href="<?php echo get_field('sponsor_url',$sponsorpost->ID); ?>?cid=CFAsponsor" target="_blank" rel="nofollow noopener" class="left">
+        <a href="<?php echo get_field('sponsor_url',$sponsorpost->ID); ?>?cid=CFAsponsor" target="_blank" rel="nofollow noopener" class="left" title="<?php echo $sponsorpost->post_title; ?>">
             <div class="spi">
               <?php foreach ($sponsorpics as $sponsorpic) {
-                
+
                 $ll = '';
                 if ($sponsornum>1) { $ll = ' loading="lazy"'; }
 
                 $sponsorpicsrc =  wp_get_attachment_image_src($sponsorpic["sponsor_pic"]["ID"], 'large' );
-                echo '<img src="'.$sponsorpicsrc[0].'"'.$ll.' width="'.$sponsorpicsrc[1].'" height="'.$sponsorpicsrc[2].'" id="splink-'. $sponsorpost->post_name.'" />';
+                echo '<img src="'.$sponsorpicsrc[0].'"'.$ll.' width="'.$sponsorpicsrc[1].'" height="'.$sponsorpicsrc[2].'" alt="<?php echo $sponsorpost->post_title; ?>" id="splink-'. $sponsorpost->post_name.'" />';
               }
               ?>
             </div>
