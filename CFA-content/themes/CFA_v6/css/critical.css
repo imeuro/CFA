@@ -624,7 +624,7 @@ div#closemenu span {
 #header {
     padding-bottom: 15px;
 }
-
+#nav-below { display:none }
 nav#archive-nav-below {
     position: relative;
     z-index: 999;
