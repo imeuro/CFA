@@ -42,7 +42,7 @@ if (!empty($sponsorposts)) {
                 if ($sponsornum>1) { $ll = ' loading="lazy"'; }
 
                 $sponsorpicsrc =  wp_get_attachment_image_src($sponsorpic["sponsor_pic"]["ID"], 'large' );
-                echo '<img src="'.$sponsorpicsrc[0].'"'.$ll.' width="'.$sponsorpicsrc[1].'" height="'.$sponsorpicsrc[2].'" alt="<?php echo $sponsorpost->post_title; ?>" id="splink-'. $sponsorpost->post_name.'" />';
+                echo '<img src="'.$sponsorpicsrc[0].'"'.$ll.' width="'.$sponsorpicsrc[1].'" height="'.$sponsorpicsrc[2].'" alt="'.$sponsorpost->post_title.'" id="splink-'. $sponsorpost->post_name.'" />';
               }
               ?>
             </div>
