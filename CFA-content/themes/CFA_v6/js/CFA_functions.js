@@ -222,7 +222,7 @@ document.addEventListener("DOMContentLoaded", function() {
 	function isASCII(str, extended) {
 	    return (extended ? /^[\x00-\xFF]*$/ : /^[\x00-\x7F]*$/).test(str);
 	}
-	let SometimesText = document.querySelectorAll('.isotope-item .pinbin-copy strong, .isotope-item .pinbin-copy small, .single-pinbin-copy h1, .single-pinbin-copy .author, .single-pinbin-copy .excerpt-container > p')
+	let SometimesText = document.querySelectorAll('article.type-post .pinbin-copy strong, article.type-post .pinbin-copy small, .single-pinbin-copy h1, .single-pinbin-copy .author, .single-pinbin-copy .excerpt-container > p')
 	// ... and use Garamond instead.
 	Array.from(SometimesText).forEach((el) => {
 		if (isASCII(el.innerText) === false) {
