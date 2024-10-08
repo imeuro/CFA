@@ -210,11 +210,27 @@ const logoTransition = () => {
 
 }
 
+
+
 document.addEventListener("DOMContentLoaded", function() {
 	// Website Credits
 	console.log("%c\n CONCEPTUAL FINE ARTS rev. 6 \n © 2013-"+new Date().getFullYear()+" - all rights reserved \n",'background:#fff;color:#F7A420;font-weight:700');
 
 	appendENV(ENV);
+
+	// check for strange chars in titles, excerpts written in 'Sometimes Times' font..
+	function isASCII(str, extended) {
+	    return (extended ? /^[\x00-\xFF]*$/ : /^[\x00-\x7F]*$/).test(str);
+	}
+	let SometimesText = document.querySelectorAll('.isotope-item .pinbin-copy strong, .isotope-item .pinbin-copy small, .single-pinbin-copy h1, .single-pinbin-copy .author, .single-pinbin-copy .excerpt-container > p')
+	// ... and use Garamond instead.
+	Array.from(SometimesText).forEach((el) => {
+		if (isASCII(el.innerText) === false) {
+			el.style.fontFamily = 'Garamond, serif';
+			el.style.fontWeight  = '100';
+			el.style.letterSpacing = '-1.5px';	
+		}
+	});
 
 });
 
