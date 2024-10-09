@@ -218,6 +218,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
 	appendENV(ENV);
 
+	/*
 	// check for strange chars in titles, excerpts written in 'Sometimes Times' font..
 	function isASCII(str, extended) {
 	    return (extended ? /^[\x00-\xFF]*$/ : /^[\x00-\x7F]*$/).test(str);
@@ -231,6 +232,7 @@ document.addEventListener("DOMContentLoaded", function() {
 			el.style.letterSpacing = '-1.5px';	
 		}
 	});
+	*/
 
 });
 
