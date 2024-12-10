@@ -16,7 +16,8 @@
 $postnum=0;
 while (have_posts()) : the_post(); 
 $postnum++;
-?>  
+?> 
+<script> var stickies = []; </script>
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
 
    <?php
