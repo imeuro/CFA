@@ -2,6 +2,7 @@
 *.sql
 php_errorlog
 .DS_Store
+.cursor.json
 
 
 wp-config.php
