@@ -1,6 +1,9 @@
 <?php
 $pagenum = get_query_var('paged') ? get_query_var('paged') : 1 ;
 
+// Array statico per tenere traccia degli sponsor già caricati
+static $loaded_sponsors = array();
+
 // carico uno sponsor con status publish * che ha sponsor_end_date > oggi *
 $sponsorposts = get_posts(array(
   'numberposts' => 1,
@@ -20,11 +23,20 @@ $sponsorposts = get_posts(array(
   ),
 ));
 if (!empty($sponsorposts)) {
+
   foreach ($sponsorposts as $sponsorpost) {
-   // echo '<pre>';
-   // print_r($sponsorpost);
-   // echo '</pre>';
   //$sponsorpost = $sponsorposts[0];
+  
+  // Verifica se questo sponsor è già stato caricato
+  if (in_array($sponsorpost->ID, $loaded_sponsors)) {
+    // Se lo sponsor è già stato caricato, incrementa $sponsornum e salta
+    $sponsornum++;
+    continue;
+  }
+  
+  // Aggiungi l'ID dello sponsor all'array dei caricati
+  $loaded_sponsors[] = $sponsorpost->ID;
+  
   $sponsorpics = get_field('sponsor_pics',$sponsorpost->ID);
   $sponsorlogo = get_field('sponsor_logo',$sponsorpost->ID);
   $sponsorStart = get_field('sponsor_start_date',$sponsorpost->ID);
